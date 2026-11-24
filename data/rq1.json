@@ -1,0 +1,4106 @@
+{
+ "schema_version": "1.0",
+ "snapshot": "bcb455b60862",
+ "snapshot_date": "2026-11-06",
+ "generated_by": "scripts/analyze_rq1_cs_journals.py",
+ "definitions": {
+  "unit": "Retraction Watch 撤稿通知记录（非独立论文）",
+  "journal_subset": "CS 撤稿，排除会议论文、书章/预印本、会议论文集载体",
+  "batch": "同一期刊同一撤稿日期 ≥10 条",
+  "incomplete_year": 2026,
+  "no_denominator": true
+ },
+ "selection_flow": [
+  {
+   "step": "CS 撤稿（起点）",
+   "excluded": 0,
+   "remaining": 9675
+  },
+  {
+   "step": "ArticleType 含 Conference Abstract/Paper",
+   "excluded": 2646,
+   "remaining": 7029
+  },
+  {
+   "step": "ArticleType 含 Book Chapter/Reference Work 或 Preprint",
+   "excluded": 61,
+   "remaining": 6968
+  },
+  {
+   "step": "载体名疑似会议论文集",
+   "excluded": 36,
+   "remaining": 6932
+  }
+ ],
+ "headline": {
+  "cs_retractions": 9675,
+  "journal_retractions": 6932,
+  "conference_retractions": 2646,
+  "journal_unique_original_doi": 6875,
+  "journals": 552,
+  "publishers": 111,
+  "peak_year": 2023,
+  "peak_year_n": 2549,
+  "hindawi_share": 0.3755,
+  "share_since_2022": 0.8785,
+  "aigc_label_share": 0.3808,
+  "median_lag_days": 603.0
+ },
+ "yearly": [
+  {
+   "year": 2010,
+   "journal_by_notice_year": 4,
+   "journal_excl_hindawi": 4,
+   "journal_hindawi": 0,
+   "journal_unique_original_doi": 4,
+   "journal_in_batch": 0,
+   "journal_aigc_label": 0,
+   "conference_by_notice_year": 1122,
+   "journal_by_pub_year": 27
+  },
+  {
+   "year": 2011,
+   "journal_by_notice_year": 15,
+   "journal_excl_hindawi": 15,
+   "journal_hindawi": 0,
+   "journal_unique_original_doi": 14,
+   "journal_in_batch": 0,
+   "journal_aigc_label": 0,
+   "conference_by_notice_year": 176,
+   "journal_by_pub_year": 50
+  },
+  {
+   "year": 2012,
+   "journal_by_notice_year": 16,
+   "journal_excl_hindawi": 16,
+   "journal_hindawi": 0,
+   "journal_unique_original_doi": 16,
+   "journal_in_batch": 0,
+   "journal_aigc_label": 0,
+   "conference_by_notice_year": 14,
+   "journal_by_pub_year": 90
+  },
+  {
+   "year": 2013,
+   "journal_by_notice_year": 29,
+   "journal_excl_hindawi": 29,
+   "journal_hindawi": 0,
+   "journal_unique_original_doi": 27,
+   "journal_in_batch": 0,
+   "journal_aigc_label": 0,
+   "conference_by_notice_year": 7,
+   "journal_by_pub_year": 31
+  },
+  {
+   "year": 2014,
+   "journal_by_notice_year": 80,
+   "journal_excl_hindawi": 77,
+   "journal_hindawi": 3,
+   "journal_unique_original_doi": 80,
+   "journal_in_batch": 52,
+   "journal_aigc_label": 0,
+   "conference_by_notice_year": 11,
+   "journal_by_pub_year": 83
+  },
+  {
+   "year": 2015,
+   "journal_by_notice_year": 32,
+   "journal_excl_hindawi": 28,
+   "journal_hindawi": 4,
+   "journal_unique_original_doi": 30,
+   "journal_in_batch": 0,
+   "journal_aigc_label": 0,
+   "conference_by_notice_year": 14,
+   "journal_by_pub_year": 113
+  },
+  {
+   "year": 2016,
+   "journal_by_notice_year": 77,
+   "journal_excl_hindawi": 70,
+   "journal_hindawi": 7,
+   "journal_unique_original_doi": 77,
+   "journal_in_batch": 43,
+   "journal_aigc_label": 0,
+   "conference_by_notice_year": 5,
+   "journal_by_pub_year": 60
+  },
+  {
+   "year": 2017,
+   "journal_by_notice_year": 33,
+   "journal_excl_hindawi": 30,
+   "journal_hindawi": 3,
+   "journal_unique_original_doi": 32,
+   "journal_in_batch": 0,
+   "journal_aigc_label": 0,
+   "conference_by_notice_year": 4,
+   "journal_by_pub_year": 126
+  },
+  {
+   "year": 2018,
+   "journal_by_notice_year": 54,
+   "journal_excl_hindawi": 52,
+   "journal_hindawi": 2,
+   "journal_unique_original_doi": 52,
+   "journal_in_batch": 0,
+   "journal_aigc_label": 0,
+   "conference_by_notice_year": 81,
+   "journal_by_pub_year": 266
+  },
+  {
+   "year": 2019,
+   "journal_by_notice_year": 132,
+   "journal_excl_hindawi": 127,
+   "journal_hindawi": 5,
+   "journal_unique_original_doi": 110,
+   "journal_in_batch": 14,
+   "journal_aigc_label": 0,
+   "conference_by_notice_year": 6,
+   "journal_by_pub_year": 380
+  },
+  {
+   "year": 2020,
+   "journal_by_notice_year": 101,
+   "journal_excl_hindawi": 99,
+   "journal_hindawi": 2,
+   "journal_unique_original_doi": 95,
+   "journal_in_batch": 10,
+   "journal_aigc_label": 0,
+   "conference_by_notice_year": 69,
+   "journal_by_pub_year": 787
+  },
+  {
+   "year": 2021,
+   "journal_by_notice_year": 242,
+   "journal_excl_hindawi": 237,
+   "journal_hindawi": 5,
+   "journal_unique_original_doi": 225,
+   "journal_in_batch": 120,
+   "journal_aigc_label": 75,
+   "conference_by_notice_year": 66,
+   "journal_by_pub_year": 1302
+  },
+  {
+   "year": 2022,
+   "journal_by_notice_year": 987,
+   "journal_excl_hindawi": 942,
+   "journal_hindawi": 45,
+   "journal_unique_original_doi": 986,
+   "journal_in_batch": 455,
+   "journal_aigc_label": 1,
+   "conference_by_notice_year": 730,
+   "journal_by_pub_year": 2257
+  },
+  {
+   "year": 2023,
+   "journal_by_notice_year": 2549,
+   "journal_excl_hindawi": 287,
+   "journal_hindawi": 2262,
+   "journal_unique_original_doi": 2549,
+   "journal_in_batch": 1802,
+   "journal_aigc_label": 1493,
+   "conference_by_notice_year": 51,
+   "journal_by_pub_year": 799
+  },
+  {
+   "year": 2024,
+   "journal_by_notice_year": 1219,
+   "journal_excl_hindawi": 954,
+   "journal_hindawi": 265,
+   "journal_unique_original_doi": 1219,
+   "journal_in_batch": 798,
+   "journal_aigc_label": 290,
+   "conference_by_notice_year": 16,
+   "journal_by_pub_year": 390
+  },
+  {
+   "year": 2025,
+   "journal_by_notice_year": 920,
+   "journal_excl_hindawi": 920,
+   "journal_hindawi": 0,
+   "journal_unique_original_doi": 920,
+   "journal_in_batch": 751,
+   "journal_aigc_label": 695,
+   "conference_by_notice_year": 112,
+   "journal_by_pub_year": 117
+  },
+  {
+   "year": 2026,
+   "journal_by_notice_year": 415,
+   "journal_excl_hindawi": 415,
+   "journal_hindawi": 0,
+   "journal_unique_original_doi": 415,
+   "journal_in_batch": 181,
+   "journal_aigc_label": 86,
+   "conference_by_notice_year": 9,
+   "journal_by_pub_year": 6
+  }
+ ],
+ "publisher_by_year": {
+  "columns": [
+   "Hindawi",
+   "Springer - Nature Publishing Group",
+   "IOS Press (bought by Sage November 2023)",
+   "Springer",
+   "Elsevier",
+   "SAGE Publications",
+   "其他出版社"
+  ],
+  "rows": [
+   {
+    "notice_year": 2010,
+    "Hindawi": 0,
+    "Springer - Nature Publishing Group": 0,
+    "IOS Press (bought by Sage November 2023)": 0,
+    "Springer": 2,
+    "Elsevier": 1,
+    "SAGE Publications": 0,
+    "其他出版社": 1
+   },
+   {
+    "notice_year": 2011,
+    "Hindawi": 0,
+    "Springer - Nature Publishing Group": 0,
+    "IOS Press (bought by Sage November 2023)": 0,
+    "Springer": 4,
+    "Elsevier": 7,
+    "SAGE Publications": 0,
+    "其他出版社": 4
+   },
+   {
+    "notice_year": 2012,
+    "Hindawi": 0,
+    "Springer - Nature Publishing Group": 0,
+    "IOS Press (bought by Sage November 2023)": 0,
+    "Springer": 4,
+    "Elsevier": 6,
+    "SAGE Publications": 0,
+    "其他出版社": 6
+   },
+   {
+    "notice_year": 2013,
+    "Hindawi": 0,
+    "Springer - Nature Publishing Group": 0,
+    "IOS Press (bought by Sage November 2023)": 0,
+    "Springer": 11,
+    "Elsevier": 11,
+    "SAGE Publications": 0,
+    "其他出版社": 7
+   },
+   {
+    "notice_year": 2014,
+    "Hindawi": 3,
+    "Springer - Nature Publishing Group": 2,
+    "IOS Press (bought by Sage November 2023)": 0,
+    "Springer": 5,
+    "Elsevier": 9,
+    "SAGE Publications": 51,
+    "其他出版社": 10
+   },
+   {
+    "notice_year": 2015,
+    "Hindawi": 4,
+    "Springer - Nature Publishing Group": 0,
+    "IOS Press (bought by Sage November 2023)": 0,
+    "Springer": 6,
+    "Elsevier": 10,
+    "SAGE Publications": 2,
+    "其他出版社": 10
+   },
+   {
+    "notice_year": 2016,
+    "Hindawi": 7,
+    "Springer - Nature Publishing Group": 0,
+    "IOS Press (bought by Sage November 2023)": 1,
+    "Springer": 4,
+    "Elsevier": 6,
+    "SAGE Publications": 0,
+    "其他出版社": 59
+   },
+   {
+    "notice_year": 2017,
+    "Hindawi": 3,
+    "Springer - Nature Publishing Group": 1,
+    "IOS Press (bought by Sage November 2023)": 0,
+    "Springer": 8,
+    "Elsevier": 9,
+    "SAGE Publications": 1,
+    "其他出版社": 11
+   },
+   {
+    "notice_year": 2018,
+    "Hindawi": 2,
+    "Springer - Nature Publishing Group": 0,
+    "IOS Press (bought by Sage November 2023)": 0,
+    "Springer": 16,
+    "Elsevier": 16,
+    "SAGE Publications": 1,
+    "其他出版社": 19
+   },
+   {
+    "notice_year": 2019,
+    "Hindawi": 5,
+    "Springer - Nature Publishing Group": 0,
+    "IOS Press (bought by Sage November 2023)": 4,
+    "Springer": 49,
+    "Elsevier": 18,
+    "SAGE Publications": 0,
+    "其他出版社": 56
+   },
+   {
+    "notice_year": 2020,
+    "Hindawi": 2,
+    "Springer - Nature Publishing Group": 2,
+    "IOS Press (bought by Sage November 2023)": 0,
+    "Springer": 38,
+    "Elsevier": 31,
+    "SAGE Publications": 1,
+    "其他出版社": 27
+   },
+   {
+    "notice_year": 2021,
+    "Hindawi": 5,
+    "Springer - Nature Publishing Group": 1,
+    "IOS Press (bought by Sage November 2023)": 8,
+    "Springer": 41,
+    "Elsevier": 40,
+    "SAGE Publications": 29,
+    "其他出版社": 118
+   },
+   {
+    "notice_year": 2022,
+    "Hindawi": 45,
+    "Springer - Nature Publishing Group": 319,
+    "IOS Press (bought by Sage November 2023)": 2,
+    "Springer": 545,
+    "Elsevier": 14,
+    "SAGE Publications": 5,
+    "其他出版社": 57
+   },
+   {
+    "notice_year": 2023,
+    "Hindawi": 2262,
+    "Springer - Nature Publishing Group": 58,
+    "IOS Press (bought by Sage November 2023)": 1,
+    "Springer": 44,
+    "Elsevier": 79,
+    "SAGE Publications": 56,
+    "其他出版社": 49
+   },
+   {
+    "notice_year": 2024,
+    "Hindawi": 265,
+    "Springer - Nature Publishing Group": 517,
+    "IOS Press (bought by Sage November 2023)": 194,
+    "Springer": 43,
+    "Elsevier": 110,
+    "SAGE Publications": 2,
+    "其他出版社": 88
+   },
+   {
+    "notice_year": 2025,
+    "Hindawi": 0,
+    "Springer - Nature Publishing Group": 63,
+    "IOS Press (bought by Sage November 2023)": 720,
+    "Springer": 2,
+    "Elsevier": 14,
+    "SAGE Publications": 1,
+    "其他出版社": 120
+   },
+   {
+    "notice_year": 2026,
+    "Hindawi": 0,
+    "Springer - Nature Publishing Group": 207,
+    "IOS Press (bought by Sage November 2023)": 33,
+    "Springer": 0,
+    "Elsevier": 3,
+    "SAGE Publications": 1,
+    "其他出版社": 171
+   }
+  ]
+ },
+ "concentration": {
+  "journal": {
+   "n_entities": 552,
+   "top1_share": 0.133,
+   "top5_share": 0.3977,
+   "top10_share": 0.541,
+   "hhi": 0.0433,
+   "entities_for_50pct": 9,
+   "entities_for_80pct": 38,
+   "singletons": 340
+  },
+  "publisher": {
+   "n_entities": 111,
+   "top1_share": 0.3755,
+   "top5_share": 0.8598,
+   "top10_share": 0.9372,
+   "hhi": 0.2078,
+   "entities_for_50pct": 2,
+   "entities_for_80pct": 4,
+   "singletons": 62
+  },
+  "journal_lorenz": [
+   {
+    "rank": 1,
+    "cum_share": 0.133
+   },
+   {
+    "rank": 2,
+    "cum_share": 0.2098
+   },
+   {
+    "rank": 3,
+    "cum_share": 0.2839
+   },
+   {
+    "rank": 4,
+    "cum_share": 0.342
+   },
+   {
+    "rank": 5,
+    "cum_share": 0.3977
+   },
+   {
+    "rank": 6,
+    "cum_share": 0.4432
+   },
+   {
+    "rank": 7,
+    "cum_share": 0.4704
+   },
+   {
+    "rank": 8,
+    "cum_share": 0.4954
+   },
+   {
+    "rank": 9,
+    "cum_share": 0.5185
+   },
+   {
+    "rank": 10,
+    "cum_share": 0.541
+   },
+   {
+    "rank": 11,
+    "cum_share": 0.5619
+   },
+   {
+    "rank": 12,
+    "cum_share": 0.5809
+   },
+   {
+    "rank": 13,
+    "cum_share": 0.5964
+   },
+   {
+    "rank": 14,
+    "cum_share": 0.6114
+   },
+   {
+    "rank": 15,
+    "cum_share": 0.6264
+   },
+   {
+    "rank": 16,
+    "cum_share": 0.6391
+   },
+   {
+    "rank": 17,
+    "cum_share": 0.6508
+   },
+   {
+    "rank": 18,
+    "cum_share": 0.6616
+   },
+   {
+    "rank": 19,
+    "cum_share": 0.6715
+   },
+   {
+    "rank": 20,
+    "cum_share": 0.6809
+   },
+   {
+    "rank": 21,
+    "cum_share": 0.6903
+   },
+   {
+    "rank": 22,
+    "cum_share": 0.6994
+   },
+   {
+    "rank": 23,
+    "cum_share": 0.708
+   },
+   {
+    "rank": 24,
+    "cum_share": 0.7162
+   },
+   {
+    "rank": 25,
+    "cum_share": 0.7239
+   },
+   {
+    "rank": 26,
+    "cum_share": 0.7315
+   },
+   {
+    "rank": 27,
+    "cum_share": 0.7383
+   },
+   {
+    "rank": 28,
+    "cum_share": 0.745
+   },
+   {
+    "rank": 29,
+    "cum_share": 0.7514
+   },
+   {
+    "rank": 30,
+    "cum_share": 0.7579
+   },
+   {
+    "rank": 31,
+    "cum_share": 0.7643
+   },
+   {
+    "rank": 32,
+    "cum_share": 0.7703
+   },
+   {
+    "rank": 33,
+    "cum_share": 0.7764
+   },
+   {
+    "rank": 34,
+    "cum_share": 0.7825
+   },
+   {
+    "rank": 35,
+    "cum_share": 0.7885
+   },
+   {
+    "rank": 36,
+    "cum_share": 0.7943
+   },
+   {
+    "rank": 37,
+    "cum_share": 0.7992
+   },
+   {
+    "rank": 38,
+    "cum_share": 0.8041
+   },
+   {
+    "rank": 39,
+    "cum_share": 0.809
+   },
+   {
+    "rank": 40,
+    "cum_share": 0.8136
+   },
+   {
+    "rank": 41,
+    "cum_share": 0.8181
+   },
+   {
+    "rank": 42,
+    "cum_share": 0.8224
+   },
+   {
+    "rank": 43,
+    "cum_share": 0.8262
+   },
+   {
+    "rank": 44,
+    "cum_share": 0.8296
+   },
+   {
+    "rank": 45,
+    "cum_share": 0.8331
+   },
+   {
+    "rank": 46,
+    "cum_share": 0.8363
+   },
+   {
+    "rank": 47,
+    "cum_share": 0.8393
+   },
+   {
+    "rank": 48,
+    "cum_share": 0.8422
+   },
+   {
+    "rank": 49,
+    "cum_share": 0.8449
+   },
+   {
+    "rank": 50,
+    "cum_share": 0.8475
+   },
+   {
+    "rank": 51,
+    "cum_share": 0.8501
+   },
+   {
+    "rank": 52,
+    "cum_share": 0.8526
+   },
+   {
+    "rank": 53,
+    "cum_share": 0.855
+   },
+   {
+    "rank": 54,
+    "cum_share": 0.857
+   },
+   {
+    "rank": 55,
+    "cum_share": 0.8589
+   },
+   {
+    "rank": 56,
+    "cum_share": 0.8608
+   },
+   {
+    "rank": 57,
+    "cum_share": 0.8625
+   },
+   {
+    "rank": 58,
+    "cum_share": 0.8643
+   },
+   {
+    "rank": 59,
+    "cum_share": 0.866
+   },
+   {
+    "rank": 60,
+    "cum_share": 0.8677
+   },
+   {
+    "rank": 61,
+    "cum_share": 0.8694
+   },
+   {
+    "rank": 62,
+    "cum_share": 0.8709
+   },
+   {
+    "rank": 63,
+    "cum_share": 0.8723
+   },
+   {
+    "rank": 64,
+    "cum_share": 0.8738
+   },
+   {
+    "rank": 65,
+    "cum_share": 0.8752
+   },
+   {
+    "rank": 66,
+    "cum_share": 0.8767
+   },
+   {
+    "rank": 67,
+    "cum_share": 0.878
+   },
+   {
+    "rank": 68,
+    "cum_share": 0.8793
+   },
+   {
+    "rank": 69,
+    "cum_share": 0.8806
+   },
+   {
+    "rank": 70,
+    "cum_share": 0.8819
+   },
+   {
+    "rank": 71,
+    "cum_share": 0.883
+   },
+   {
+    "rank": 72,
+    "cum_share": 0.8842
+   },
+   {
+    "rank": 73,
+    "cum_share": 0.8853
+   },
+   {
+    "rank": 74,
+    "cum_share": 0.8865
+   },
+   {
+    "rank": 75,
+    "cum_share": 0.8876
+   },
+   {
+    "rank": 76,
+    "cum_share": 0.8886
+   },
+   {
+    "rank": 77,
+    "cum_share": 0.8896
+   },
+   {
+    "rank": 78,
+    "cum_share": 0.8907
+   },
+   {
+    "rank": 79,
+    "cum_share": 0.8917
+   },
+   {
+    "rank": 80,
+    "cum_share": 0.8927
+   },
+   {
+    "rank": 81,
+    "cum_share": 0.8937
+   },
+   {
+    "rank": 82,
+    "cum_share": 0.8947
+   },
+   {
+    "rank": 83,
+    "cum_share": 0.8957
+   },
+   {
+    "rank": 84,
+    "cum_share": 0.8967
+   },
+   {
+    "rank": 85,
+    "cum_share": 0.8977
+   },
+   {
+    "rank": 86,
+    "cum_share": 0.8987
+   },
+   {
+    "rank": 87,
+    "cum_share": 0.8996
+   },
+   {
+    "rank": 88,
+    "cum_share": 0.9005
+   },
+   {
+    "rank": 89,
+    "cum_share": 0.9013
+   },
+   {
+    "rank": 90,
+    "cum_share": 0.9022
+   },
+   {
+    "rank": 91,
+    "cum_share": 0.9031
+   },
+   {
+    "rank": 92,
+    "cum_share": 0.9039
+   },
+   {
+    "rank": 93,
+    "cum_share": 0.9048
+   },
+   {
+    "rank": 94,
+    "cum_share": 0.9055
+   },
+   {
+    "rank": 95,
+    "cum_share": 0.9062
+   },
+   {
+    "rank": 96,
+    "cum_share": 0.907
+   },
+   {
+    "rank": 97,
+    "cum_share": 0.9077
+   },
+   {
+    "rank": 98,
+    "cum_share": 0.9084
+   },
+   {
+    "rank": 99,
+    "cum_share": 0.9091
+   },
+   {
+    "rank": 100,
+    "cum_share": 0.9098
+   },
+   {
+    "rank": 101,
+    "cum_share": 0.9104
+   },
+   {
+    "rank": 102,
+    "cum_share": 0.911
+   },
+   {
+    "rank": 103,
+    "cum_share": 0.9116
+   },
+   {
+    "rank": 104,
+    "cum_share": 0.9121
+   },
+   {
+    "rank": 105,
+    "cum_share": 0.9127
+   },
+   {
+    "rank": 106,
+    "cum_share": 0.9133
+   },
+   {
+    "rank": 107,
+    "cum_share": 0.9139
+   },
+   {
+    "rank": 108,
+    "cum_share": 0.9145
+   },
+   {
+    "rank": 109,
+    "cum_share": 0.915
+   },
+   {
+    "rank": 110,
+    "cum_share": 0.9156
+   },
+   {
+    "rank": 111,
+    "cum_share": 0.9162
+   },
+   {
+    "rank": 112,
+    "cum_share": 0.9168
+   },
+   {
+    "rank": 113,
+    "cum_share": 0.9173
+   },
+   {
+    "rank": 114,
+    "cum_share": 0.9179
+   },
+   {
+    "rank": 115,
+    "cum_share": 0.9185
+   },
+   {
+    "rank": 116,
+    "cum_share": 0.9191
+   },
+   {
+    "rank": 117,
+    "cum_share": 0.9195
+   },
+   {
+    "rank": 118,
+    "cum_share": 0.9199
+   },
+   {
+    "rank": 119,
+    "cum_share": 0.9204
+   },
+   {
+    "rank": 120,
+    "cum_share": 0.9208
+   },
+   {
+    "rank": 121,
+    "cum_share": 0.9212
+   },
+   {
+    "rank": 122,
+    "cum_share": 0.9217
+   },
+   {
+    "rank": 123,
+    "cum_share": 0.9221
+   },
+   {
+    "rank": 124,
+    "cum_share": 0.9225
+   },
+   {
+    "rank": 125,
+    "cum_share": 0.923
+   },
+   {
+    "rank": 126,
+    "cum_share": 0.9234
+   },
+   {
+    "rank": 127,
+    "cum_share": 0.9238
+   },
+   {
+    "rank": 128,
+    "cum_share": 0.9243
+   },
+   {
+    "rank": 129,
+    "cum_share": 0.9247
+   },
+   {
+    "rank": 130,
+    "cum_share": 0.9251
+   },
+   {
+    "rank": 131,
+    "cum_share": 0.9256
+   },
+   {
+    "rank": 132,
+    "cum_share": 0.926
+   },
+   {
+    "rank": 133,
+    "cum_share": 0.9264
+   },
+   {
+    "rank": 134,
+    "cum_share": 0.9269
+   },
+   {
+    "rank": 135,
+    "cum_share": 0.9273
+   },
+   {
+    "rank": 136,
+    "cum_share": 0.9277
+   },
+   {
+    "rank": 137,
+    "cum_share": 0.9282
+   },
+   {
+    "rank": 138,
+    "cum_share": 0.9286
+   },
+   {
+    "rank": 139,
+    "cum_share": 0.929
+   },
+   {
+    "rank": 140,
+    "cum_share": 0.9295
+   },
+   {
+    "rank": 141,
+    "cum_share": 0.9299
+   },
+   {
+    "rank": 142,
+    "cum_share": 0.9303
+   },
+   {
+    "rank": 143,
+    "cum_share": 0.9308
+   },
+   {
+    "rank": 144,
+    "cum_share": 0.9312
+   },
+   {
+    "rank": 145,
+    "cum_share": 0.9316
+   },
+   {
+    "rank": 146,
+    "cum_share": 0.9319
+   },
+   {
+    "rank": 147,
+    "cum_share": 0.9322
+   },
+   {
+    "rank": 148,
+    "cum_share": 0.9325
+   },
+   {
+    "rank": 149,
+    "cum_share": 0.9328
+   },
+   {
+    "rank": 150,
+    "cum_share": 0.9331
+   },
+   {
+    "rank": 151,
+    "cum_share": 0.9334
+   },
+   {
+    "rank": 152,
+    "cum_share": 0.9336
+   },
+   {
+    "rank": 153,
+    "cum_share": 0.9339
+   },
+   {
+    "rank": 154,
+    "cum_share": 0.9342
+   },
+   {
+    "rank": 155,
+    "cum_share": 0.9345
+   },
+   {
+    "rank": 156,
+    "cum_share": 0.9348
+   },
+   {
+    "rank": 157,
+    "cum_share": 0.9351
+   },
+   {
+    "rank": 158,
+    "cum_share": 0.9354
+   },
+   {
+    "rank": 159,
+    "cum_share": 0.9357
+   },
+   {
+    "rank": 160,
+    "cum_share": 0.9359
+   },
+   {
+    "rank": 161,
+    "cum_share": 0.9362
+   },
+   {
+    "rank": 162,
+    "cum_share": 0.9365
+   },
+   {
+    "rank": 163,
+    "cum_share": 0.9368
+   },
+   {
+    "rank": 164,
+    "cum_share": 0.9371
+   },
+   {
+    "rank": 165,
+    "cum_share": 0.9374
+   },
+   {
+    "rank": 166,
+    "cum_share": 0.9377
+   },
+   {
+    "rank": 167,
+    "cum_share": 0.938
+   },
+   {
+    "rank": 168,
+    "cum_share": 0.9383
+   },
+   {
+    "rank": 169,
+    "cum_share": 0.9385
+   },
+   {
+    "rank": 170,
+    "cum_share": 0.9388
+   },
+   {
+    "rank": 171,
+    "cum_share": 0.9391
+   },
+   {
+    "rank": 172,
+    "cum_share": 0.9394
+   },
+   {
+    "rank": 173,
+    "cum_share": 0.9397
+   },
+   {
+    "rank": 174,
+    "cum_share": 0.94
+   },
+   {
+    "rank": 175,
+    "cum_share": 0.9403
+   },
+   {
+    "rank": 176,
+    "cum_share": 0.9406
+   },
+   {
+    "rank": 177,
+    "cum_share": 0.9409
+   },
+   {
+    "rank": 178,
+    "cum_share": 0.9411
+   },
+   {
+    "rank": 179,
+    "cum_share": 0.9414
+   },
+   {
+    "rank": 180,
+    "cum_share": 0.9417
+   },
+   {
+    "rank": 181,
+    "cum_share": 0.942
+   },
+   {
+    "rank": 182,
+    "cum_share": 0.9423
+   },
+   {
+    "rank": 183,
+    "cum_share": 0.9426
+   },
+   {
+    "rank": 184,
+    "cum_share": 0.9429
+   },
+   {
+    "rank": 185,
+    "cum_share": 0.9432
+   },
+   {
+    "rank": 186,
+    "cum_share": 0.9435
+   },
+   {
+    "rank": 187,
+    "cum_share": 0.9437
+   },
+   {
+    "rank": 188,
+    "cum_share": 0.944
+   },
+   {
+    "rank": 189,
+    "cum_share": 0.9443
+   },
+   {
+    "rank": 190,
+    "cum_share": 0.9446
+   },
+   {
+    "rank": 191,
+    "cum_share": 0.9449
+   },
+   {
+    "rank": 192,
+    "cum_share": 0.9452
+   },
+   {
+    "rank": 193,
+    "cum_share": 0.9455
+   },
+   {
+    "rank": 194,
+    "cum_share": 0.9458
+   },
+   {
+    "rank": 195,
+    "cum_share": 0.946
+   },
+   {
+    "rank": 196,
+    "cum_share": 0.9463
+   },
+   {
+    "rank": 197,
+    "cum_share": 0.9466
+   },
+   {
+    "rank": 198,
+    "cum_share": 0.9469
+   },
+   {
+    "rank": 199,
+    "cum_share": 0.9472
+   },
+   {
+    "rank": 200,
+    "cum_share": 0.9475
+   },
+   {
+    "rank": 201,
+    "cum_share": 0.9478
+   },
+   {
+    "rank": 202,
+    "cum_share": 0.9481
+   },
+   {
+    "rank": 203,
+    "cum_share": 0.9484
+   },
+   {
+    "rank": 204,
+    "cum_share": 0.9486
+   },
+   {
+    "rank": 205,
+    "cum_share": 0.9489
+   },
+   {
+    "rank": 206,
+    "cum_share": 0.9492
+   },
+   {
+    "rank": 207,
+    "cum_share": 0.9495
+   },
+   {
+    "rank": 208,
+    "cum_share": 0.9498
+   },
+   {
+    "rank": 209,
+    "cum_share": 0.9501
+   },
+   {
+    "rank": 210,
+    "cum_share": 0.9504
+   },
+   {
+    "rank": 211,
+    "cum_share": 0.9507
+   },
+   {
+    "rank": 212,
+    "cum_share": 0.951
+   },
+   {
+    "rank": 213,
+    "cum_share": 0.9511
+   },
+   {
+    "rank": 214,
+    "cum_share": 0.9512
+   },
+   {
+    "rank": 215,
+    "cum_share": 0.9514
+   },
+   {
+    "rank": 216,
+    "cum_share": 0.9515
+   },
+   {
+    "rank": 217,
+    "cum_share": 0.9517
+   },
+   {
+    "rank": 218,
+    "cum_share": 0.9518
+   },
+   {
+    "rank": 219,
+    "cum_share": 0.952
+   },
+   {
+    "rank": 220,
+    "cum_share": 0.9521
+   },
+   {
+    "rank": 221,
+    "cum_share": 0.9523
+   },
+   {
+    "rank": 222,
+    "cum_share": 0.9524
+   },
+   {
+    "rank": 223,
+    "cum_share": 0.9525
+   },
+   {
+    "rank": 224,
+    "cum_share": 0.9527
+   },
+   {
+    "rank": 225,
+    "cum_share": 0.9528
+   },
+   {
+    "rank": 226,
+    "cum_share": 0.953
+   },
+   {
+    "rank": 227,
+    "cum_share": 0.9531
+   },
+   {
+    "rank": 228,
+    "cum_share": 0.9533
+   },
+   {
+    "rank": 229,
+    "cum_share": 0.9534
+   },
+   {
+    "rank": 230,
+    "cum_share": 0.9535
+   },
+   {
+    "rank": 231,
+    "cum_share": 0.9537
+   },
+   {
+    "rank": 232,
+    "cum_share": 0.9538
+   },
+   {
+    "rank": 233,
+    "cum_share": 0.954
+   },
+   {
+    "rank": 234,
+    "cum_share": 0.9541
+   },
+   {
+    "rank": 235,
+    "cum_share": 0.9543
+   },
+   {
+    "rank": 236,
+    "cum_share": 0.9544
+   },
+   {
+    "rank": 237,
+    "cum_share": 0.9546
+   },
+   {
+    "rank": 238,
+    "cum_share": 0.9547
+   },
+   {
+    "rank": 239,
+    "cum_share": 0.9548
+   },
+   {
+    "rank": 240,
+    "cum_share": 0.955
+   },
+   {
+    "rank": 241,
+    "cum_share": 0.9551
+   },
+   {
+    "rank": 242,
+    "cum_share": 0.9553
+   },
+   {
+    "rank": 243,
+    "cum_share": 0.9554
+   },
+   {
+    "rank": 244,
+    "cum_share": 0.9556
+   },
+   {
+    "rank": 245,
+    "cum_share": 0.9557
+   },
+   {
+    "rank": 246,
+    "cum_share": 0.9559
+   },
+   {
+    "rank": 247,
+    "cum_share": 0.956
+   },
+   {
+    "rank": 248,
+    "cum_share": 0.9561
+   },
+   {
+    "rank": 249,
+    "cum_share": 0.9563
+   },
+   {
+    "rank": 250,
+    "cum_share": 0.9564
+   },
+   {
+    "rank": 251,
+    "cum_share": 0.9566
+   },
+   {
+    "rank": 252,
+    "cum_share": 0.9567
+   },
+   {
+    "rank": 253,
+    "cum_share": 0.9569
+   },
+   {
+    "rank": 254,
+    "cum_share": 0.957
+   },
+   {
+    "rank": 255,
+    "cum_share": 0.9572
+   },
+   {
+    "rank": 256,
+    "cum_share": 0.9573
+   },
+   {
+    "rank": 257,
+    "cum_share": 0.9574
+   },
+   {
+    "rank": 258,
+    "cum_share": 0.9576
+   },
+   {
+    "rank": 259,
+    "cum_share": 0.9577
+   },
+   {
+    "rank": 260,
+    "cum_share": 0.9579
+   },
+   {
+    "rank": 261,
+    "cum_share": 0.958
+   },
+   {
+    "rank": 262,
+    "cum_share": 0.9582
+   },
+   {
+    "rank": 263,
+    "cum_share": 0.9583
+   },
+   {
+    "rank": 264,
+    "cum_share": 0.9585
+   },
+   {
+    "rank": 265,
+    "cum_share": 0.9586
+   },
+   {
+    "rank": 266,
+    "cum_share": 0.9587
+   },
+   {
+    "rank": 267,
+    "cum_share": 0.9589
+   },
+   {
+    "rank": 268,
+    "cum_share": 0.959
+   },
+   {
+    "rank": 269,
+    "cum_share": 0.9592
+   },
+   {
+    "rank": 270,
+    "cum_share": 0.9593
+   },
+   {
+    "rank": 271,
+    "cum_share": 0.9595
+   },
+   {
+    "rank": 272,
+    "cum_share": 0.9596
+   },
+   {
+    "rank": 273,
+    "cum_share": 0.9598
+   },
+   {
+    "rank": 274,
+    "cum_share": 0.9599
+   },
+   {
+    "rank": 275,
+    "cum_share": 0.96
+   },
+   {
+    "rank": 276,
+    "cum_share": 0.9602
+   },
+   {
+    "rank": 277,
+    "cum_share": 0.9603
+   },
+   {
+    "rank": 278,
+    "cum_share": 0.9605
+   },
+   {
+    "rank": 279,
+    "cum_share": 0.9606
+   },
+   {
+    "rank": 280,
+    "cum_share": 0.9608
+   },
+   {
+    "rank": 281,
+    "cum_share": 0.9609
+   },
+   {
+    "rank": 282,
+    "cum_share": 0.9611
+   },
+   {
+    "rank": 283,
+    "cum_share": 0.9612
+   },
+   {
+    "rank": 284,
+    "cum_share": 0.9613
+   },
+   {
+    "rank": 285,
+    "cum_share": 0.9615
+   },
+   {
+    "rank": 286,
+    "cum_share": 0.9616
+   },
+   {
+    "rank": 287,
+    "cum_share": 0.9618
+   },
+   {
+    "rank": 288,
+    "cum_share": 0.9619
+   },
+   {
+    "rank": 289,
+    "cum_share": 0.9621
+   },
+   {
+    "rank": 290,
+    "cum_share": 0.9622
+   },
+   {
+    "rank": 291,
+    "cum_share": 0.9623
+   },
+   {
+    "rank": 292,
+    "cum_share": 0.9625
+   },
+   {
+    "rank": 293,
+    "cum_share": 0.9626
+   },
+   {
+    "rank": 294,
+    "cum_share": 0.9628
+   },
+   {
+    "rank": 295,
+    "cum_share": 0.9629
+   },
+   {
+    "rank": 296,
+    "cum_share": 0.9631
+   },
+   {
+    "rank": 297,
+    "cum_share": 0.9632
+   },
+   {
+    "rank": 298,
+    "cum_share": 0.9634
+   },
+   {
+    "rank": 299,
+    "cum_share": 0.9635
+   },
+   {
+    "rank": 300,
+    "cum_share": 0.9636
+   },
+   {
+    "rank": 301,
+    "cum_share": 0.9638
+   },
+   {
+    "rank": 302,
+    "cum_share": 0.9639
+   },
+   {
+    "rank": 303,
+    "cum_share": 0.9641
+   },
+   {
+    "rank": 304,
+    "cum_share": 0.9642
+   },
+   {
+    "rank": 305,
+    "cum_share": 0.9644
+   },
+   {
+    "rank": 306,
+    "cum_share": 0.9645
+   },
+   {
+    "rank": 307,
+    "cum_share": 0.9647
+   },
+   {
+    "rank": 308,
+    "cum_share": 0.9648
+   },
+   {
+    "rank": 309,
+    "cum_share": 0.9649
+   },
+   {
+    "rank": 310,
+    "cum_share": 0.9651
+   },
+   {
+    "rank": 311,
+    "cum_share": 0.9652
+   },
+   {
+    "rank": 312,
+    "cum_share": 0.9654
+   },
+   {
+    "rank": 313,
+    "cum_share": 0.9655
+   },
+   {
+    "rank": 314,
+    "cum_share": 0.9657
+   },
+   {
+    "rank": 315,
+    "cum_share": 0.9658
+   },
+   {
+    "rank": 316,
+    "cum_share": 0.966
+   },
+   {
+    "rank": 317,
+    "cum_share": 0.9661
+   },
+   {
+    "rank": 318,
+    "cum_share": 0.9662
+   },
+   {
+    "rank": 319,
+    "cum_share": 0.9664
+   },
+   {
+    "rank": 320,
+    "cum_share": 0.9665
+   },
+   {
+    "rank": 321,
+    "cum_share": 0.9667
+   },
+   {
+    "rank": 322,
+    "cum_share": 0.9668
+   },
+   {
+    "rank": 323,
+    "cum_share": 0.967
+   },
+   {
+    "rank": 324,
+    "cum_share": 0.9671
+   },
+   {
+    "rank": 325,
+    "cum_share": 0.9673
+   },
+   {
+    "rank": 326,
+    "cum_share": 0.9674
+   },
+   {
+    "rank": 327,
+    "cum_share": 0.9675
+   },
+   {
+    "rank": 328,
+    "cum_share": 0.9677
+   },
+   {
+    "rank": 329,
+    "cum_share": 0.9678
+   },
+   {
+    "rank": 330,
+    "cum_share": 0.968
+   },
+   {
+    "rank": 331,
+    "cum_share": 0.9681
+   },
+   {
+    "rank": 332,
+    "cum_share": 0.9683
+   },
+   {
+    "rank": 333,
+    "cum_share": 0.9684
+   },
+   {
+    "rank": 334,
+    "cum_share": 0.9686
+   },
+   {
+    "rank": 335,
+    "cum_share": 0.9687
+   },
+   {
+    "rank": 336,
+    "cum_share": 0.9688
+   },
+   {
+    "rank": 337,
+    "cum_share": 0.969
+   },
+   {
+    "rank": 338,
+    "cum_share": 0.9691
+   },
+   {
+    "rank": 339,
+    "cum_share": 0.9693
+   },
+   {
+    "rank": 340,
+    "cum_share": 0.9694
+   },
+   {
+    "rank": 341,
+    "cum_share": 0.9696
+   },
+   {
+    "rank": 342,
+    "cum_share": 0.9697
+   },
+   {
+    "rank": 343,
+    "cum_share": 0.9698
+   },
+   {
+    "rank": 344,
+    "cum_share": 0.97
+   },
+   {
+    "rank": 345,
+    "cum_share": 0.9701
+   },
+   {
+    "rank": 346,
+    "cum_share": 0.9703
+   },
+   {
+    "rank": 347,
+    "cum_share": 0.9704
+   },
+   {
+    "rank": 348,
+    "cum_share": 0.9706
+   },
+   {
+    "rank": 349,
+    "cum_share": 0.9707
+   },
+   {
+    "rank": 350,
+    "cum_share": 0.9709
+   },
+   {
+    "rank": 351,
+    "cum_share": 0.971
+   },
+   {
+    "rank": 352,
+    "cum_share": 0.9711
+   },
+   {
+    "rank": 353,
+    "cum_share": 0.9713
+   },
+   {
+    "rank": 354,
+    "cum_share": 0.9714
+   },
+   {
+    "rank": 355,
+    "cum_share": 0.9716
+   },
+   {
+    "rank": 356,
+    "cum_share": 0.9717
+   },
+   {
+    "rank": 357,
+    "cum_share": 0.9719
+   },
+   {
+    "rank": 358,
+    "cum_share": 0.972
+   },
+   {
+    "rank": 359,
+    "cum_share": 0.9722
+   },
+   {
+    "rank": 360,
+    "cum_share": 0.9723
+   },
+   {
+    "rank": 361,
+    "cum_share": 0.9724
+   },
+   {
+    "rank": 362,
+    "cum_share": 0.9726
+   },
+   {
+    "rank": 363,
+    "cum_share": 0.9727
+   },
+   {
+    "rank": 364,
+    "cum_share": 0.9729
+   },
+   {
+    "rank": 365,
+    "cum_share": 0.973
+   },
+   {
+    "rank": 366,
+    "cum_share": 0.9732
+   },
+   {
+    "rank": 367,
+    "cum_share": 0.9733
+   },
+   {
+    "rank": 368,
+    "cum_share": 0.9735
+   },
+   {
+    "rank": 369,
+    "cum_share": 0.9736
+   },
+   {
+    "rank": 370,
+    "cum_share": 0.9737
+   },
+   {
+    "rank": 371,
+    "cum_share": 0.9739
+   },
+   {
+    "rank": 372,
+    "cum_share": 0.974
+   },
+   {
+    "rank": 373,
+    "cum_share": 0.9742
+   },
+   {
+    "rank": 374,
+    "cum_share": 0.9743
+   },
+   {
+    "rank": 375,
+    "cum_share": 0.9745
+   },
+   {
+    "rank": 376,
+    "cum_share": 0.9746
+   },
+   {
+    "rank": 377,
+    "cum_share": 0.9748
+   },
+   {
+    "rank": 378,
+    "cum_share": 0.9749
+   },
+   {
+    "rank": 379,
+    "cum_share": 0.975
+   },
+   {
+    "rank": 380,
+    "cum_share": 0.9752
+   },
+   {
+    "rank": 381,
+    "cum_share": 0.9753
+   },
+   {
+    "rank": 382,
+    "cum_share": 0.9755
+   },
+   {
+    "rank": 383,
+    "cum_share": 0.9756
+   },
+   {
+    "rank": 384,
+    "cum_share": 0.9758
+   },
+   {
+    "rank": 385,
+    "cum_share": 0.9759
+   },
+   {
+    "rank": 386,
+    "cum_share": 0.9761
+   },
+   {
+    "rank": 387,
+    "cum_share": 0.9762
+   },
+   {
+    "rank": 388,
+    "cum_share": 0.9763
+   },
+   {
+    "rank": 389,
+    "cum_share": 0.9765
+   },
+   {
+    "rank": 390,
+    "cum_share": 0.9766
+   },
+   {
+    "rank": 391,
+    "cum_share": 0.9768
+   },
+   {
+    "rank": 392,
+    "cum_share": 0.9769
+   },
+   {
+    "rank": 393,
+    "cum_share": 0.9771
+   },
+   {
+    "rank": 394,
+    "cum_share": 0.9772
+   },
+   {
+    "rank": 395,
+    "cum_share": 0.9774
+   },
+   {
+    "rank": 396,
+    "cum_share": 0.9775
+   },
+   {
+    "rank": 397,
+    "cum_share": 0.9776
+   },
+   {
+    "rank": 398,
+    "cum_share": 0.9778
+   },
+   {
+    "rank": 399,
+    "cum_share": 0.9779
+   },
+   {
+    "rank": 400,
+    "cum_share": 0.9781
+   },
+   {
+    "rank": 401,
+    "cum_share": 0.9782
+   },
+   {
+    "rank": 402,
+    "cum_share": 0.9784
+   },
+   {
+    "rank": 403,
+    "cum_share": 0.9785
+   },
+   {
+    "rank": 404,
+    "cum_share": 0.9786
+   },
+   {
+    "rank": 405,
+    "cum_share": 0.9788
+   },
+   {
+    "rank": 406,
+    "cum_share": 0.9789
+   },
+   {
+    "rank": 407,
+    "cum_share": 0.9791
+   },
+   {
+    "rank": 408,
+    "cum_share": 0.9792
+   },
+   {
+    "rank": 409,
+    "cum_share": 0.9794
+   },
+   {
+    "rank": 410,
+    "cum_share": 0.9795
+   },
+   {
+    "rank": 411,
+    "cum_share": 0.9797
+   },
+   {
+    "rank": 412,
+    "cum_share": 0.9798
+   },
+   {
+    "rank": 413,
+    "cum_share": 0.9799
+   },
+   {
+    "rank": 414,
+    "cum_share": 0.9801
+   },
+   {
+    "rank": 415,
+    "cum_share": 0.9802
+   },
+   {
+    "rank": 416,
+    "cum_share": 0.9804
+   },
+   {
+    "rank": 417,
+    "cum_share": 0.9805
+   },
+   {
+    "rank": 418,
+    "cum_share": 0.9807
+   },
+   {
+    "rank": 419,
+    "cum_share": 0.9808
+   },
+   {
+    "rank": 420,
+    "cum_share": 0.981
+   },
+   {
+    "rank": 421,
+    "cum_share": 0.9811
+   },
+   {
+    "rank": 422,
+    "cum_share": 0.9812
+   },
+   {
+    "rank": 423,
+    "cum_share": 0.9814
+   },
+   {
+    "rank": 424,
+    "cum_share": 0.9815
+   },
+   {
+    "rank": 425,
+    "cum_share": 0.9817
+   },
+   {
+    "rank": 426,
+    "cum_share": 0.9818
+   },
+   {
+    "rank": 427,
+    "cum_share": 0.982
+   },
+   {
+    "rank": 428,
+    "cum_share": 0.9821
+   },
+   {
+    "rank": 429,
+    "cum_share": 0.9823
+   },
+   {
+    "rank": 430,
+    "cum_share": 0.9824
+   },
+   {
+    "rank": 431,
+    "cum_share": 0.9825
+   },
+   {
+    "rank": 432,
+    "cum_share": 0.9827
+   },
+   {
+    "rank": 433,
+    "cum_share": 0.9828
+   },
+   {
+    "rank": 434,
+    "cum_share": 0.983
+   },
+   {
+    "rank": 435,
+    "cum_share": 0.9831
+   },
+   {
+    "rank": 436,
+    "cum_share": 0.9833
+   },
+   {
+    "rank": 437,
+    "cum_share": 0.9834
+   },
+   {
+    "rank": 438,
+    "cum_share": 0.9836
+   },
+   {
+    "rank": 439,
+    "cum_share": 0.9837
+   },
+   {
+    "rank": 440,
+    "cum_share": 0.9838
+   },
+   {
+    "rank": 441,
+    "cum_share": 0.984
+   },
+   {
+    "rank": 442,
+    "cum_share": 0.9841
+   },
+   {
+    "rank": 443,
+    "cum_share": 0.9843
+   },
+   {
+    "rank": 444,
+    "cum_share": 0.9844
+   },
+   {
+    "rank": 445,
+    "cum_share": 0.9846
+   },
+   {
+    "rank": 446,
+    "cum_share": 0.9847
+   },
+   {
+    "rank": 447,
+    "cum_share": 0.9849
+   },
+   {
+    "rank": 448,
+    "cum_share": 0.985
+   },
+   {
+    "rank": 449,
+    "cum_share": 0.9851
+   },
+   {
+    "rank": 450,
+    "cum_share": 0.9853
+   },
+   {
+    "rank": 451,
+    "cum_share": 0.9854
+   },
+   {
+    "rank": 452,
+    "cum_share": 0.9856
+   },
+   {
+    "rank": 453,
+    "cum_share": 0.9857
+   },
+   {
+    "rank": 454,
+    "cum_share": 0.9859
+   },
+   {
+    "rank": 455,
+    "cum_share": 0.986
+   },
+   {
+    "rank": 456,
+    "cum_share": 0.9862
+   },
+   {
+    "rank": 457,
+    "cum_share": 0.9863
+   },
+   {
+    "rank": 458,
+    "cum_share": 0.9864
+   },
+   {
+    "rank": 459,
+    "cum_share": 0.9866
+   },
+   {
+    "rank": 460,
+    "cum_share": 0.9867
+   },
+   {
+    "rank": 461,
+    "cum_share": 0.9869
+   },
+   {
+    "rank": 462,
+    "cum_share": 0.987
+   },
+   {
+    "rank": 463,
+    "cum_share": 0.9872
+   },
+   {
+    "rank": 464,
+    "cum_share": 0.9873
+   },
+   {
+    "rank": 465,
+    "cum_share": 0.9874
+   },
+   {
+    "rank": 466,
+    "cum_share": 0.9876
+   },
+   {
+    "rank": 467,
+    "cum_share": 0.9877
+   },
+   {
+    "rank": 468,
+    "cum_share": 0.9879
+   },
+   {
+    "rank": 469,
+    "cum_share": 0.988
+   },
+   {
+    "rank": 470,
+    "cum_share": 0.9882
+   },
+   {
+    "rank": 471,
+    "cum_share": 0.9883
+   },
+   {
+    "rank": 472,
+    "cum_share": 0.9885
+   },
+   {
+    "rank": 473,
+    "cum_share": 0.9886
+   },
+   {
+    "rank": 474,
+    "cum_share": 0.9887
+   },
+   {
+    "rank": 475,
+    "cum_share": 0.9889
+   },
+   {
+    "rank": 476,
+    "cum_share": 0.989
+   },
+   {
+    "rank": 477,
+    "cum_share": 0.9892
+   },
+   {
+    "rank": 478,
+    "cum_share": 0.9893
+   },
+   {
+    "rank": 479,
+    "cum_share": 0.9895
+   },
+   {
+    "rank": 480,
+    "cum_share": 0.9896
+   },
+   {
+    "rank": 481,
+    "cum_share": 0.9898
+   },
+   {
+    "rank": 482,
+    "cum_share": 0.9899
+   },
+   {
+    "rank": 483,
+    "cum_share": 0.99
+   },
+   {
+    "rank": 484,
+    "cum_share": 0.9902
+   },
+   {
+    "rank": 485,
+    "cum_share": 0.9903
+   },
+   {
+    "rank": 486,
+    "cum_share": 0.9905
+   },
+   {
+    "rank": 487,
+    "cum_share": 0.9906
+   },
+   {
+    "rank": 488,
+    "cum_share": 0.9908
+   },
+   {
+    "rank": 489,
+    "cum_share": 0.9909
+   },
+   {
+    "rank": 490,
+    "cum_share": 0.9911
+   },
+   {
+    "rank": 491,
+    "cum_share": 0.9912
+   },
+   {
+    "rank": 492,
+    "cum_share": 0.9913
+   },
+   {
+    "rank": 493,
+    "cum_share": 0.9915
+   },
+   {
+    "rank": 494,
+    "cum_share": 0.9916
+   },
+   {
+    "rank": 495,
+    "cum_share": 0.9918
+   },
+   {
+    "rank": 496,
+    "cum_share": 0.9919
+   },
+   {
+    "rank": 497,
+    "cum_share": 0.9921
+   },
+   {
+    "rank": 498,
+    "cum_share": 0.9922
+   },
+   {
+    "rank": 499,
+    "cum_share": 0.9924
+   },
+   {
+    "rank": 500,
+    "cum_share": 0.9925
+   },
+   {
+    "rank": 501,
+    "cum_share": 0.9926
+   },
+   {
+    "rank": 502,
+    "cum_share": 0.9928
+   },
+   {
+    "rank": 503,
+    "cum_share": 0.9929
+   },
+   {
+    "rank": 504,
+    "cum_share": 0.9931
+   },
+   {
+    "rank": 505,
+    "cum_share": 0.9932
+   },
+   {
+    "rank": 506,
+    "cum_share": 0.9934
+   },
+   {
+    "rank": 507,
+    "cum_share": 0.9935
+   },
+   {
+    "rank": 508,
+    "cum_share": 0.9937
+   },
+   {
+    "rank": 509,
+    "cum_share": 0.9938
+   },
+   {
+    "rank": 510,
+    "cum_share": 0.9939
+   },
+   {
+    "rank": 511,
+    "cum_share": 0.9941
+   },
+   {
+    "rank": 512,
+    "cum_share": 0.9942
+   },
+   {
+    "rank": 513,
+    "cum_share": 0.9944
+   },
+   {
+    "rank": 514,
+    "cum_share": 0.9945
+   },
+   {
+    "rank": 515,
+    "cum_share": 0.9947
+   },
+   {
+    "rank": 516,
+    "cum_share": 0.9948
+   },
+   {
+    "rank": 517,
+    "cum_share": 0.995
+   },
+   {
+    "rank": 518,
+    "cum_share": 0.9951
+   },
+   {
+    "rank": 519,
+    "cum_share": 0.9952
+   },
+   {
+    "rank": 520,
+    "cum_share": 0.9954
+   },
+   {
+    "rank": 521,
+    "cum_share": 0.9955
+   },
+   {
+    "rank": 522,
+    "cum_share": 0.9957
+   },
+   {
+    "rank": 523,
+    "cum_share": 0.9958
+   },
+   {
+    "rank": 524,
+    "cum_share": 0.996
+   },
+   {
+    "rank": 525,
+    "cum_share": 0.9961
+   },
+   {
+    "rank": 526,
+    "cum_share": 0.9962
+   },
+   {
+    "rank": 527,
+    "cum_share": 0.9964
+   },
+   {
+    "rank": 528,
+    "cum_share": 0.9965
+   },
+   {
+    "rank": 529,
+    "cum_share": 0.9967
+   },
+   {
+    "rank": 530,
+    "cum_share": 0.9968
+   },
+   {
+    "rank": 531,
+    "cum_share": 0.997
+   },
+   {
+    "rank": 532,
+    "cum_share": 0.9971
+   },
+   {
+    "rank": 533,
+    "cum_share": 0.9973
+   },
+   {
+    "rank": 534,
+    "cum_share": 0.9974
+   },
+   {
+    "rank": 535,
+    "cum_share": 0.9975
+   },
+   {
+    "rank": 536,
+    "cum_share": 0.9977
+   },
+   {
+    "rank": 537,
+    "cum_share": 0.9978
+   },
+   {
+    "rank": 538,
+    "cum_share": 0.998
+   },
+   {
+    "rank": 539,
+    "cum_share": 0.9981
+   },
+   {
+    "rank": 540,
+    "cum_share": 0.9983
+   },
+   {
+    "rank": 541,
+    "cum_share": 0.9984
+   },
+   {
+    "rank": 542,
+    "cum_share": 0.9986
+   },
+   {
+    "rank": 543,
+    "cum_share": 0.9987
+   },
+   {
+    "rank": 544,
+    "cum_share": 0.9988
+   },
+   {
+    "rank": 545,
+    "cum_share": 0.999
+   },
+   {
+    "rank": 546,
+    "cum_share": 0.9991
+   },
+   {
+    "rank": 547,
+    "cum_share": 0.9993
+   },
+   {
+    "rank": 548,
+    "cum_share": 0.9994
+   },
+   {
+    "rank": 549,
+    "cum_share": 0.9996
+   },
+   {
+    "rank": 550,
+    "cum_share": 0.9997
+   },
+   {
+    "rank": 551,
+    "cum_share": 0.9999
+   },
+   {
+    "rank": 552,
+    "cum_share": 1.0
+   }
+  ]
+ },
+ "top_journals": [
+  {
+   "journal": "Journal of Intelligent & Fuzzy Systems",
+   "publisher": "IOS Press (bought by Sage November 2023)",
+   "n": 922,
+   "unique_original_doi": 922,
+   "first_notice_year": 2016,
+   "last_notice_year": 2026,
+   "peak_notice_year": 2025,
+   "batch_share": 0.983,
+   "largest_batch": 433,
+   "median_lag_days": 693.5,
+   "aigc_label_share": 0.735,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "Soft Computing",
+   "publisher": "Springer - Nature Publishing Group",
+   "n": 532,
+   "unique_original_doi": 532,
+   "first_notice_year": 2020,
+   "last_notice_year": 2026,
+   "peak_notice_year": 2024,
+   "batch_share": 0.485,
+   "largest_batch": 41,
+   "median_lag_days": 990.0,
+   "aigc_label_share": 0.0,
+   "top_reason": "Unreliable Results and/or Conclusions"
+  },
+  {
+   "journal": "Security and Communication Networks",
+   "publisher": "Hindawi",
+   "n": 514,
+   "unique_original_doi": 514,
+   "first_notice_year": 2022,
+   "last_notice_year": 2024,
+   "peak_notice_year": 2023,
+   "batch_share": 0.872,
+   "largest_batch": 128,
+   "median_lag_days": 531.5,
+   "aigc_label_share": 0.469,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "Journal of Ambient Intelligence and Humanized Computing",
+   "publisher": "Springer - Nature Publishing Group",
+   "n": 403,
+   "unique_original_doi": 403,
+   "first_notice_year": 2021,
+   "last_notice_year": 2026,
+   "peak_notice_year": 2022,
+   "batch_share": 0.769,
+   "largest_batch": 46,
+   "median_lag_days": 726.0,
+   "aigc_label_share": 0.002,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "Computational Intelligence and Neuroscience",
+   "publisher": "Hindawi",
+   "n": 386,
+   "unique_original_doi": 386,
+   "first_notice_year": 2018,
+   "last_notice_year": 2024,
+   "peak_notice_year": 2023,
+   "batch_share": 0.896,
+   "largest_batch": 100,
+   "median_lag_days": 480.0,
+   "aigc_label_share": 0.464,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "Wireless Communications and Mobile Computing",
+   "publisher": "Hindawi",
+   "n": 315,
+   "unique_original_doi": 315,
+   "first_notice_year": 2019,
+   "last_notice_year": 2025,
+   "peak_notice_year": 2023,
+   "batch_share": 0.819,
+   "largest_batch": 36,
+   "median_lag_days": 448.0,
+   "aigc_label_share": 0.66,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "Microprocessors and Microsystems",
+   "publisher": "Elsevier",
+   "n": 189,
+   "unique_original_doi": 189,
+   "first_notice_year": 2017,
+   "last_notice_year": 2024,
+   "peak_notice_year": 2024,
+   "batch_share": 0.862,
+   "largest_batch": 49,
+   "median_lag_days": 1125.0,
+   "aigc_label_share": 0.228,
+   "top_reason": "Error by Journal/Publisher"
+  },
+  {
+   "journal": "Journal of Sensors",
+   "publisher": "Hindawi",
+   "n": 173,
+   "unique_original_doi": 173,
+   "first_notice_year": 2022,
+   "last_notice_year": 2024,
+   "peak_notice_year": 2023,
+   "batch_share": 0.844,
+   "largest_batch": 51,
+   "median_lag_days": 479.0,
+   "aigc_label_share": 0.786,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "Multimedia Tools and Applications",
+   "publisher": "Springer - Nature Publishing Group",
+   "n": 160,
+   "unique_original_doi": 160,
+   "first_notice_year": 2018,
+   "last_notice_year": 2026,
+   "peak_notice_year": 2026,
+   "batch_share": 0.575,
+   "largest_batch": 20,
+   "median_lag_days": 1144.0,
+   "aigc_label_share": 0.256,
+   "top_reason": "Compromised Peer Review"
+  },
+  {
+   "journal": "Mobile Information Systems",
+   "publisher": "Hindawi",
+   "n": 156,
+   "unique_original_doi": 156,
+   "first_notice_year": 2019,
+   "last_notice_year": 2023,
+   "peak_notice_year": 2023,
+   "batch_share": 0.808,
+   "largest_batch": 25,
+   "median_lag_days": 417.5,
+   "aigc_label_share": 0.865,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "Journal of Healthcare Engineering",
+   "publisher": "Hindawi",
+   "n": 145,
+   "unique_original_doi": 145,
+   "first_notice_year": 2021,
+   "last_notice_year": 2026,
+   "peak_notice_year": 2023,
+   "batch_share": 0.71,
+   "largest_batch": 60,
+   "median_lag_days": 688.0,
+   "aigc_label_share": 0.676,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "Mathematical Problems in Engineering",
+   "publisher": "Hindawi",
+   "n": 132,
+   "unique_original_doi": 132,
+   "first_notice_year": 2014,
+   "last_notice_year": 2023,
+   "peak_notice_year": 2023,
+   "batch_share": 0.705,
+   "largest_batch": 26,
+   "median_lag_days": 511.0,
+   "aigc_label_share": 0.902,
+   "top_reason": "Unreliable Results and/or Conclusions"
+  },
+  {
+   "journal": "PLoS One",
+   "publisher": "PLoS",
+   "n": 107,
+   "unique_original_doi": 107,
+   "first_notice_year": 2019,
+   "last_notice_year": 2026,
+   "peak_notice_year": 2025,
+   "batch_share": 0.0,
+   "largest_batch": 9,
+   "median_lag_days": 845.0,
+   "aigc_label_share": 0.093,
+   "top_reason": "Concerns/Issues about Peer Review"
+  },
+  {
+   "journal": "Journal of Testing and Evaluation (JOTE)",
+   "publisher": "ASTM International",
+   "n": 104,
+   "unique_original_doi": 104,
+   "first_notice_year": 2025,
+   "last_notice_year": 2026,
+   "peak_notice_year": 2026,
+   "batch_share": 0.933,
+   "largest_batch": 78,
+   "median_lag_days": 1001.0,
+   "aigc_label_share": 0.0,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "Complexity",
+   "publisher": "Hindawi",
+   "n": 104,
+   "unique_original_doi": 104,
+   "first_notice_year": 2020,
+   "last_notice_year": 2024,
+   "peak_notice_year": 2024,
+   "batch_share": 0.894,
+   "largest_batch": 53,
+   "median_lag_days": 982.0,
+   "aigc_label_share": 0.99,
+   "top_reason": "Computer-Aided Content or Computer-Generated Content"
+  },
+  {
+   "journal": "Cluster Computing",
+   "publisher": "Springer",
+   "n": 88,
+   "unique_original_doi": 88,
+   "first_notice_year": 2018,
+   "last_notice_year": 2024,
+   "peak_notice_year": 2022,
+   "batch_share": 0.591,
+   "largest_batch": 28,
+   "median_lag_days": 1755.0,
+   "aigc_label_share": 0.0,
+   "top_reason": "Unreliable Results and/or Conclusions"
+  },
+  {
+   "journal": "Optical and Quantum Electronics",
+   "publisher": "Springer - Nature Publishing Group",
+   "n": 81,
+   "unique_original_doi": 81,
+   "first_notice_year": 2024,
+   "last_notice_year": 2026,
+   "peak_notice_year": 2024,
+   "batch_share": 0.444,
+   "largest_batch": 25,
+   "median_lag_days": 265.0,
+   "aigc_label_share": 0.21,
+   "top_reason": "Unreliable Results and/or Conclusions"
+  },
+  {
+   "journal": "Advances in Multimedia",
+   "publisher": "Hindawi",
+   "n": 75,
+   "unique_original_doi": 75,
+   "first_notice_year": 2020,
+   "last_notice_year": 2024,
+   "peak_notice_year": 2023,
+   "batch_share": 0.773,
+   "largest_batch": 41,
+   "median_lag_days": 457.0,
+   "aigc_label_share": 0.72,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "Computational and Mathematical Methods in Medicine",
+   "publisher": "Hindawi",
+   "n": 69,
+   "unique_original_doi": 69,
+   "first_notice_year": 2014,
+   "last_notice_year": 2023,
+   "peak_notice_year": 2023,
+   "batch_share": 0.681,
+   "largest_batch": 16,
+   "median_lag_days": 645.0,
+   "aigc_label_share": 0.333,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "Annals of Operations Research",
+   "publisher": "Springer - Nature Publishing Group",
+   "n": 65,
+   "unique_original_doi": 65,
+   "first_notice_year": 2018,
+   "last_notice_year": 2024,
+   "peak_notice_year": 2023,
+   "batch_share": 0.154,
+   "largest_batch": 10,
+   "median_lag_days": 560.0,
+   "aigc_label_share": 0.0,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "Neural Computing and Applications",
+   "publisher": "Springer",
+   "n": 65,
+   "unique_original_doi": 65,
+   "first_notice_year": 2011,
+   "last_notice_year": 2024,
+   "peak_notice_year": 2022,
+   "batch_share": 0.0,
+   "largest_batch": 7,
+   "median_lag_days": 1439.0,
+   "aigc_label_share": 0.0,
+   "top_reason": "Compromised Peer Review"
+  },
+  {
+   "journal": "Wireless Personal Communications",
+   "publisher": "Springer",
+   "n": 63,
+   "unique_original_doi": 63,
+   "first_notice_year": 2016,
+   "last_notice_year": 2026,
+   "peak_notice_year": 2022,
+   "batch_share": 0.476,
+   "largest_batch": 16,
+   "median_lag_days": 734.0,
+   "aigc_label_share": 0.0,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "Journal of Environmental and Public Health",
+   "publisher": "Hindawi",
+   "n": 60,
+   "unique_original_doi": 60,
+   "first_notice_year": 2023,
+   "last_notice_year": 2024,
+   "peak_notice_year": 2023,
+   "batch_share": 0.483,
+   "largest_batch": 16,
+   "median_lag_days": 381.0,
+   "aigc_label_share": 0.6,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "Journal of Mathematics",
+   "publisher": "Hindawi",
+   "n": 57,
+   "unique_original_doi": 57,
+   "first_notice_year": 2022,
+   "last_notice_year": 2024,
+   "peak_notice_year": 2023,
+   "batch_share": 0.737,
+   "largest_batch": 22,
+   "median_lag_days": 712.0,
+   "aigc_label_share": 0.982,
+   "top_reason": "Concerns/Issues about Peer Review"
+  },
+  {
+   "journal": "Journal of Vibration and Control",
+   "publisher": "SAGE Publications",
+   "n": 53,
+   "unique_original_doi": 53,
+   "first_notice_year": 2014,
+   "last_notice_year": 2015,
+   "peak_notice_year": 2014,
+   "batch_share": 0.981,
+   "largest_batch": 52,
+   "median_lag_days": 761.0,
+   "aigc_label_share": 0.0,
+   "top_reason": "Compromised Peer Review"
+  },
+  {
+   "journal": "Arabian Journal for Science and Engineering",
+   "publisher": "Springer",
+   "n": 53,
+   "unique_original_doi": 53,
+   "first_notice_year": 2022,
+   "last_notice_year": 2022,
+   "peak_notice_year": 2022,
+   "batch_share": 0.264,
+   "largest_batch": 14,
+   "median_lag_days": 448.0,
+   "aigc_label_share": 0.0,
+   "top_reason": "Compromised Peer Review"
+  },
+  {
+   "journal": "The Open Automation and Control Systems Journal",
+   "publisher": "Bentham Open",
+   "n": 47,
+   "unique_original_doi": 47,
+   "first_notice_year": 2016,
+   "last_notice_year": 2018,
+   "peak_notice_year": 2016,
+   "batch_share": 0.915,
+   "largest_batch": 43,
+   "median_lag_days": 473.0,
+   "aigc_label_share": 0.0,
+   "top_reason": "Compromised Peer Review"
+  },
+  {
+   "journal": "Applied Bionics and Biomechanics",
+   "publisher": "Hindawi",
+   "n": 46,
+   "unique_original_doi": 46,
+   "first_notice_year": 2022,
+   "last_notice_year": 2024,
+   "peak_notice_year": 2023,
+   "batch_share": 0.478,
+   "largest_batch": 11,
+   "median_lag_days": 567.5,
+   "aigc_label_share": 0.739,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "Scientific Programming",
+   "publisher": "Hindawi",
+   "n": 45,
+   "unique_original_doi": 45,
+   "first_notice_year": 2022,
+   "last_notice_year": 2023,
+   "peak_notice_year": 2023,
+   "batch_share": 0.4,
+   "largest_batch": 18,
+   "median_lag_days": 582.0,
+   "aigc_label_share": 0.978,
+   "top_reason": "Concerns/Issues about Data"
+  },
+  {
+   "journal": "The International Journal of Electrical Engineering & Education",
+   "publisher": "SAGE Publications",
+   "n": 45,
+   "unique_original_doi": 45,
+   "first_notice_year": 2023,
+   "last_notice_year": 2023,
+   "peak_notice_year": 2023,
+   "batch_share": 1.0,
+   "largest_batch": 45,
+   "median_lag_days": 1227.0,
+   "aigc_label_share": 0.0,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "Applied Mechanics and Materials",
+   "publisher": "Trans Tech Publications Ltd",
+   "n": 44,
+   "unique_original_doi": 44,
+   "first_notice_year": 2021,
+   "last_notice_year": 2021,
+   "peak_notice_year": 2021,
+   "batch_share": 0.977,
+   "largest_batch": 43,
+   "median_lag_days": 2415.0,
+   "aigc_label_share": 0.977,
+   "top_reason": "Date of Article and/or Notice Unknown"
+  },
+  {
+   "journal": "BioMed Research International",
+   "publisher": "Hindawi",
+   "n": 42,
+   "unique_original_doi": 42,
+   "first_notice_year": 2017,
+   "last_notice_year": 2024,
+   "peak_notice_year": 2024,
+   "batch_share": 0.429,
+   "largest_batch": 18,
+   "median_lag_days": 552.5,
+   "aigc_label_share": 0.571,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "Heliyon",
+   "publisher": "Elsevier - Cell Press",
+   "n": 42,
+   "unique_original_doi": 42,
+   "first_notice_year": 2024,
+   "last_notice_year": 2026,
+   "peak_notice_year": 2025,
+   "batch_share": 0.0,
+   "largest_batch": 4,
+   "median_lag_days": 558.5,
+   "aigc_label_share": 0.167,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "International Transactions on Electrical Energy Systems",
+   "publisher": "Hindawi",
+   "n": 42,
+   "unique_original_doi": 42,
+   "first_notice_year": 2023,
+   "last_notice_year": 2024,
+   "peak_notice_year": 2023,
+   "batch_share": 0.333,
+   "largest_batch": 14,
+   "median_lag_days": 403.0,
+   "aigc_label_share": 0.5,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "Journal of Electrical and Computer Engineering",
+   "publisher": "Hindawi",
+   "n": 42,
+   "unique_original_doi": 42,
+   "first_notice_year": 2022,
+   "last_notice_year": 2024,
+   "peak_notice_year": 2023,
+   "batch_share": 0.81,
+   "largest_batch": 21,
+   "median_lag_days": 574.0,
+   "aigc_label_share": 0.952,
+   "top_reason": "Concerns/Issues about Peer Review"
+  },
+  {
+   "journal": "Journal of Computational Methods in Sciences and Engineering",
+   "publisher": "IOS Press (bought by Sage November 2023)",
+   "n": 40,
+   "unique_original_doi": 40,
+   "first_notice_year": 2025,
+   "last_notice_year": 2025,
+   "peak_notice_year": 2025,
+   "batch_share": 1.0,
+   "largest_batch": 40,
+   "median_lag_days": 98.5,
+   "aigc_label_share": 0.0,
+   "top_reason": "Compromised Peer Review"
+  },
+  {
+   "journal": "The Journal of Supercomputing",
+   "publisher": "Springer",
+   "n": 34,
+   "unique_original_doi": 34,
+   "first_notice_year": 2022,
+   "last_notice_year": 2024,
+   "peak_notice_year": 2024,
+   "batch_share": 0.0,
+   "largest_batch": 6,
+   "median_lag_days": 1223.5,
+   "aigc_label_share": 0.0,
+   "top_reason": "Unreliable Results and/or Conclusions"
+  },
+  {
+   "journal": "Scientific Reports",
+   "publisher": "Springer - Nature Publishing Group",
+   "n": 34,
+   "unique_original_doi": 34,
+   "first_notice_year": 2015,
+   "last_notice_year": 2026,
+   "peak_notice_year": 2026,
+   "batch_share": 0.0,
+   "largest_batch": 3,
+   "median_lag_days": 378.5,
+   "aigc_label_share": 0.265,
+   "top_reason": "Investigation by Journal/Publisher"
+  },
+  {
+   "journal": "Information Systems and e-Business Management",
+   "publisher": "Springer",
+   "n": 34,
+   "unique_original_doi": 34,
+   "first_notice_year": 2022,
+   "last_notice_year": 2022,
+   "peak_notice_year": 2022,
+   "batch_share": 0.0,
+   "largest_batch": 5,
+   "median_lag_days": 1402.5,
+   "aigc_label_share": 0.0,
+   "top_reason": "Concerns/Issues about Referencing/Attributions"
+  },
+  {
+   "journal": "Journal of Function Spaces",
+   "publisher": "Hindawi",
+   "n": 32,
+   "unique_original_doi": 32,
+   "first_notice_year": 2023,
+   "last_notice_year": 2024,
+   "peak_notice_year": 2023,
+   "batch_share": 0.312,
+   "largest_batch": 10,
+   "median_lag_days": 447.5,
+   "aigc_label_share": 0.656,
+   "top_reason": "Investigation by Journal/Publisher"
+  }
+ ],
+ "top_publishers": [
+  {
+   "publisher": "Hindawi",
+   "n": 2603
+  },
+  {
+   "publisher": "Springer - Nature Publishing Group",
+   "n": 1171
+  },
+  {
+   "publisher": "IOS Press (bought by Sage November 2023)",
+   "n": 963
+  },
+  {
+   "publisher": "Springer",
+   "n": 824
+  },
+  {
+   "publisher": "Elsevier",
+   "n": 399
+  },
+  {
+   "publisher": "SAGE Publications",
+   "n": 150
+  },
+  {
+   "publisher": "Wiley",
+   "n": 111
+  },
+  {
+   "publisher": "PLoS",
+   "n": 108
+  },
+  {
+   "publisher": "ASTM International",
+   "n": 104
+  },
+  {
+   "publisher": "Taylor and Francis",
+   "n": 64
+  },
+  {
+   "publisher": "Trans Tech Publications Ltd",
+   "n": 57
+  },
+  {
+   "publisher": "Bentham Open",
+   "n": 50
+  },
+  {
+   "publisher": "Elsevier - Cell Press",
+   "n": 42
+  },
+  {
+   "publisher": "MDPI",
+   "n": 36
+  },
+  {
+   "publisher": "IEEE: Institute of Electrical and Electronics Engineers",
+   "n": 30
+  }
+ ],
+ "batches": {
+  "threshold": 10,
+  "n_batches": 144,
+  "records_in_batches": 4226,
+  "share_in_batches": 0.6096,
+  "largest_batch": {
+   "journal": "Journal of Intelligent & Fuzzy Systems",
+   "publisher": "IOS Press (bought by Sage November 2023)",
+   "notice_date": "2025-04-17",
+   "n": 433
+  },
+  "size_distribution": [
+   {
+    "bucket": "1",
+    "events": 1101,
+    "records": 1101
+   },
+   {
+    "bucket": "2–9",
+    "events": 430,
+    "records": 1605
+   },
+   {
+    "bucket": "10–49",
+    "events": 132,
+    "records": 2662
+   },
+   {
+    "bucket": "50–99",
+    "events": 7,
+    "records": 462
+   },
+   {
+    "bucket": "≥100",
+    "events": 5,
+    "records": 1102
+   }
+  ]
+ },
+ "top_batches": [
+  {
+   "journal": "Journal of Intelligent & Fuzzy Systems",
+   "publisher": "IOS Press (bought by Sage November 2023)",
+   "notice_date": "2025-04-17",
+   "n": 433
+  },
+  {
+   "journal": "Journal of Intelligent & Fuzzy Systems",
+   "publisher": "IOS Press (bought by Sage November 2023)",
+   "notice_date": "2025-01-15",
+   "n": 247
+  },
+  {
+   "journal": "Journal of Intelligent & Fuzzy Systems",
+   "publisher": "IOS Press (bought by Sage November 2023)",
+   "notice_date": "2024-08-23",
+   "n": 194
+  },
+  {
+   "journal": "Security and Communication Networks",
+   "publisher": "Hindawi",
+   "notice_date": "2023-12-29",
+   "n": 128
+  },
+  {
+   "journal": "Computational Intelligence and Neuroscience",
+   "publisher": "Hindawi",
+   "notice_date": "2023-07-26",
+   "n": 100
+  },
+  {
+   "journal": "Security and Communication Networks",
+   "publisher": "Hindawi",
+   "notice_date": "2023-12-06",
+   "n": 89
+  },
+  {
+   "journal": "Security and Communication Networks",
+   "publisher": "Hindawi",
+   "notice_date": "2024-01-09",
+   "n": 79
+  },
+  {
+   "journal": "Journal of Testing and Evaluation (JOTE)",
+   "publisher": "ASTM International",
+   "notice_date": "2026-01-26",
+   "n": 78
+  },
+  {
+   "journal": "Journal of Healthcare Engineering",
+   "publisher": "Hindawi",
+   "notice_date": "2023-10-11",
+   "n": 60
+  },
+  {
+   "journal": "Complexity",
+   "publisher": "Hindawi",
+   "notice_date": "2024-01-24",
+   "n": 53
+  },
+  {
+   "journal": "Journal of Vibration and Control",
+   "publisher": "SAGE Publications",
+   "notice_date": "2014-07-01",
+   "n": 52
+  },
+  {
+   "journal": "Journal of Sensors",
+   "publisher": "Hindawi",
+   "notice_date": "2023-12-20",
+   "n": 51
+  },
+  {
+   "journal": "Microprocessors and Microsystems",
+   "publisher": "Elsevier",
+   "notice_date": "2024-02-09",
+   "n": 49
+  },
+  {
+   "journal": "Journal of Ambient Intelligence and Humanized Computing",
+   "publisher": "Springer",
+   "notice_date": "2022-07-04",
+   "n": 46
+  },
+  {
+   "journal": "The International Journal of Electrical Engineering & Education",
+   "publisher": "SAGE Publications",
+   "notice_date": "2023-11-01",
+   "n": 45
+  },
+  {
+   "journal": "Microprocessors and Microsystems",
+   "publisher": "Elsevier",
+   "notice_date": "2024-03-14",
+   "n": 44
+  },
+  {
+   "journal": "Computational Intelligence and Neuroscience",
+   "publisher": "Hindawi",
+   "notice_date": "2023-12-13",
+   "n": 44
+  },
+  {
+   "journal": "Computational Intelligence and Neuroscience",
+   "publisher": "Hindawi",
+   "notice_date": "2023-07-12",
+   "n": 44
+  },
+  {
+   "journal": "Journal of Ambient Intelligence and Humanized Computing",
+   "publisher": "Springer - Nature Publishing Group",
+   "notice_date": "2022-10-30",
+   "n": 43
+  },
+  {
+   "journal": "Applied Mechanics and Materials",
+   "publisher": "Trans Tech Publications Ltd",
+   "notice_date": "2021-01-01",
+   "n": 43
+  }
+ ],
+ "reasons": [
+  {
+   "reason": "Investigation by Journal/Publisher",
+   "journal_n": 5885.0,
+   "journal_share": 0.849,
+   "journal_excl_hindawi_share": 0.7655,
+   "conference_share": 0.5692
+  },
+  {
+   "reason": "Unreliable Results and/or Conclusions",
+   "journal_n": 4826.0,
+   "journal_share": 0.6962,
+   "journal_excl_hindawi_share": 0.5366,
+   "conference_share": 0.0299
+  },
+  {
+   "reason": "Concerns/Issues about Referencing/Attributions",
+   "journal_n": 3865.0,
+   "journal_share": 0.5576,
+   "journal_excl_hindawi_share": 0.4375,
+   "conference_share": 0.1648
+  },
+  {
+   "reason": "Compromised Peer Review",
+   "journal_n": 3546.0,
+   "journal_share": 0.5115,
+   "journal_excl_hindawi_share": 0.6951,
+   "conference_share": 0.2831
+  },
+  {
+   "reason": "Investigation by Third Party",
+   "journal_n": 3499.0,
+   "journal_share": 0.5048,
+   "journal_excl_hindawi_share": 0.2566,
+   "conference_share": 0.1232
+  },
+  {
+   "reason": "Concerns/Issues about Peer Review",
+   "journal_n": 2812.0,
+   "journal_share": 0.4057,
+   "journal_excl_hindawi_share": 0.1786,
+   "conference_share": 0.0166
+  },
+  {
+   "reason": "Paper Mill",
+   "journal_n": 2674.0,
+   "journal_share": 0.3857,
+   "journal_excl_hindawi_share": 0.1702,
+   "conference_share": 0.1459
+  },
+  {
+   "reason": "Computer-Aided Content or Computer-Generated Content",
+   "journal_n": 2640.0,
+   "journal_share": 0.3808,
+   "journal_excl_hindawi_share": 0.2176,
+   "conference_share": 0.1349
+  },
+  {
+   "reason": "Concerns/Issues about Data",
+   "journal_n": 2079.0,
+   "journal_share": 0.2999,
+   "journal_excl_hindawi_share": 0.0245,
+   "conference_share": 0.0034
+  },
+  {
+   "reason": "Concerns/Issues about Results and/or Conclusions",
+   "journal_n": 1996.0,
+   "journal_share": 0.2879,
+   "journal_excl_hindawi_share": 0.0402,
+   "conference_share": 0.0019
+  },
+  {
+   "reason": "Rogue Editor",
+   "journal_n": 1676.0,
+   "journal_share": 0.2418,
+   "journal_excl_hindawi_share": 0.3872,
+   "conference_share": 0.0034
+  },
+  {
+   "reason": "Concerns/Issues about Third Party Involvement",
+   "journal_n": 866.0,
+   "journal_share": 0.1249,
+   "journal_excl_hindawi_share": 0.2,
+   "conference_share": 0.0011
+  },
+  {
+   "reason": "Author Unresponsive",
+   "journal_n": 707.0,
+   "journal_share": 0.102,
+   "journal_excl_hindawi_share": 0.1633,
+   "conference_share": 0.0083
+  },
+  {
+   "reason": "Objections by Author(s)",
+   "journal_n": 538.0,
+   "journal_share": 0.0776,
+   "journal_excl_hindawi_share": 0.1183,
+   "conference_share": 0.0045
+  },
+  {
+   "reason": "Concerns/Issues about Article",
+   "journal_n": 519.0,
+   "journal_share": 0.0749,
+   "journal_excl_hindawi_share": 0.1199,
+   "conference_share": 0.0136
+  },
+  {
+   "reason": "Concerns/Issues about Authorship/Affiliation",
+   "journal_n": 400.0,
+   "journal_share": 0.0577,
+   "journal_excl_hindawi_share": 0.0922,
+   "conference_share": 0.0034
+  },
+  {
+   "reason": "Date of Article and/or Notice Unknown",
+   "journal_n": 289.0,
+   "journal_share": 0.0417,
+   "journal_excl_hindawi_share": 0.0668,
+   "conference_share": 0.1852
+  },
+  {
+   "reason": "Plagiarism of/in Article",
+   "journal_n": 252.0,
+   "journal_share": 0.0364,
+   "journal_excl_hindawi_share": 0.0561,
+   "conference_share": 0.0397
+  },
+  {
+   "reason": "Lack of IRB/IACUC Approval and/or Compliance",
+   "journal_n": 244.0,
+   "journal_share": 0.0352,
+   "journal_excl_hindawi_share": 0.0023,
+   "conference_share": 0.0004
+  },
+  {
+   "reason": "Upgrade/Update of Prior Notice(s)",
+   "journal_n": 242.0,
+   "journal_share": 0.0349,
+   "journal_excl_hindawi_share": 0.0559,
+   "conference_share": 0.0004
+  },
+  {
+   "reason": "Euphemisms for Plagiarism",
+   "journal_n": 230.0,
+   "journal_share": 0.0332,
+   "journal_excl_hindawi_share": 0.0506,
+   "conference_share": 0.0472
+  },
+  {
+   "reason": "Informed/Patient Consent - None/Withdrawn",
+   "journal_n": 221.0,
+   "journal_share": 0.0319,
+   "journal_excl_hindawi_share": 0.0018,
+   "conference_share": 0.0
+  },
+  {
+   "reason": "Error by Journal/Publisher",
+   "journal_n": 218.0,
+   "journal_share": 0.0314,
+   "journal_excl_hindawi_share": 0.0501,
+   "conference_share": 0.0034
+  },
+  {
+   "reason": "Duplication of/in Article",
+   "journal_n": 175.0,
+   "journal_share": 0.0252,
+   "journal_excl_hindawi_share": 0.0388,
+   "conference_share": 0.0064
+  },
+  {
+   "reason": "Notice - Limited or No Information",
+   "journal_n": 111.0,
+   "journal_share": 0.016,
+   "journal_excl_hindawi_share": 0.0256,
+   "conference_share": 0.5476
+  }
+ ],
+ "themes_by_year": {
+  "columns": [
+   "T1 论文工厂/计算机生成内容",
+   "T2 同行评审操纵/第三方介入",
+   "T3 引用/参考文献问题",
+   "T4 抄袭/重复发表",
+   "T5 数据/方法/结果有效性",
+   "T6 署名/伦理/合规",
+   "T7 声明信息不足"
+  ],
+  "rows": [
+   {
+    "notice_year": 2018,
+    "T1 论文工厂/计算机生成内容": 0.0,
+    "T2 同行评审操纵/第三方介入": 0.1667,
+    "T3 引用/参考文献问题": 0.0185,
+    "T4 抄袭/重复发表": 0.537,
+    "T5 数据/方法/结果有效性": 0.1481,
+    "T6 署名/伦理/合规": 0.0741,
+    "T7 声明信息不足": 0.1481
+   },
+   {
+    "notice_year": 2019,
+    "T1 论文工厂/计算机生成内容": 0.0,
+    "T2 同行评审操纵/第三方介入": 0.2955,
+    "T3 引用/参考文献问题": 0.0152,
+    "T4 抄袭/重复发表": 0.6439,
+    "T5 数据/方法/结果有效性": 0.1364,
+    "T6 署名/伦理/合规": 0.2727,
+    "T7 声明信息不足": 0.0606
+   },
+   {
+    "notice_year": 2020,
+    "T1 论文工厂/计算机生成内容": 0.0099,
+    "T2 同行评审操纵/第三方介入": 0.297,
+    "T3 引用/参考文献问题": 0.0396,
+    "T4 抄袭/重复发表": 0.6832,
+    "T5 数据/方法/结果有效性": 0.1782,
+    "T6 署名/伦理/合规": 0.2277,
+    "T7 声明信息不足": 0.0396
+   },
+   {
+    "notice_year": 2021,
+    "T1 论文工厂/计算机生成内容": 0.4008,
+    "T2 同行评审操纵/第三方介入": 0.376,
+    "T3 引用/参考文献问题": 0.1322,
+    "T4 抄袭/重复发表": 0.2231,
+    "T5 数据/方法/结果有效性": 0.1942,
+    "T6 署名/伦理/合规": 0.0661,
+    "T7 声明信息不足": 0.2603
+   },
+   {
+    "notice_year": 2022,
+    "T1 论文工厂/计算机生成内容": 0.002,
+    "T2 同行评审操纵/第三方介入": 0.9311,
+    "T3 引用/参考文献问题": 0.2148,
+    "T4 抄袭/重复发表": 0.0324,
+    "T5 数据/方法/结果有效性": 0.5674,
+    "T6 署名/伦理/合规": 0.0081,
+    "T7 声明信息不足": 0.0051
+   },
+   {
+    "notice_year": 2023,
+    "T1 论文工厂/计算机生成内容": 0.7905,
+    "T2 同行评审操纵/第三方介入": 0.98,
+    "T3 引用/参考文献问题": 0.7066,
+    "T4 抄袭/重复发表": 0.0239,
+    "T5 数据/方法/结果有效性": 0.947,
+    "T6 署名/伦理/合规": 0.0894,
+    "T7 声明信息不足": 0.0004
+   },
+   {
+    "notice_year": 2024,
+    "T1 论文工厂/计算机生成内容": 0.2609,
+    "T2 同行评审操纵/第三方介入": 0.9442,
+    "T3 引用/参考文献问题": 0.6571,
+    "T4 抄袭/重复发表": 0.0254,
+    "T5 数据/方法/结果有效性": 0.7268,
+    "T6 署名/伦理/合规": 0.0574,
+    "T7 声明信息不足": 0.0041
+   },
+   {
+    "notice_year": 2025,
+    "T1 论文工厂/计算机生成内容": 0.7587,
+    "T2 同行评审操纵/第三方介入": 0.9043,
+    "T3 引用/参考文献问题": 0.8315,
+    "T4 抄袭/重复发表": 0.0293,
+    "T5 数据/方法/结果有效性": 0.8935,
+    "T6 署名/伦理/合规": 0.313,
+    "T7 声明信息不足": 0.0011
+   },
+   {
+    "notice_year": 2026,
+    "T1 论文工厂/计算机生成内容": 0.2072,
+    "T2 同行评审操纵/第三方介入": 0.7301,
+    "T3 引用/参考文献问题": 0.453,
+    "T4 抄袭/重复发表": 0.0265,
+    "T5 数据/方法/结果有效性": 0.5084,
+    "T6 署名/伦理/合规": 0.106,
+    "T7 声明信息不足": 0.0
+   }
+  ]
+ },
+ "countries": [
+  {
+   "country": "China",
+   "n_records": 4414,
+   "share_of_records": 0.6368
+  },
+  {
+   "country": "India",
+   "n_records": 1634,
+   "share_of_records": 0.2357
+  },
+  {
+   "country": "Saudi Arabia",
+   "n_records": 364,
+   "share_of_records": 0.0525
+  },
+  {
+   "country": "United States",
+   "n_records": 212,
+   "share_of_records": 0.0306
+  },
+  {
+   "country": "Pakistan",
+   "n_records": 205,
+   "share_of_records": 0.0296
+  },
+  {
+   "country": "South Korea",
+   "n_records": 163,
+   "share_of_records": 0.0235
+  },
+  {
+   "country": "Iran",
+   "n_records": 145,
+   "share_of_records": 0.0209
+  },
+  {
+   "country": "Malaysia",
+   "n_records": 139,
+   "share_of_records": 0.0201
+  },
+  {
+   "country": "Turkey",
+   "n_records": 111,
+   "share_of_records": 0.016
+  },
+  {
+   "country": "Iraq",
+   "n_records": 108,
+   "share_of_records": 0.0156
+  },
+  {
+   "country": "United Kingdom",
+   "n_records": 107,
+   "share_of_records": 0.0154
+  },
+  {
+   "country": "Taiwan",
+   "n_records": 106,
+   "share_of_records": 0.0153
+  },
+  {
+   "country": "Ethiopia",
+   "n_records": 93,
+   "share_of_records": 0.0134
+  },
+  {
+   "country": "Egypt",
+   "n_records": 80,
+   "share_of_records": 0.0115
+  },
+  {
+   "country": "Russia",
+   "n_records": 78,
+   "share_of_records": 0.0113
+  }
+ ],
+ "countries_by_year": {
+  "columns": [
+   "China",
+   "India",
+   "Saudi Arabia",
+   "United States",
+   "Pakistan",
+   "South Korea"
+  ],
+  "rows": [
+   {
+    "notice_year": 2018,
+    "China": 0.3889,
+    "India": 0.1296,
+    "Saudi Arabia": 0.0556,
+    "United States": 0.0926,
+    "Pakistan": 0.0556,
+    "South Korea": 0.0
+   },
+   {
+    "notice_year": 2019,
+    "China": 0.4697,
+    "India": 0.0833,
+    "Saudi Arabia": 0.0606,
+    "United States": 0.0379,
+    "Pakistan": 0.0379,
+    "South Korea": 0.0303
+   },
+   {
+    "notice_year": 2020,
+    "China": 0.3861,
+    "India": 0.1386,
+    "Saudi Arabia": 0.0,
+    "United States": 0.0693,
+    "Pakistan": 0.0198,
+    "South Korea": 0.0099
+   },
+   {
+    "notice_year": 2021,
+    "China": 0.6653,
+    "India": 0.0785,
+    "Saudi Arabia": 0.0041,
+    "United States": 0.0496,
+    "Pakistan": 0.0041,
+    "South Korea": 0.0289
+   },
+   {
+    "notice_year": 2022,
+    "China": 0.4174,
+    "India": 0.536,
+    "Saudi Arabia": 0.0395,
+    "United States": 0.0274,
+    "Pakistan": 0.0081,
+    "South Korea": 0.0182
+   },
+   {
+    "notice_year": 2023,
+    "China": 0.8497,
+    "India": 0.0808,
+    "Saudi Arabia": 0.0636,
+    "United States": 0.0106,
+    "Pakistan": 0.0294,
+    "South Korea": 0.029
+   },
+   {
+    "notice_year": 2024,
+    "China": 0.5619,
+    "India": 0.3495,
+    "Saudi Arabia": 0.0525,
+    "United States": 0.0336,
+    "Pakistan": 0.0246,
+    "South Korea": 0.0148
+   },
+   {
+    "notice_year": 2025,
+    "China": 0.6196,
+    "India": 0.2913,
+    "Saudi Arabia": 0.0565,
+    "United States": 0.0402,
+    "Pakistan": 0.0543,
+    "South Korea": 0.0152
+   },
+   {
+    "notice_year": 2026,
+    "China": 0.4434,
+    "India": 0.3133,
+    "Saudi Arabia": 0.0771,
+    "United States": 0.0361,
+    "Pakistan": 0.0651,
+    "South Korea": 0.0337
+   }
+  ]
+ },
+ "lag": {
+  "n_valid": 6931,
+  "n_negative_or_missing": 1,
+  "median_days": 603.0,
+  "p25_days": 421.5,
+  "p75_days": 936.5,
+  "within_1y_share": 0.175,
+  "hist": [
+   {
+    "bucket": "<3月",
+    "n": 178
+   },
+   {
+    "bucket": "3–6月",
+    "n": 210
+   },
+   {
+    "bucket": "6–12月",
+    "n": 825
+   },
+   {
+    "bucket": "1–2年",
+    "n": 3062
+   },
+   {
+    "bucket": "2–3年",
+    "n": 1313
+   },
+   {
+    "bucket": "3–5年",
+    "n": 881
+   },
+   {
+    "bucket": "5–10年",
+    "n": 437
+   },
+   {
+    "bucket": "≥10年",
+    "n": 25
+   }
+  ],
+  "by_notice_year": [
+   {
+    "year": 2014,
+    "count": 80.0,
+    "p25": 510.0,
+    "median": 736.5,
+    "p75": 930.0
+   },
+   {
+    "year": 2015,
+    "count": 32.0,
+    "p25": 110.0,
+    "median": 365.0,
+    "p75": 769.25
+   },
+   {
+    "year": 2016,
+    "count": 77.0,
+    "p25": 365.0,
+    "median": 457.0,
+    "p75": 553.0
+   },
+   {
+    "year": 2017,
+    "count": 33.0,
+    "p25": 143.0,
+    "median": 290.0,
+    "p75": 830.0
+   },
+   {
+    "year": 2018,
+    "count": 54.0,
+    "p25": 145.75,
+    "median": 281.5,
+    "p75": 704.25
+   },
+   {
+    "year": 2019,
+    "count": 132.0,
+    "p25": 223.25,
+    "median": 559.5,
+    "p75": 1358.75
+   },
+   {
+    "year": 2020,
+    "count": 101.0,
+    "p25": 85.0,
+    "median": 429.0,
+    "p75": 1728.0
+   },
+   {
+    "year": 2021,
+    "count": 242.0,
+    "p25": 227.0,
+    "median": 546.5,
+    "p75": 2293.0
+   },
+   {
+    "year": 2022,
+    "count": 987.0,
+    "p25": 560.5,
+    "median": 741.0,
+    "p75": 1165.5
+   },
+   {
+    "year": 2023,
+    "count": 2548.0,
+    "p25": 408.0,
+    "median": 520.0,
+    "p75": 691.0
+   },
+   {
+    "year": 2024,
+    "count": 1219.0,
+    "p25": 447.5,
+    "median": 676.0,
+    "p75": 1129.0
+   },
+   {
+    "year": 2025,
+    "count": 920.0,
+    "p25": 447.0,
+    "median": 722.0,
+    "p75": 1643.75
+   },
+   {
+    "year": 2026,
+    "count": 415.0,
+    "p25": 635.0,
+    "median": 1001.0,
+    "p75": 1231.5
+   }
+  ],
+  "median_by_publisher": [
+   {
+    "publisher": "Hindawi",
+    "median_days": 510.0
+   },
+   {
+    "publisher": "Springer - Nature Publishing Group",
+    "median_days": 738.0
+   },
+   {
+    "publisher": "IOS Press (bought by Sage November 2023)",
+    "median_days": 653.0
+   },
+   {
+    "publisher": "Springer",
+    "median_days": 829.0
+   },
+   {
+    "publisher": "Elsevier",
+    "median_days": 902.0
+   },
+   {
+    "publisher": "SAGE Publications",
+    "median_days": 896.0
+   },
+   {
+    "publisher": "Wiley",
+    "median_days": 685.0
+   },
+   {
+    "publisher": "PLoS",
+    "median_days": 852.0
+   }
+  ]
+ },
+ "misc": {
+  "cs_only_subject_share": 0.0609,
+  "notice_paywalled_yes": 11,
+  "median_authors": 2.0,
+  "missing_original_doi": 56,
+  "has_reinstatement": 0,
+  "subjects_cooccurring": [
+   {
+    "subject": "(B/T) Technology",
+    "n": 4118
+   },
+   {
+    "subject": "(B/T) Data Science",
+    "n": 2337
+   },
+   {
+    "subject": "(SOC) Education",
+    "n": 733
+   },
+   {
+    "subject": "(PHY) Engineering - Electrical",
+    "n": 396
+   },
+   {
+    "subject": "(SOC) Sports and Recreation",
+    "n": 388
+   },
+   {
+    "subject": "(B/T) Business - Economics",
+    "n": 322
+   },
+   {
+    "subject": "(HSC) Radiology/Imaging",
+    "n": 314
+   },
+   {
+    "subject": "(SOC) Linguistics",
+    "n": 270
+   },
+   {
+    "subject": "(B/T) Transportation",
+    "n": 250
+   },
+   {
+    "subject": "(SOC) Communications",
+    "n": 249
+   }
+  ]
+ }
+}

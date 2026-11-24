@@ -1,0 +1,960 @@
+{
+ "snapshot": "bcb455b60862",
+ "snapshot_commit": "bcb455b60862616288b8245e21bfdfdc0610ee34",
+ "snapshot_date": "2026-11-06T23:00:10.000+00:00",
+ "source_csv_sha256": "f7e2365a7eb06259348b3e859cd6a7df134d0747e6f744a0d76ebf3260c9862c",
+ "site_built_at": "2026-11-24T14:32:25+00:00",
+ "cohorts": {
+  "all_records": 73688,
+  "all_retractions": 68244,
+  "cs_all_notices": 9874,
+  "cs_retractions": 9675,
+  "cs_conference_retractions": 2646
+ },
+ "period_2023": {
+  "snapshot": "bcb455b60862",
+  "snapshot_date": "2026-11-06",
+  "unit": "Retraction Watch retraction notice records (not unique papers, no publication denominator)",
+  "pre_window": [
+   2018,
+   2022
+  ],
+  "post_window": [
+   2023,
+   2025
+  ],
+  "time_axis": "notice_date year (retraction year); see early_retraction_by_pub_year for publication-year view",
+  "largest_post_publisher_excluded_in_sensitivity": "Hindawi",
+  "volume": [
+   {
+    "cohort": "all",
+    "pre_records_2018_2022": 18108,
+    "post_records_2023_2025": 25880,
+    "pre_annual_mean": 3621.6,
+    "post_annual_mean": 8626.7,
+    "post_vs_pre_ratio": 2.38,
+    "pre_unique_original_dois_per_year": 3138.8,
+    "post_unique_original_dois_per_year": 8558.3,
+    "peak_year": 2023,
+    "y2022": 5592,
+    "y2023": 13371,
+    "y2024": 6502,
+    "y2025": 6007,
+    "y2026_ytd": 2392,
+    "y2026_annualized_naive": 2826.0,
+    "post_top_publisher_share": 0.417,
+    "post_top_publisher": "Hindawi"
+   },
+   {
+    "cohort": "all_excl_top_publisher",
+    "pre_records_2018_2022": 17595,
+    "post_records_2023_2025": 15091,
+    "pre_annual_mean": 3519.0,
+    "post_annual_mean": 5030.3,
+    "post_vs_pre_ratio": 1.43,
+    "pre_unique_original_dois_per_year": 3036.2,
+    "post_unique_original_dois_per_year": 4962.0,
+    "peak_year": 2025,
+    "y2022": 5241,
+    "y2023": 3698,
+    "y2024": 5386,
+    "y2025": 6007,
+    "y2026_ytd": 2392,
+    "y2026_annualized_naive": 2826.0,
+    "post_top_publisher_share": 0.133,
+    "post_top_publisher": "Elsevier"
+   },
+   {
+    "cohort": "cs",
+    "pre_records_2018_2022": 2509,
+    "post_records_2023_2025": 4871,
+    "pre_annual_mean": 501.8,
+    "post_annual_mean": 1623.7,
+    "post_vs_pre_ratio": 3.24,
+    "pre_unique_original_dois_per_year": 490.2,
+    "post_unique_original_dois_per_year": 1623.0,
+    "peak_year": 2023,
+    "y2022": 1724,
+    "y2023": 2603,
+    "y2024": 1236,
+    "y2025": 1032,
+    "y2026_ytd": 427,
+    "y2026_annualized_naive": 504.0,
+    "post_top_publisher_share": 0.519,
+    "post_top_publisher": "Hindawi"
+   },
+   {
+    "cohort": "cs_excl_top_publisher",
+    "pre_records_2018_2022": 2450,
+    "post_records_2023_2025": 2344,
+    "pre_annual_mean": 490.0,
+    "post_annual_mean": 781.3,
+    "post_vs_pre_ratio": 1.59,
+    "pre_unique_original_dois_per_year": 478.4,
+    "post_unique_original_dois_per_year": 780.7,
+    "peak_year": 2022,
+    "y2022": 1679,
+    "y2023": 341,
+    "y2024": 971,
+    "y2025": 1032,
+    "y2026_ytd": 427,
+    "y2026_annualized_naive": 504.0,
+    "post_top_publisher_share": 0.39,
+    "post_top_publisher": "IOS Press (bought by Sage November 2023)"
+   },
+   {
+    "cohort": "cs_journal",
+    "pre_records_2018_2022": 1557,
+    "post_records_2023_2025": 4692,
+    "pre_annual_mean": 311.4,
+    "post_annual_mean": 1564.0,
+    "post_vs_pre_ratio": 5.02,
+    "pre_unique_original_dois_per_year": 301.6,
+    "post_unique_original_dois_per_year": 1564.0,
+    "peak_year": 2023,
+    "y2022": 994,
+    "y2023": 2552,
+    "y2024": 1220,
+    "y2025": 920,
+    "y2026_ytd": 418,
+    "y2026_annualized_naive": 494.0,
+    "post_top_publisher_share": 0.539,
+    "post_top_publisher": "Hindawi"
+   },
+   {
+    "cohort": "cs_conference",
+    "pre_records_2018_2022": 952,
+    "post_records_2023_2025": 179,
+    "pre_annual_mean": 190.4,
+    "post_annual_mean": 59.7,
+    "post_vs_pre_ratio": 0.31,
+    "pre_unique_original_dois_per_year": 188.6,
+    "post_unique_original_dois_per_year": 59.0,
+    "peak_year": 2010,
+    "y2022": 730,
+    "y2023": 51,
+    "y2024": 16,
+    "y2025": 112,
+    "y2026_ytd": 9,
+    "y2026_annualized_naive": 11.0,
+    "post_top_publisher_share": 0.246,
+    "post_top_publisher": "AIP Publishing"
+   }
+  ],
+  "reason_changes": {
+   "all": {
+    "top_increases_pp": [
+     {
+      "feature": "Investigation by Journal/Publisher",
+      "pre_share": 0.24,
+      "post_share": 0.846,
+      "diff_pp": 60.589
+     },
+     {
+      "feature": "Unreliable Results and/or Conclusions",
+      "pre_share": 0.132,
+      "post_share": 0.693,
+      "diff_pp": 56.135
+     },
+     {
+      "feature": "Investigation by Third Party",
+      "pre_share": 0.112,
+      "post_share": 0.582,
+      "diff_pp": 47.007
+     },
+     {
+      "feature": "Concerns/Issues about Referencing/Attributions",
+      "pre_share": 0.062,
+      "post_share": 0.502,
+      "diff_pp": 44.007
+     },
+     {
+      "feature": "Concerns/Issues about Peer Review",
+      "pre_share": 0.024,
+      "post_share": 0.42,
+      "diff_pp": 39.638
+     },
+     {
+      "feature": "Concerns/Issues about Data",
+      "pre_share": 0.13,
+      "post_share": 0.428,
+      "diff_pp": 29.844
+     }
+    ],
+    "top_decreases_pp": [
+     {
+      "feature": "Duplication of/in Article",
+      "pre_share": 0.098,
+      "post_share": 0.017,
+      "diff_pp": -8.078
+     },
+     {
+      "feature": "Date of Article and/or Notice Unknown",
+      "pre_share": 0.098,
+      "post_share": 0.03,
+      "diff_pp": -6.891
+     },
+     {
+      "feature": "Removed",
+      "pre_share": 0.079,
+      "post_share": 0.011,
+      "diff_pp": -6.799
+     },
+     {
+      "feature": "Notice - Limited or No Information",
+      "pre_share": 0.072,
+      "post_share": 0.004,
+      "diff_pp": -6.77
+     },
+     {
+      "feature": "Plagiarism of Text",
+      "pre_share": 0.064,
+      "post_share": 0.003,
+      "diff_pp": -6.155
+     },
+     {
+      "feature": "Euphemisms for Plagiarism",
+      "pre_share": 0.099,
+      "post_share": 0.043,
+      "diff_pp": -5.604
+     }
+    ],
+    "themes": [
+     {
+      "feature": "T2 同行评审操纵/第三方介入",
+      "pre_share": 0.2153,
+      "post_share": 0.6587,
+      "diff_pp": 44.3391,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T3 引用/参考文献问题",
+      "pre_share": 0.0665,
+      "post_share": 0.5038,
+      "diff_pp": 43.7335,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T5 数据/方法/结果有效性",
+      "pre_share": 0.4041,
+      "post_share": 0.8061,
+      "diff_pp": 40.1974,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T1 论文工厂/计算机生成内容",
+      "pre_share": 0.1609,
+      "post_share": 0.4458,
+      "diff_pp": 28.4959,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T4 抄袭/重复发表",
+      "pre_share": 0.3674,
+      "post_share": 0.1567,
+      "diff_pp": -21.0628,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T7 声明信息不足",
+      "pre_share": 0.0792,
+      "post_share": 0.0048,
+      "diff_pp": -7.4494,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T6 署名/伦理/合规",
+      "pre_share": 0.1021,
+      "post_share": 0.173,
+      "diff_pp": 7.0975,
+      "q_value_bh": 0.0
+     }
+    ]
+   },
+   "all_excl_top_publisher": {
+    "top_increases_pp": [
+     {
+      "feature": "Investigation by Journal/Publisher",
+      "pre_share": 0.229,
+      "post_share": 0.736,
+      "diff_pp": 50.787
+     },
+     {
+      "feature": "Unreliable Results and/or Conclusions",
+      "pre_share": 0.135,
+      "post_share": 0.488,
+      "diff_pp": 35.359
+     },
+     {
+      "feature": "Concerns/Issues about Referencing/Attributions",
+      "pre_share": 0.064,
+      "post_share": 0.305,
+      "diff_pp": 24.143
+     },
+     {
+      "feature": "Investigation by Third Party",
+      "pre_share": 0.114,
+      "post_share": 0.315,
+      "diff_pp": 20.16
+     },
+     {
+      "feature": "Objections by Author(s)",
+      "pre_share": 0.017,
+      "post_share": 0.169,
+      "diff_pp": 15.29
+     },
+     {
+      "feature": "Concerns/Issues about Peer Review",
+      "pre_share": 0.008,
+      "post_share": 0.152,
+      "diff_pp": 14.389
+     }
+    ],
+    "top_decreases_pp": [
+     {
+      "feature": "Duplication of/in Article",
+      "pre_share": 0.1,
+      "post_share": 0.029,
+      "diff_pp": -7.072
+     },
+     {
+      "feature": "Notice - Limited or No Information",
+      "pre_share": 0.074,
+      "post_share": 0.007,
+      "diff_pp": -6.69
+     },
+     {
+      "feature": "Removed",
+      "pre_share": 0.081,
+      "post_share": 0.019,
+      "diff_pp": -6.237
+     },
+     {
+      "feature": "Plagiarism of Text",
+      "pre_share": 0.065,
+      "post_share": 0.004,
+      "diff_pp": -6.078
+     },
+     {
+      "feature": "Date of Article and/or Notice Unknown",
+      "pre_share": 0.101,
+      "post_share": 0.051,
+      "diff_pp": -5.064
+     },
+     {
+      "feature": "Plagiarism of/in Article",
+      "pre_share": 0.071,
+      "post_share": 0.036,
+      "diff_pp": -3.488
+     }
+    ],
+    "themes": [
+     {
+      "feature": "T5 数据/方法/结果有效性",
+      "pre_share": 0.4089,
+      "post_share": 0.6814,
+      "diff_pp": 27.2477,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T3 引用/参考文献问题",
+      "pre_share": 0.0678,
+      "post_share": 0.3074,
+      "diff_pp": 23.9598,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T2 同行评审操纵/第三方介入",
+      "pre_share": 0.2036,
+      "post_share": 0.4162,
+      "diff_pp": 21.2571,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T4 抄袭/重复发表",
+      "pre_share": 0.3698,
+      "post_share": 0.2684,
+      "diff_pp": -10.1449,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T6 署名/伦理/合规",
+      "pre_share": 0.1034,
+      "post_share": 0.1843,
+      "diff_pp": 8.0967,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T7 声明信息不足",
+      "pre_share": 0.0814,
+      "post_share": 0.0081,
+      "diff_pp": -7.3359,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T1 论文工厂/计算机生成内容",
+      "pre_share": 0.1654,
+      "post_share": 0.1948,
+      "diff_pp": 2.9307,
+      "q_value_bh": 0.0
+     }
+    ]
+   },
+   "cs": {
+    "top_increases_pp": [
+     {
+      "feature": "Unreliable Results and/or Conclusions",
+      "pre_share": 0.231,
+      "post_share": 0.848,
+      "diff_pp": 61.732
+     },
+     {
+      "feature": "Investigation by Third Party",
+      "pre_share": 0.13,
+      "post_share": 0.716,
+      "diff_pp": 58.573
+     },
+     {
+      "feature": "Concerns/Issues about Peer Review",
+      "pre_share": 0.028,
+      "post_share": 0.553,
+      "diff_pp": 52.496
+     },
+     {
+      "feature": "Concerns/Issues about Referencing/Attributions",
+      "pre_share": 0.201,
+      "post_share": 0.716,
+      "diff_pp": 51.439
+     },
+     {
+      "feature": "Concerns/Issues about Data",
+      "pre_share": 0.016,
+      "post_share": 0.416,
+      "diff_pp": 40.04
+     },
+     {
+      "feature": "Concerns/Issues about Results and/or Conclusions",
+      "pre_share": 0.005,
+      "post_share": 0.401,
+      "diff_pp": 39.576
+     }
+    ],
+    "top_decreases_pp": [
+     {
+      "feature": "Compromised Peer Review",
+      "pre_share": 0.685,
+      "post_share": 0.462,
+      "diff_pp": -22.342
+     },
+     {
+      "feature": "Rogue Editor",
+      "pre_share": 0.342,
+      "post_share": 0.145,
+      "diff_pp": -19.643
+     },
+     {
+      "feature": "Date of Article and/or Notice Unknown",
+      "pre_share": 0.118,
+      "post_share": 0.017,
+      "diff_pp": -10.174
+     },
+     {
+      "feature": "Notice - Limited or No Information",
+      "pre_share": 0.073,
+      "post_share": 0.001,
+      "diff_pp": -7.19
+     },
+     {
+      "feature": "Plagiarism of/in Article",
+      "pre_share": 0.078,
+      "post_share": 0.017,
+      "diff_pp": -6.109
+     },
+     {
+      "feature": "Euphemisms for Plagiarism",
+      "pre_share": 0.065,
+      "post_share": 0.018,
+      "diff_pp": -4.75
+     }
+    ],
+    "themes": [
+     {
+      "feature": "T5 数据/方法/结果有效性",
+      "pre_share": 0.2666,
+      "post_share": 0.8633,
+      "diff_pp": 59.6632,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T3 引用/参考文献问题",
+      "pre_share": 0.2013,
+      "post_share": 0.7161,
+      "diff_pp": 51.4799,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T1 论文工厂/计算机生成内容",
+      "pre_share": 0.324,
+      "post_share": 0.6301,
+      "diff_pp": 30.6022,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T2 同行评审操纵/第三方介入",
+      "pre_share": 0.715,
+      "post_share": 0.9316,
+      "diff_pp": 21.661,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T4 抄袭/重复发表",
+      "pre_share": 0.1423,
+      "post_share": 0.0289,
+      "diff_pp": -11.3341,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T6 署名/伦理/合规",
+      "pre_share": 0.0391,
+      "post_share": 0.124,
+      "diff_pp": 8.494,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T7 声明信息不足",
+      "pre_share": 0.0817,
+      "post_share": 0.0014,
+      "diff_pp": -8.0269,
+      "q_value_bh": 0.0
+     }
+    ]
+   },
+   "cs_excl_top_publisher": {
+    "top_increases_pp": [
+     {
+      "feature": "Unreliable Results and/or Conclusions",
+      "pre_share": 0.236,
+      "post_share": 0.696,
+      "diff_pp": 45.992
+     },
+     {
+      "feature": "Concerns/Issues about Referencing/Attributions",
+      "pre_share": 0.206,
+      "post_share": 0.647,
+      "diff_pp": 44.147
+     },
+     {
+      "feature": "Investigation by Third Party",
+      "pre_share": 0.133,
+      "post_share": 0.469,
+      "diff_pp": 33.58
+     },
+     {
+      "feature": "Concerns/Issues about Third Party Involvement",
+      "pre_share": 0.033,
+      "post_share": 0.32,
+      "diff_pp": 28.607
+     },
+     {
+      "feature": "Concerns/Issues about Peer Review",
+      "pre_share": 0.013,
+      "post_share": 0.298,
+      "diff_pp": 28.556
+     },
+     {
+      "feature": "Investigation by Journal/Publisher",
+      "pre_share": 0.658,
+      "post_share": 0.919,
+      "diff_pp": 26.182
+     }
+    ],
+    "top_decreases_pp": [
+     {
+      "feature": "Date of Article and/or Notice Unknown",
+      "pre_share": 0.121,
+      "post_share": 0.035,
+      "diff_pp": -8.667
+     },
+     {
+      "feature": "Notice - Limited or No Information",
+      "pre_share": 0.075,
+      "post_share": 0.003,
+      "diff_pp": -7.212
+     },
+     {
+      "feature": "Rogue Editor",
+      "pre_share": 0.35,
+      "post_share": 0.302,
+      "diff_pp": -4.817
+     },
+     {
+      "feature": "Plagiarism of/in Article",
+      "pre_share": 0.077,
+      "post_share": 0.035,
+      "diff_pp": -4.218
+     },
+     {
+      "feature": "Removed",
+      "pre_share": 0.052,
+      "post_share": 0.016,
+      "diff_pp": -3.646
+     },
+     {
+      "feature": "Duplication of/in Article",
+      "pre_share": 0.044,
+      "post_share": 0.014,
+      "diff_pp": -3.041
+     }
+    ],
+    "themes": [
+     {
+      "feature": "T5 数据/方法/结果有效性",
+      "pre_share": 0.2702,
+      "post_share": 0.7253,
+      "diff_pp": 45.5052,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T3 引用/参考文献问题",
+      "pre_share": 0.2057,
+      "post_share": 0.648,
+      "diff_pp": 44.2323,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T2 同行评审操纵/第三方介入",
+      "pre_share": 0.7163,
+      "post_share": 0.8584,
+      "diff_pp": 14.2035,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T6 署名/伦理/合规",
+      "pre_share": 0.0388,
+      "post_share": 0.157,
+      "diff_pp": 11.8221,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T7 声明信息不足",
+      "pre_share": 0.0837,
+      "post_share": 0.003,
+      "diff_pp": -8.0687,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T4 抄袭/重复发表",
+      "pre_share": 0.1396,
+      "post_share": 0.0602,
+      "diff_pp": -7.9438,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T1 论文工厂/计算机生成内容",
+      "pre_share": 0.3318,
+      "post_share": 0.3567,
+      "diff_pp": 2.4819,
+      "q_value_bh": 0.0706
+     }
+    ]
+   },
+   "cs_journal": {
+    "top_increases_pp": [
+     {
+      "feature": "Investigation by Third Party",
+      "pre_share": 0.017,
+      "post_share": 0.737,
+      "diff_pp": 72.008
+     },
+     {
+      "feature": "Concerns/Issues about Referencing/Attributions",
+      "pre_share": 0.161,
+      "post_share": 0.717,
+      "diff_pp": 55.597
+     },
+     {
+      "feature": "Paper Mill",
+      "pre_share": 0.017,
+      "post_share": 0.565,
+      "diff_pp": 54.809
+     },
+     {
+      "feature": "Concerns/Issues about Peer Review",
+      "pre_share": 0.045,
+      "post_share": 0.565,
+      "diff_pp": 51.962
+     },
+     {
+      "feature": "Unreliable Results and/or Conclusions",
+      "pre_share": 0.371,
+      "post_share": 0.865,
+      "diff_pp": 49.451
+     },
+     {
+      "feature": "Computer-Aided Content or Computer-Generated Content",
+      "pre_share": 0.062,
+      "post_share": 0.529,
+      "diff_pp": 46.626
+     }
+    ],
+    "top_decreases_pp": [
+     {
+      "feature": "Rogue Editor",
+      "pre_share": 0.55,
+      "post_share": 0.149,
+      "diff_pp": -40.165
+     },
+     {
+      "feature": "Compromised Peer Review",
+      "pre_share": 0.653,
+      "post_share": 0.47,
+      "diff_pp": -18.301
+     },
+     {
+      "feature": "Date of Article and/or Notice Unknown",
+      "pre_share": 0.159,
+      "post_share": 0.005,
+      "diff_pp": -15.395
+     },
+     {
+      "feature": "Plagiarism of/in Article",
+      "pre_share": 0.095,
+      "post_share": 0.014,
+      "diff_pp": -8.099
+     },
+     {
+      "feature": "Euphemisms for Plagiarism",
+      "pre_share": 0.082,
+      "post_share": 0.016,
+      "diff_pp": -6.601
+     },
+     {
+      "feature": "Notice - Limited or No Information",
+      "pre_share": 0.064,
+      "post_share": 0.001,
+      "diff_pp": -6.273
+     }
+    ],
+    "themes": [
+     {
+      "feature": "T1 论文工厂/计算机生成内容",
+      "pre_share": 0.079,
+      "post_share": 0.6464,
+      "diff_pp": 56.7421,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T3 引用/参考文献问题",
+      "pre_share": 0.1612,
+      "post_share": 0.7176,
+      "diff_pp": 55.6397,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T5 数据/方法/结果有效性",
+      "pre_share": 0.4213,
+      "post_share": 0.8787,
+      "diff_pp": 45.7407,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T2 同行评审操纵/第三方介入",
+      "pre_share": 0.7001,
+      "post_share": 0.9552,
+      "diff_pp": 25.5179,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T4 抄袭/重复发表",
+      "pre_share": 0.1824,
+      "post_share": 0.0254,
+      "diff_pp": -15.704,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T6 署名/伦理/合规",
+      "pre_share": 0.0578,
+      "post_share": 0.1251,
+      "diff_pp": 6.7303,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T7 声明信息不足",
+      "pre_share": 0.0662,
+      "post_share": 0.0015,
+      "diff_pp": -6.4661,
+      "q_value_bh": 0.0
+     }
+    ]
+   },
+   "cs_conference": {
+    "top_increases_pp": [
+     {
+      "feature": "Unreliable Results and/or Conclusions",
+      "pre_share": 0.003,
+      "post_share": 0.413,
+      "diff_pp": 41.026
+     },
+     {
+      "feature": "Concerns/Issues about Referencing/Attributions",
+      "pre_share": 0.267,
+      "post_share": 0.676,
+      "diff_pp": 40.917
+     },
+     {
+      "feature": "Date of Article and/or Notice Unknown",
+      "pre_share": 0.051,
+      "post_share": 0.313,
+      "diff_pp": 26.138
+     },
+     {
+      "feature": "Concerns/Issues about Peer Review",
+      "pre_share": 0.0,
+      "post_share": 0.246,
+      "diff_pp": 24.581
+     },
+     {
+      "feature": "Concerns/Issues about Article",
+      "pre_share": 0.001,
+      "post_share": 0.196,
+      "diff_pp": 19.448
+     },
+     {
+      "feature": "Investigation by Company/Institution",
+      "pre_share": 0.016,
+      "post_share": 0.061,
+      "diff_pp": 4.57
+     }
+    ],
+    "top_decreases_pp": [
+     {
+      "feature": "Compromised Peer Review",
+      "pre_share": 0.738,
+      "post_share": 0.257,
+      "diff_pp": -48.146
+     },
+     {
+      "feature": "Paper Mill",
+      "pre_share": 0.402,
+      "post_share": 0.017,
+      "diff_pp": -38.555
+     },
+     {
+      "feature": "Investigation by Journal/Publisher",
+      "pre_share": 0.814,
+      "post_share": 0.631,
+      "diff_pp": -18.279
+     },
+     {
+      "feature": "Investigation by Third Party",
+      "pre_share": 0.314,
+      "post_share": 0.145,
+      "diff_pp": -16.882
+     },
+     {
+      "feature": "Computer-Aided Content or Computer-Generated Content",
+      "pre_share": 0.322,
+      "post_share": 0.201,
+      "diff_pp": -12.136
+     },
+     {
+      "feature": "Removed",
+      "pre_share": 0.091,
+      "post_share": 0.0,
+      "diff_pp": -9.139
+     }
+    ],
+    "themes": [
+     {
+      "feature": "T1 论文工厂/计算机生成内容",
+      "pre_share": 0.7248,
+      "post_share": 0.2011,
+      "diff_pp": -52.3673,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T5 数据/方法/结果有效性",
+      "pre_share": 0.0137,
+      "post_share": 0.4581,
+      "diff_pp": 44.4445,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T2 同行评审操纵/第三方介入",
+      "pre_share": 0.7395,
+      "post_share": 0.3128,
+      "diff_pp": -42.6647,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T3 引用/参考文献问题",
+      "pre_share": 0.2668,
+      "post_share": 0.676,
+      "diff_pp": 40.9171,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T7 声明信息不足",
+      "pre_share": 0.1071,
+      "post_share": 0.0,
+      "diff_pp": -10.7143,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T6 署名/伦理/合规",
+      "pre_share": 0.0084,
+      "post_share": 0.095,
+      "diff_pp": 8.6569,
+      "q_value_bh": 0.0
+     },
+     {
+      "feature": "T4 抄袭/重复发表",
+      "pre_share": 0.0767,
+      "post_share": 0.1229,
+      "diff_pp": 4.6224,
+      "q_value_bh": 0.0408
+     }
+    ]
+   }
+  },
+  "generated_content_label_by_pub_period": {
+   "2019": {
+    "published_2023_plus": 0,
+    "published_before_2023": 1
+   },
+   "2020": {
+    "published_2023_plus": 0,
+    "published_before_2023": 39
+   },
+   "2021": {
+    "published_2023_plus": 0,
+    "published_before_2023": 481
+   },
+   "2022": {
+    "published_2023_plus": 0,
+    "published_before_2023": 383
+   },
+   "2023": {
+    "published_2023_plus": 62,
+    "published_before_2023": 5560
+   },
+   "2024": {
+    "published_2023_plus": 118,
+    "published_before_2023": 1335
+   },
+   "2025": {
+    "published_2023_plus": 746,
+    "published_before_2023": 529
+   },
+   "2026": {
+    "published_2023_plus": 173,
+    "published_before_2023": 51
+   }
+  },
+  "explicit_llm_mentions_in_notes_or_titles": 14,
+  "themes_are_exploratory": true
+ },
+ "openalex_run": [
+  "2026-11-24"
+ ]
+}

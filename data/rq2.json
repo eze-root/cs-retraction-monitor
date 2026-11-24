@@ -1,0 +1,633 @@
+{
+ "schema_version": "1.0",
+ "snapshot": "bcb455b60862",
+ "generated_by": "scripts/analyze_rq2_ai.py",
+ "definitions": {
+  "aigc_label": "Computer-Aided Content or Computer-Generated Content",
+  "chatgpt_cutoff": "2022-11-30",
+  "notice_text": "OpenAlex 撤稿声明摘要；去掉标题、期刊名、链接和模板句后 ≥80 字符视为有信息",
+  "tiers": {
+   "A": "声明明确提及 LLM",
+   "B": "生成内容标签且 ChatGPT 后发表",
+   "C": "生成内容标签且 ChatGPT 前发表",
+   "D": "无证据"
+  }
+ },
+ "headline": {
+  "journal_records": 6932,
+  "aigc_label": 2640,
+  "aigc_label_share": 0.3808,
+  "aigc_post_chatgpt": 492,
+  "aigc_pre_chatgpt": 2148,
+  "post_chatgpt_papers": 1337,
+  "aigc_share_among_post_chatgpt": 0.368,
+  "aigc_share_among_pre_chatgpt": 0.3839,
+  "with_openalex_text": 1227,
+  "informative_notices": 293,
+  "explicit_llm_mentions": 0
+ },
+ "tiers": [
+  {
+   "tier": "B 生成内容标签·ChatGPT 后发表",
+   "n": 492,
+   "share": 0.071,
+   "in_batch_share": 0.8699,
+   "median_lag_days": 491.0
+  },
+  {
+   "tier": "C 生成内容标签·ChatGPT 前发表",
+   "n": 2148,
+   "share": 0.3099,
+   "in_batch_share": 0.764,
+   "median_lag_days": 569.0
+  },
+  {
+   "tier": "D 无 AI 相关证据",
+   "n": 4292,
+   "share": 0.6192,
+   "in_batch_share": 0.5026,
+   "median_lag_days": 663.0
+  }
+ ],
+ "aigc_by_pub_year": [
+  {
+   "pub_year": 2014,
+   "retracted": 83,
+   "aigc_label": 35,
+   "aigc_label_batch": 35,
+   "aigc_label_scattered": 0,
+   "aigc_share": 0.4217
+  },
+  {
+   "pub_year": 2015,
+   "retracted": 113,
+   "aigc_label": 6,
+   "aigc_label_batch": 6,
+   "aigc_label_scattered": 0,
+   "aigc_share": 0.0531
+  },
+  {
+   "pub_year": 2016,
+   "retracted": 60,
+   "aigc_label": 6,
+   "aigc_label_batch": 5,
+   "aigc_label_scattered": 1,
+   "aigc_share": 0.1
+  },
+  {
+   "pub_year": 2017,
+   "retracted": 126,
+   "aigc_label": 24,
+   "aigc_label_batch": 24,
+   "aigc_label_scattered": 0,
+   "aigc_share": 0.1905
+  },
+  {
+   "pub_year": 2018,
+   "retracted": 266,
+   "aigc_label": 22,
+   "aigc_label_batch": 21,
+   "aigc_label_scattered": 1,
+   "aigc_share": 0.0827
+  },
+  {
+   "pub_year": 2019,
+   "retracted": 380,
+   "aigc_label": 93,
+   "aigc_label_batch": 92,
+   "aigc_label_scattered": 1,
+   "aigc_share": 0.2447
+  },
+  {
+   "pub_year": 2020,
+   "retracted": 787,
+   "aigc_label": 114,
+   "aigc_label_batch": 96,
+   "aigc_label_scattered": 18,
+   "aigc_share": 0.1449
+  },
+  {
+   "pub_year": 2021,
+   "retracted": 1302,
+   "aigc_label": 480,
+   "aigc_label_batch": 374,
+   "aigc_label_scattered": 106,
+   "aigc_share": 0.3687
+  },
+  {
+   "pub_year": 2022,
+   "retracted": 2257,
+   "aigc_label": 1356,
+   "aigc_label_batch": 975,
+   "aigc_label_scattered": 381,
+   "aigc_share": 0.6008
+  },
+  {
+   "pub_year": 2023,
+   "retracted": 799,
+   "aigc_label": 286,
+   "aigc_label_batch": 263,
+   "aigc_label_scattered": 23,
+   "aigc_share": 0.3579
+  },
+  {
+   "pub_year": 2024,
+   "retracted": 390,
+   "aigc_label": 157,
+   "aigc_label_batch": 134,
+   "aigc_label_scattered": 23,
+   "aigc_share": 0.4026
+  },
+  {
+   "pub_year": 2025,
+   "retracted": 117,
+   "aigc_label": 35,
+   "aigc_label_batch": 21,
+   "aigc_label_scattered": 14,
+   "aigc_share": 0.2991
+  },
+  {
+   "pub_year": 2026,
+   "retracted": 6,
+   "aigc_label": 1,
+   "aigc_label_batch": 0,
+   "aigc_label_scattered": 1,
+   "aigc_share": 0.1667
+  }
+ ],
+ "aigc_by_notice_year_era": [
+  {
+   "notice_year": 2018,
+   "pre_chatgpt": 0,
+   "post_chatgpt": 0
+  },
+  {
+   "notice_year": 2019,
+   "pre_chatgpt": 0,
+   "post_chatgpt": 0
+  },
+  {
+   "notice_year": 2020,
+   "pre_chatgpt": 0,
+   "post_chatgpt": 0
+  },
+  {
+   "notice_year": 2021,
+   "pre_chatgpt": 75,
+   "post_chatgpt": 0
+  },
+  {
+   "notice_year": 2022,
+   "pre_chatgpt": 1,
+   "post_chatgpt": 0
+  },
+  {
+   "notice_year": 2023,
+   "pre_chatgpt": 1472,
+   "post_chatgpt": 21
+  },
+  {
+   "notice_year": 2024,
+   "pre_chatgpt": 264,
+   "post_chatgpt": 26
+  },
+  {
+   "notice_year": 2025,
+   "pre_chatgpt": 315,
+   "post_chatgpt": 380
+  },
+  {
+   "notice_year": 2026,
+   "pre_chatgpt": 21,
+   "post_chatgpt": 65
+  }
+ ],
+ "eras": {
+  "ChatGPT 前": {
+   "n": 2148,
+   "in_batch_share": 0.764,
+   "top_journal": "Journal of Intelligent & Fuzzy Systems",
+   "top_journal_share": 0.1448,
+   "journals": 59,
+   "top_journals": [
+    {
+     "journal": "Journal of Intelligent & Fuzzy Systems",
+     "n": 311
+    },
+    {
+     "journal": "Security and Communication Networks",
+     "n": 240
+    },
+    {
+     "journal": "Wireless Communications and Mobile Computing",
+     "n": 206
+    },
+    {
+     "journal": "Computational Intelligence and Neuroscience",
+     "n": 175
+    },
+    {
+     "journal": "Mobile Information Systems",
+     "n": 135
+    },
+    {
+     "journal": "Journal of Sensors",
+     "n": 128
+    },
+    {
+     "journal": "Mathematical Problems in Engineering",
+     "n": 119
+    },
+    {
+     "journal": "Complexity",
+     "n": 103
+    }
+   ]
+  },
+  "ChatGPT 后": {
+   "n": 492,
+   "in_batch_share": 0.8699,
+   "top_journal": "Journal of Intelligent & Fuzzy Systems",
+   "top_journal_share": 0.7459,
+   "journals": 25,
+   "top_journals": [
+    {
+     "journal": "Journal of Intelligent & Fuzzy Systems",
+     "n": 367
+    },
+    {
+     "journal": "Multimedia Tools and Applications",
+     "n": 28
+    },
+    {
+     "journal": "Iraqi Journal for Computer Science and Mathematics",
+     "n": 21
+    },
+    {
+     "journal": "Optical and Quantum Electronics",
+     "n": 15
+    },
+    {
+     "journal": "Scientific Reports",
+     "n": 9
+    },
+    {
+     "journal": "Journal of Sensors",
+     "n": 8
+    },
+    {
+     "journal": "PLoS One",
+     "n": 6
+    },
+    {
+     "journal": "Heliyon",
+     "n": 6
+    }
+   ]
+  },
+  "ChatGPT 后·排除最大期刊": {
+   "n": 125,
+   "in_batch_share": 0.488,
+   "top_journal": "Multimedia Tools and Applications",
+   "top_journal_share": 0.224,
+   "journals": 24,
+   "top_journals": [
+    {
+     "journal": "Multimedia Tools and Applications",
+     "n": 28
+    },
+    {
+     "journal": "Iraqi Journal for Computer Science and Mathematics",
+     "n": 21
+    },
+    {
+     "journal": "Optical and Quantum Electronics",
+     "n": 15
+    },
+    {
+     "journal": "Scientific Reports",
+     "n": 9
+    },
+    {
+     "journal": "Journal of Sensors",
+     "n": 8
+    },
+    {
+     "journal": "PLoS One",
+     "n": 6
+    },
+    {
+     "journal": "Heliyon",
+     "n": 6
+    },
+    {
+     "journal": "Journal of Electrical and Computer Engineering",
+     "n": 5
+    }
+   ]
+  }
+ },
+ "lag_by_pub_year": [
+  {
+   "pub_year": 2019,
+   "group": "生成内容标签",
+   "n": 93,
+   "median_lag_days": 2122.0,
+   "within_365d_share": 0.0
+  },
+  {
+   "pub_year": 2019,
+   "group": "其他",
+   "n": 287,
+   "median_lag_days": 1343.0,
+   "within_365d_share": 0.122
+  },
+  {
+   "pub_year": 2020,
+   "group": "生成内容标签",
+   "n": 114,
+   "median_lag_days": 1309.0,
+   "within_365d_share": 0.0
+  },
+  {
+   "pub_year": 2020,
+   "group": "其他",
+   "n": 673,
+   "median_lag_days": 786.0,
+   "within_365d_share": 0.0669
+  },
+  {
+   "pub_year": 2021,
+   "group": "生成内容标签",
+   "n": 480,
+   "median_lag_days": 771.5,
+   "within_365d_share": 0.0375
+  },
+  {
+   "pub_year": 2021,
+   "group": "其他",
+   "n": 822,
+   "median_lag_days": 706.5,
+   "within_365d_share": 0.0839
+  },
+  {
+   "pub_year": 2022,
+   "group": "生成内容标签",
+   "n": 1356,
+   "median_lag_days": 461.5,
+   "within_365d_share": 0.163
+  },
+  {
+   "pub_year": 2022,
+   "group": "其他",
+   "n": 901,
+   "median_lag_days": 527.0,
+   "within_365d_share": 0.1798
+  },
+  {
+   "pub_year": 2023,
+   "group": "生成内容标签",
+   "n": 286,
+   "median_lag_days": 576.0,
+   "within_365d_share": 0.1119
+  },
+  {
+   "pub_year": 2023,
+   "group": "其他",
+   "n": 513,
+   "median_lag_days": 495.0,
+   "within_365d_share": 0.2729
+  },
+  {
+   "pub_year": 2024,
+   "group": "生成内容标签",
+   "n": 157,
+   "median_lag_days": 368.0,
+   "within_365d_share": 0.4968
+  },
+  {
+   "pub_year": 2024,
+   "group": "其他",
+   "n": 233,
+   "median_lag_days": 231.0,
+   "within_365d_share": 0.6223
+  }
+ ],
+ "notice_text_coverage": [
+  {
+   "publisher": "Hindawi",
+   "n": 2603,
+   "openalex_text": 826,
+   "informative": 12,
+   "informative_share": 0.0046
+  },
+  {
+   "publisher": "Springer - Nature Publishing Group",
+   "n": 1171,
+   "openalex_text": 37,
+   "informative": 35,
+   "informative_share": 0.0299
+  },
+  {
+   "publisher": "IOS Press (bought by Sage November 2023)",
+   "n": 963,
+   "openalex_text": 9,
+   "informative": 9,
+   "informative_share": 0.0093
+  },
+  {
+   "publisher": "Springer",
+   "n": 824,
+   "openalex_text": 5,
+   "informative": 3,
+   "informative_share": 0.0036
+  },
+  {
+   "publisher": "Elsevier",
+   "n": 399,
+   "openalex_text": 4,
+   "informative": 0,
+   "informative_share": 0.0
+  },
+  {
+   "publisher": "SAGE Publications",
+   "n": 150,
+   "openalex_text": 51,
+   "informative": 51,
+   "informative_share": 0.34
+  },
+  {
+   "publisher": "Wiley",
+   "n": 111,
+   "openalex_text": 88,
+   "informative": 80,
+   "informative_share": 0.7207
+  },
+  {
+   "publisher": "PLoS",
+   "n": 108,
+   "openalex_text": 18,
+   "informative": 13,
+   "informative_share": 0.1204
+  },
+  {
+   "publisher": "ASTM International",
+   "n": 104,
+   "openalex_text": 19,
+   "informative": 19,
+   "informative_share": 0.1827
+  },
+  {
+   "publisher": "Taylor and Francis",
+   "n": 64,
+   "openalex_text": 37,
+   "informative": 7,
+   "informative_share": 0.1094
+  }
+ ],
+ "notice_mechanisms": [
+  {
+   "mechanism": "LLM / 生成式 AI",
+   "informative_n": 0,
+   "share_of_informative": 0.0,
+   "among_aigc_label": 0.0,
+   "among_no_aigc_label": 0.0
+  },
+  {
+   "mechanism": "非标准用语 / tortured phrases",
+   "informative_n": 11,
+   "share_of_informative": 0.0375,
+   "among_aigc_label": 0.2903,
+   "among_no_aigc_label": 0.0076
+  },
+  {
+   "mechanism": "机器生成文本（SCIgen 等）",
+   "informative_n": 0,
+   "share_of_informative": 0.0,
+   "among_aigc_label": 0.0,
+   "among_no_aigc_label": 0.0
+  },
+  {
+   "mechanism": "无关/不当引用",
+   "informative_n": 62,
+   "share_of_informative": 0.2116,
+   "among_aigc_label": 0.0645,
+   "among_no_aigc_label": 0.229
+  },
+  {
+   "mechanism": "同行评审操纵",
+   "informative_n": 104,
+   "share_of_informative": 0.3549,
+   "among_aigc_label": 0.0,
+   "among_no_aigc_label": 0.3969
+  },
+  {
+   "mechanism": "特刊 / 客座编辑",
+   "informative_n": 52,
+   "share_of_informative": 0.1775,
+   "among_aigc_label": 0.0,
+   "among_no_aigc_label": 0.1985
+  },
+  {
+   "mechanism": "超出期刊范围",
+   "informative_n": 0,
+   "share_of_informative": 0.0,
+   "among_aigc_label": 0.0,
+   "among_no_aigc_label": 0.0
+  },
+  {
+   "mechanism": "数据/结果问题",
+   "informative_n": 84,
+   "share_of_informative": 0.2867,
+   "among_aigc_label": 0.0645,
+   "among_no_aigc_label": 0.313
+  },
+  {
+   "mechanism": "抄袭/重复",
+   "informative_n": 20,
+   "share_of_informative": 0.0683,
+   "among_aigc_label": 0.0323,
+   "among_no_aigc_label": 0.0725
+  },
+  {
+   "mechanism": "论文工厂 / 系统性操纵",
+   "informative_n": 2,
+   "share_of_informative": 0.0068,
+   "among_aigc_label": 0.0,
+   "among_no_aigc_label": 0.0076
+  }
+ ],
+ "llm_mention_cases": [],
+ "aigc_rate_by_pub_year": [
+  {
+   "pub_year": 2012,
+   "aigc_per_10k": 0.29,
+   "per_10k": 4.16
+  },
+  {
+   "pub_year": 2013,
+   "aigc_per_10k": 0.29,
+   "per_10k": 1.23
+  },
+  {
+   "pub_year": 2014,
+   "aigc_per_10k": 1.33,
+   "per_10k": 3.07
+  },
+  {
+   "pub_year": 2015,
+   "aigc_per_10k": 0.25,
+   "per_10k": 4.27
+  },
+  {
+   "pub_year": 2016,
+   "aigc_per_10k": 0.25,
+   "per_10k": 1.9
+  },
+  {
+   "pub_year": 2017,
+   "aigc_per_10k": 0.98,
+   "per_10k": 5.12
+  },
+  {
+   "pub_year": 2018,
+   "aigc_per_10k": 0.8,
+   "per_10k": 10.04
+  },
+  {
+   "pub_year": 2019,
+   "aigc_per_10k": 3.08,
+   "per_10k": 12.64
+  },
+  {
+   "pub_year": 2020,
+   "aigc_per_10k": 3.22,
+   "per_10k": 21.79
+  },
+  {
+   "pub_year": 2021,
+   "aigc_per_10k": 12.18,
+   "per_10k": 33.01
+  },
+  {
+   "pub_year": 2022,
+   "aigc_per_10k": 30.98,
+   "per_10k": 51.59
+  },
+  {
+   "pub_year": 2023,
+   "aigc_per_10k": 6.81,
+   "per_10k": 19.2
+  },
+  {
+   "pub_year": 2024,
+   "aigc_per_10k": 3.63,
+   "per_10k": 9.04
+  },
+  {
+   "pub_year": 2025,
+   "aigc_per_10k": 0.76,
+   "per_10k": 2.58
+  }
+ ]
+}

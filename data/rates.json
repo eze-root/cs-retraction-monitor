@@ -1,0 +1,3344 @@
+{
+ "schema_version": "1.0",
+ "snapshot": "bcb455b60862",
+ "generated_by": "scripts/analyze_rq1_rates.py",
+ "definitions": {
+  "numerator": "期刊子集中匹配到 OpenAlex source 的唯一撤稿论文，按原论文发表年",
+  "denominator": "OpenAlex 该期刊该年发文量（counts_by_year，全部类型）",
+  "pool": "仅含至少 1 条 CS 撤稿的期刊（条件比率）",
+  "unit": "每万篇",
+  "right_censoring": "2023 年及以后发表的论文观察期短，比率偏低"
+ },
+ "coverage": {
+  "journal_records": 6932,
+  "matched_records": 6860,
+  "matched_sources": 513,
+  "window": [
+   2015,
+   2022
+  ],
+  "window_retracted": 5241,
+  "window_works": 2465334,
+  "window_per_10k": 21.26,
+  "min_works_for_ranking": 2000
+ },
+ "pool_by_pub_year": [
+  {
+   "pub_year": 2012,
+   "retracted_papers": 87,
+   "works": 209071,
+   "per_10k": 4.16,
+   "excl_hindawi_retracted": 84,
+   "excl_hindawi_works": 200690,
+   "excl_hindawi_per_10k": 4.19,
+   "aigc_label_retracted": 6,
+   "aigc_per_10k": 0.29
+  },
+  {
+   "pub_year": 2013,
+   "retracted_papers": 30,
+   "works": 243959,
+   "per_10k": 1.23,
+   "excl_hindawi_retracted": 28,
+   "excl_hindawi_works": 231493,
+   "excl_hindawi_per_10k": 1.21,
+   "aigc_label_retracted": 7,
+   "aigc_per_10k": 0.29
+  },
+  {
+   "pub_year": 2014,
+   "retracted_papers": 81,
+   "works": 263989,
+   "per_10k": 3.07,
+   "excl_hindawi_retracted": 73,
+   "excl_hindawi_works": 247674,
+   "excl_hindawi_per_10k": 2.95,
+   "aigc_label_retracted": 35,
+   "aigc_per_10k": 1.33
+  },
+  {
+   "pub_year": 2015,
+   "retracted_papers": 101,
+   "works": 236624,
+   "per_10k": 4.27,
+   "excl_hindawi_retracted": 95,
+   "excl_hindawi_works": 222150,
+   "excl_hindawi_per_10k": 4.28,
+   "aigc_label_retracted": 6,
+   "aigc_per_10k": 0.25
+  },
+  {
+   "pub_year": 2016,
+   "retracted_papers": 45,
+   "works": 237243,
+   "per_10k": 1.9,
+   "excl_hindawi_retracted": 43,
+   "excl_hindawi_works": 227362,
+   "excl_hindawi_per_10k": 1.89,
+   "aigc_label_retracted": 6,
+   "aigc_per_10k": 0.25
+  },
+  {
+   "pub_year": 2017,
+   "retracted_papers": 125,
+   "works": 243922,
+   "per_10k": 5.12,
+   "excl_hindawi_retracted": 125,
+   "excl_hindawi_works": 234285,
+   "excl_hindawi_per_10k": 5.34,
+   "aigc_label_retracted": 24,
+   "aigc_per_10k": 0.98
+  },
+  {
+   "pub_year": 2018,
+   "retracted_papers": 264,
+   "works": 262855,
+   "per_10k": 10.04,
+   "excl_hindawi_retracted": 261,
+   "excl_hindawi_works": 250691,
+   "excl_hindawi_per_10k": 10.41,
+   "aigc_label_retracted": 21,
+   "aigc_per_10k": 0.8
+  },
+  {
+   "pub_year": 2019,
+   "retracted_papers": 378,
+   "works": 299124,
+   "per_10k": 12.64,
+   "excl_hindawi_retracted": 375,
+   "excl_hindawi_works": 288805,
+   "excl_hindawi_per_10k": 12.98,
+   "aigc_label_retracted": 92,
+   "aigc_per_10k": 3.08
+  },
+  {
+   "pub_year": 2020,
+   "retracted_papers": 772,
+   "works": 354317,
+   "per_10k": 21.79,
+   "excl_hindawi_retracted": 735,
+   "excl_hindawi_works": 339804,
+   "excl_hindawi_per_10k": 21.63,
+   "aigc_label_retracted": 114,
+   "aigc_per_10k": 3.22
+  },
+  {
+   "pub_year": 2021,
+   "retracted_papers": 1301,
+   "works": 394142,
+   "per_10k": 33.01,
+   "excl_hindawi_retracted": 650,
+   "excl_hindawi_works": 372898,
+   "excl_hindawi_per_10k": 17.43,
+   "aigc_label_retracted": 480,
+   "aigc_per_10k": 12.18
+  },
+  {
+   "pub_year": 2022,
+   "retracted_papers": 2255,
+   "works": 437107,
+   "per_10k": 51.59,
+   "excl_hindawi_retracted": 404,
+   "excl_hindawi_works": 405783,
+   "excl_hindawi_per_10k": 9.96,
+   "aigc_label_retracted": 1354,
+   "aigc_per_10k": 30.98
+  },
+  {
+   "pub_year": 2023,
+   "retracted_papers": 795,
+   "works": 414018,
+   "per_10k": 19.2,
+   "excl_hindawi_retracted": 742,
+   "excl_hindawi_works": 400109,
+   "excl_hindawi_per_10k": 18.54,
+   "aigc_label_retracted": 282,
+   "aigc_per_10k": 6.81
+  },
+  {
+   "pub_year": 2024,
+   "retracted_papers": 389,
+   "works": 430141,
+   "per_10k": 9.04,
+   "excl_hindawi_retracted": 389,
+   "excl_hindawi_works": 426557,
+   "excl_hindawi_per_10k": 9.12,
+   "aigc_label_retracted": 156,
+   "aigc_per_10k": 3.63
+  },
+  {
+   "pub_year": 2025,
+   "retracted_papers": 112,
+   "works": 434339,
+   "per_10k": 2.58,
+   "excl_hindawi_retracted": 112,
+   "excl_hindawi_works": 431891,
+   "excl_hindawi_per_10k": 2.59,
+   "aigc_label_retracted": 33,
+   "aigc_per_10k": 0.76
+  }
+ ],
+ "top_by_rate": [
+  {
+   "journal_rw": "Security and Communication Networks",
+   "publisher_rw": "Hindawi",
+   "display_name": "Security and Communication Networks",
+   "retracted": 508.0,
+   "works": 3821.0,
+   "per_10k": 1329.49,
+   "ci_low_per_10k": 1225.52,
+   "ci_high_per_10k": 1440.85,
+   "per_10k_article_review": 1826.68
+  },
+  {
+   "journal_rw": "Journal of Ambient Intelligence and Humanized Computing",
+   "publisher_rw": "Springer - Nature Publishing Group",
+   "display_name": "Journal of Ambient Intelligence and Humanized Computing",
+   "retracted": 403.0,
+   "works": 4162.0,
+   "per_10k": 968.28,
+   "ci_low_per_10k": 882.12,
+   "ci_high_per_10k": 1061.88,
+   "per_10k_article_review": 1287.95
+  },
+  {
+   "journal_rw": "Microprocessors and Microsystems",
+   "publisher_rw": "Elsevier",
+   "display_name": "Microprocessors and Microsystems",
+   "retracted": 189.0,
+   "works": 2153.0,
+   "per_10k": 877.84,
+   "ci_low_per_10k": 765.53,
+   "ci_high_per_10k": 1004.84,
+   "per_10k_article_review": 1330.99
+  },
+  {
+   "journal_rw": "Computational Intelligence and Neuroscience",
+   "publisher_rw": "Hindawi",
+   "display_name": "Computational Intelligence and Neuroscience",
+   "retracted": 381.0,
+   "works": 4921.0,
+   "per_10k": 774.23,
+   "ci_low_per_10k": 702.81,
+   "ci_high_per_10k": 852.25,
+   "per_10k_article_review": 1002.9
+  },
+  {
+   "journal_rw": "Wireless Communications and Mobile Computing",
+   "publisher_rw": "Hindawi",
+   "display_name": "Wireless Communications and Mobile Computing",
+   "retracted": 311.0,
+   "works": 5504.0,
+   "per_10k": 565.04,
+   "ci_low_per_10k": 507.08,
+   "ci_high_per_10k": 629.19,
+   "per_10k_article_review": 678.45
+  },
+  {
+   "journal_rw": "Journal of Sensors",
+   "publisher_rw": "Hindawi",
+   "display_name": "Journal of Sensors",
+   "retracted": 161.0,
+   "works": 2932.0,
+   "per_10k": 549.11,
+   "ci_low_per_10k": 472.33,
+   "ci_high_per_10k": 637.55,
+   "per_10k_article_review": 657.14
+  },
+  {
+   "journal_rw": "Soft Computing",
+   "publisher_rw": "Springer - Nature Publishing Group",
+   "display_name": "Soft Computing",
+   "retracted": 313.0,
+   "works": 5841.0,
+   "per_10k": 535.87,
+   "ci_low_per_10k": 480.99,
+   "ci_high_per_10k": 596.61,
+   "per_10k_article_review": 590.79
+  },
+  {
+   "journal_rw": "Journal of Healthcare Engineering",
+   "publisher_rw": "Hindawi",
+   "display_name": "Journal of Healthcare Engineering",
+   "retracted": 143.0,
+   "works": 2796.0,
+   "per_10k": 511.44,
+   "ci_low_per_10k": 435.77,
+   "ci_high_per_10k": 599.44,
+   "per_10k_article_review": 855.77
+  },
+  {
+   "journal_rw": "Journal of Intelligent & Fuzzy Systems",
+   "publisher_rw": "IOS Press (bought by Sage November 2023)",
+   "display_name": "Journal of Intelligent & Fuzzy Systems",
+   "retracted": 429.0,
+   "works": 8632.0,
+   "per_10k": 496.99,
+   "ci_low_per_10k": 453.11,
+   "ci_high_per_10k": 544.87,
+   "per_10k_article_review": 550.85
+  },
+  {
+   "journal_rw": "Mobile Information Systems",
+   "publisher_rw": "Hindawi",
+   "display_name": "Mobile Information Systems",
+   "retracted": 155.0,
+   "works": 3328.0,
+   "per_10k": 465.75,
+   "ci_low_per_10k": 399.23,
+   "ci_high_per_10k": 542.72,
+   "per_10k_article_review": 544.24
+  },
+  {
+   "journal_rw": "Journal of Mathematics",
+   "publisher_rw": "Hindawi",
+   "display_name": "Journal of Mathematics",
+   "retracted": 57.0,
+   "works": 2017.0,
+   "per_10k": 282.6,
+   "ci_low_per_10k": 218.76,
+   "ci_high_per_10k": 364.37,
+   "per_10k_article_review": 308.61
+  },
+  {
+   "journal_rw": "Cluster Computing",
+   "publisher_rw": "Springer",
+   "display_name": "Cluster Computing",
+   "retracted": 88.0,
+   "works": 3192.0,
+   "per_10k": 275.69,
+   "ci_low_per_10k": 224.32,
+   "ci_high_per_10k": 338.42,
+   "per_10k_article_review": 298.91
+  },
+  {
+   "journal_rw": "Computational and Mathematical Methods in Medicine",
+   "publisher_rw": "Hindawi",
+   "display_name": "Computational and Mathematical Methods in Medicine",
+   "retracted": 68.0,
+   "works": 3283.0,
+   "per_10k": 207.13,
+   "ci_low_per_10k": 163.72,
+   "ci_high_per_10k": 261.74,
+   "per_10k_article_review": 313.08
+  },
+  {
+   "journal_rw": "Complexity",
+   "publisher_rw": "Hindawi",
+   "display_name": "Complexity",
+   "retracted": 104.0,
+   "works": 5703.0,
+   "per_10k": 182.36,
+   "ci_low_per_10k": 150.74,
+   "ci_high_per_10k": 220.47,
+   "per_10k_article_review": 194.79
+  },
+  {
+   "journal_rw": "Scientific Programming",
+   "publisher_rw": "Hindawi",
+   "display_name": "Scientific Programming",
+   "retracted": 45.0,
+   "works": 2517.0,
+   "per_10k": 178.78,
+   "ci_low_per_10k": 133.88,
+   "ci_high_per_10k": 238.38,
+   "per_10k_article_review": 190.27
+  },
+  {
+   "journal_rw": "International Transactions on Electrical Energy Systems",
+   "publisher_rw": "Hindawi",
+   "display_name": "International Transactions on Electrical Energy Systems",
+   "retracted": 40.0,
+   "works": 2517.0,
+   "per_10k": 158.92,
+   "ci_low_per_10k": 116.92,
+   "ci_high_per_10k": 215.67,
+   "per_10k_article_review": 180.83
+  },
+  {
+   "journal_rw": "Annals of Operations Research",
+   "publisher_rw": "Springer - Nature Publishing Group",
+   "display_name": "Annals of Operations Research",
+   "retracted": 52.0,
+   "works": 3340.0,
+   "per_10k": 155.69,
+   "ci_low_per_10k": 118.92,
+   "ci_high_per_10k": 203.58,
+   "per_10k_article_review": 167.85
+  },
+  {
+   "journal_rw": "Discrete Dynamics in Nature and Society",
+   "publisher_rw": "Hindawi",
+   "display_name": "Discrete Dynamics in Nature and Society",
+   "retracted": 30.0,
+   "works": 2908.0,
+   "per_10k": 103.16,
+   "ci_low_per_10k": 72.36,
+   "ci_high_per_10k": 146.89,
+   "per_10k_article_review": null
+  },
+  {
+   "journal_rw": "Multimedia Tools and Applications",
+   "publisher_rw": "Springer - Nature Publishing Group",
+   "display_name": "Multimedia Tools and Applications",
+   "retracted": 117.0,
+   "works": 11684.0,
+   "per_10k": 100.14,
+   "ci_low_per_10k": 83.62,
+   "ci_high_per_10k": 119.87,
+   "per_10k_article_review": 106.27
+  },
+  {
+   "journal_rw": "Arabian Journal for Science and Engineering",
+   "publisher_rw": "Springer",
+   "display_name": "Arabian Journal for Science and Engineering",
+   "retracted": 53.0,
+   "works": 5896.0,
+   "per_10k": 89.89,
+   "ci_low_per_10k": 68.79,
+   "ci_high_per_10k": 117.38,
+   "per_10k_article_review": 91.51
+  },
+  {
+   "journal_rw": "Journal of Testing and Evaluation (JOTE)",
+   "publisher_rw": "ASTM International",
+   "display_name": "Journal of Testing and Evaluation",
+   "retracted": 19.0,
+   "works": 2169.0,
+   "per_10k": 87.6,
+   "ci_low_per_10k": 56.15,
+   "ci_high_per_10k": 136.42,
+   "per_10k_article_review": 95.81
+  },
+  {
+   "journal_rw": "Mathematical Problems in Engineering",
+   "publisher_rw": "Hindawi",
+   "display_name": "Mathematical Problems in Engineering",
+   "retracted": 128.0,
+   "works": 14715.0,
+   "per_10k": 86.99,
+   "ci_low_per_10k": 73.21,
+   "ci_high_per_10k": 103.32,
+   "per_10k_article_review": 90.69
+  },
+  {
+   "journal_rw": "The Journal of Supercomputing",
+   "publisher_rw": "Springer",
+   "display_name": "The Journal of Supercomputing",
+   "retracted": 31.0,
+   "works": 3616.0,
+   "per_10k": 85.73,
+   "ci_low_per_10k": 60.46,
+   "ci_high_per_10k": 121.43,
+   "per_10k_article_review": 90.06
+  },
+  {
+   "journal_rw": "Wireless Personal Communications",
+   "publisher_rw": "Springer",
+   "display_name": "Wireless Personal Communications",
+   "retracted": 63.0,
+   "works": 7547.0,
+   "per_10k": 83.48,
+   "ci_low_per_10k": 65.3,
+   "ci_high_per_10k": 106.65,
+   "per_10k_article_review": 87.08
+  },
+  {
+   "journal_rw": "International Journal of Communication Systems",
+   "publisher_rw": "Wiley",
+   "display_name": "International Journal of Communication Systems",
+   "retracted": 17.0,
+   "works": 2536.0,
+   "per_10k": 67.03,
+   "ci_low_per_10k": 41.9,
+   "ci_high_per_10k": 107.1,
+   "per_10k_article_review": null
+  }
+ ],
+ "top_by_count": [
+  {
+   "journal_rw": "Security and Communication Networks",
+   "publisher_rw": "Hindawi",
+   "display_name": "Security and Communication Networks",
+   "retracted": 508.0,
+   "works": 3821.0,
+   "per_10k": 1329.49,
+   "ci_low_per_10k": 1225.52,
+   "ci_high_per_10k": 1440.85,
+   "per_10k_article_review": 1826.68
+  },
+  {
+   "journal_rw": "Journal of Intelligent & Fuzzy Systems",
+   "publisher_rw": "IOS Press (bought by Sage November 2023)",
+   "display_name": "Journal of Intelligent & Fuzzy Systems",
+   "retracted": 429.0,
+   "works": 8632.0,
+   "per_10k": 496.99,
+   "ci_low_per_10k": 453.11,
+   "ci_high_per_10k": 544.87,
+   "per_10k_article_review": 550.85
+  },
+  {
+   "journal_rw": "Journal of Ambient Intelligence and Humanized Computing",
+   "publisher_rw": "Springer - Nature Publishing Group",
+   "display_name": "Journal of Ambient Intelligence and Humanized Computing",
+   "retracted": 403.0,
+   "works": 4162.0,
+   "per_10k": 968.28,
+   "ci_low_per_10k": 882.12,
+   "ci_high_per_10k": 1061.88,
+   "per_10k_article_review": 1287.95
+  },
+  {
+   "journal_rw": "Computational Intelligence and Neuroscience",
+   "publisher_rw": "Hindawi",
+   "display_name": "Computational Intelligence and Neuroscience",
+   "retracted": 381.0,
+   "works": 4921.0,
+   "per_10k": 774.23,
+   "ci_low_per_10k": 702.81,
+   "ci_high_per_10k": 852.25,
+   "per_10k_article_review": 1002.9
+  },
+  {
+   "journal_rw": "Soft Computing",
+   "publisher_rw": "Springer - Nature Publishing Group",
+   "display_name": "Soft Computing",
+   "retracted": 313.0,
+   "works": 5841.0,
+   "per_10k": 535.87,
+   "ci_low_per_10k": 480.99,
+   "ci_high_per_10k": 596.61,
+   "per_10k_article_review": 590.79
+  },
+  {
+   "journal_rw": "Wireless Communications and Mobile Computing",
+   "publisher_rw": "Hindawi",
+   "display_name": "Wireless Communications and Mobile Computing",
+   "retracted": 311.0,
+   "works": 5504.0,
+   "per_10k": 565.04,
+   "ci_low_per_10k": 507.08,
+   "ci_high_per_10k": 629.19,
+   "per_10k_article_review": 678.45
+  },
+  {
+   "journal_rw": "Microprocessors and Microsystems",
+   "publisher_rw": "Elsevier",
+   "display_name": "Microprocessors and Microsystems",
+   "retracted": 189.0,
+   "works": 2153.0,
+   "per_10k": 877.84,
+   "ci_low_per_10k": 765.53,
+   "ci_high_per_10k": 1004.84,
+   "per_10k_article_review": 1330.99
+  },
+  {
+   "journal_rw": "Journal of Sensors",
+   "publisher_rw": "Hindawi",
+   "display_name": "Journal of Sensors",
+   "retracted": 161.0,
+   "works": 2932.0,
+   "per_10k": 549.11,
+   "ci_low_per_10k": 472.33,
+   "ci_high_per_10k": 637.55,
+   "per_10k_article_review": 657.14
+  },
+  {
+   "journal_rw": "Mobile Information Systems",
+   "publisher_rw": "Hindawi",
+   "display_name": "Mobile Information Systems",
+   "retracted": 155.0,
+   "works": 3328.0,
+   "per_10k": 465.75,
+   "ci_low_per_10k": 399.23,
+   "ci_high_per_10k": 542.72,
+   "per_10k_article_review": 544.24
+  },
+  {
+   "journal_rw": "Journal of Healthcare Engineering",
+   "publisher_rw": "Hindawi",
+   "display_name": "Journal of Healthcare Engineering",
+   "retracted": 143.0,
+   "works": 2796.0,
+   "per_10k": 511.44,
+   "ci_low_per_10k": 435.77,
+   "ci_high_per_10k": 599.44,
+   "per_10k_article_review": 855.77
+  },
+  {
+   "journal_rw": "Mathematical Problems in Engineering",
+   "publisher_rw": "Hindawi",
+   "display_name": "Mathematical Problems in Engineering",
+   "retracted": 128.0,
+   "works": 14715.0,
+   "per_10k": 86.99,
+   "ci_low_per_10k": 73.21,
+   "ci_high_per_10k": 103.32,
+   "per_10k_article_review": 90.69
+  },
+  {
+   "journal_rw": "Multimedia Tools and Applications",
+   "publisher_rw": "Springer - Nature Publishing Group",
+   "display_name": "Multimedia Tools and Applications",
+   "retracted": 117.0,
+   "works": 11684.0,
+   "per_10k": 100.14,
+   "ci_low_per_10k": 83.62,
+   "ci_high_per_10k": 119.87,
+   "per_10k_article_review": 106.27
+  },
+  {
+   "journal_rw": "Complexity",
+   "publisher_rw": "Hindawi",
+   "display_name": "Complexity",
+   "retracted": 104.0,
+   "works": 5703.0,
+   "per_10k": 182.36,
+   "ci_low_per_10k": 150.74,
+   "ci_high_per_10k": 220.47,
+   "per_10k_article_review": 194.79
+  },
+  {
+   "journal_rw": "Cluster Computing",
+   "publisher_rw": "Springer",
+   "display_name": "Cluster Computing",
+   "retracted": 88.0,
+   "works": 3192.0,
+   "per_10k": 275.69,
+   "ci_low_per_10k": 224.32,
+   "ci_high_per_10k": 338.42,
+   "per_10k_article_review": 298.91
+  },
+  {
+   "journal_rw": "Advances in Multimedia",
+   "publisher_rw": "Hindawi",
+   "display_name": "Advances in Multimedia",
+   "retracted": 69.0,
+   "works": 595.0,
+   "per_10k": 1159.66,
+   "ci_low_per_10k": 926.67,
+   "ci_high_per_10k": 1441.93,
+   "per_10k_article_review": 1662.65
+  },
+  {
+   "journal_rw": "Computational and Mathematical Methods in Medicine",
+   "publisher_rw": "Hindawi",
+   "display_name": "Computational and Mathematical Methods in Medicine",
+   "retracted": 68.0,
+   "works": 3283.0,
+   "per_10k": 207.13,
+   "ci_low_per_10k": 163.72,
+   "ci_high_per_10k": 261.74,
+   "per_10k_article_review": 313.08
+  },
+  {
+   "journal_rw": "The International Journal of Electrical Engineering & Education",
+   "publisher_rw": "SAGE Publications",
+   "display_name": "International Journal of Electrical Engineering Education",
+   "retracted": 67.0,
+   "works": 683.0,
+   "per_10k": 980.97,
+   "ci_low_per_10k": 779.86,
+   "ci_high_per_10k": 1227.03,
+   "per_10k_article_review": 1947.67
+  },
+  {
+   "journal_rw": "Wireless Personal Communications",
+   "publisher_rw": "Springer",
+   "display_name": "Wireless Personal Communications",
+   "retracted": 63.0,
+   "works": 7547.0,
+   "per_10k": 83.48,
+   "ci_low_per_10k": 65.3,
+   "ci_high_per_10k": 106.65,
+   "per_10k_article_review": 87.08
+  },
+  {
+   "journal_rw": "Journal of Environmental and Public Health",
+   "publisher_rw": "Hindawi",
+   "display_name": "Journal of Environmental and Public Health",
+   "retracted": 60.0,
+   "works": 1122.0,
+   "per_10k": 534.76,
+   "ci_low_per_10k": 417.7,
+   "ci_high_per_10k": 682.3,
+   "per_10k_article_review": 884.96
+  },
+  {
+   "journal_rw": "PLoS One",
+   "publisher_rw": "PLoS",
+   "display_name": "PLoS ONE",
+   "retracted": 58.0,
+   "works": 158704.0,
+   "per_10k": 3.65,
+   "ci_low_per_10k": 2.83,
+   "ci_high_per_10k": 4.72,
+   "per_10k_article_review": 3.84
+  },
+  {
+   "journal_rw": "Journal of Mathematics",
+   "publisher_rw": "Hindawi",
+   "display_name": "Journal of Mathematics",
+   "retracted": 57.0,
+   "works": 2017.0,
+   "per_10k": 282.6,
+   "ci_low_per_10k": 218.76,
+   "ci_high_per_10k": 364.37,
+   "per_10k_article_review": 308.61
+  },
+  {
+   "journal_rw": "Arabian Journal for Science and Engineering",
+   "publisher_rw": "Springer",
+   "display_name": "Arabian Journal for Science and Engineering",
+   "retracted": 53.0,
+   "works": 5896.0,
+   "per_10k": 89.89,
+   "ci_low_per_10k": 68.79,
+   "ci_high_per_10k": 117.38,
+   "per_10k_article_review": 91.51
+  },
+  {
+   "journal_rw": "Annals of Operations Research",
+   "publisher_rw": "Springer - Nature Publishing Group",
+   "display_name": "Annals of Operations Research",
+   "retracted": 52.0,
+   "works": 3340.0,
+   "per_10k": 155.69,
+   "ci_low_per_10k": 118.92,
+   "ci_high_per_10k": 203.58,
+   "per_10k_article_review": 167.85
+  },
+  {
+   "journal_rw": "The Open Automation and Control Systems Journal",
+   "publisher_rw": "Bentham Open",
+   "display_name": "The Open Automation and Control Systems Journal",
+   "retracted": 47.0,
+   "works": 409.0,
+   "per_10k": 1149.14,
+   "ci_low_per_10k": 875.26,
+   "ci_high_per_10k": 1494.7,
+   "per_10k_article_review": 1354.47
+  },
+  {
+   "journal_rw": "Applied Bionics and Biomechanics",
+   "publisher_rw": "Hindawi",
+   "display_name": "Applied Bionics and Biomechanics",
+   "retracted": 46.0,
+   "works": 797.0,
+   "per_10k": 577.16,
+   "ci_low_per_10k": 435.47,
+   "ci_high_per_10k": 761.29,
+   "per_10k_article_review": 925.55
+  }
+ ],
+ "publisher_rates": [
+  {
+   "publisher_rw": "Hindawi",
+   "retracted": 2553.0,
+   "works": 123556.0,
+   "per_10k": 206.63
+  },
+  {
+   "publisher_rw": "Springer - Nature Publishing Group",
+   "retracted": 941.0,
+   "works": 427897.0,
+   "per_10k": 21.99
+  },
+  {
+   "publisher_rw": "Springer",
+   "retracted": 511.0,
+   "works": 178893.0,
+   "per_10k": 28.56
+  },
+  {
+   "publisher_rw": "IOS Press (bought by Sage November 2023)",
+   "retracted": 430.0,
+   "works": 10299.0,
+   "per_10k": 417.52
+  },
+  {
+   "publisher_rw": "Elsevier",
+   "retracted": 321.0,
+   "works": 569117.0,
+   "per_10k": 5.64
+  },
+  {
+   "publisher_rw": "SAGE Publications",
+   "retracted": 94.0,
+   "works": 21029.0,
+   "per_10k": 44.7
+  },
+  {
+   "publisher_rw": "Wiley",
+   "retracted": 70.0,
+   "works": 48280.0,
+   "per_10k": 14.5
+  },
+  {
+   "publisher_rw": "PLoS",
+   "retracted": 59.0,
+   "works": 161622.0,
+   "per_10k": 3.65
+  },
+  {
+   "publisher_rw": "Taylor and Francis",
+   "retracted": 46.0,
+   "works": 34860.0,
+   "per_10k": 13.2
+  },
+  {
+   "publisher_rw": "MDPI",
+   "retracted": 27.0,
+   "works": 338095.0,
+   "per_10k": 0.8
+  },
+  {
+   "publisher_rw": "IEEE: Institute of Electrical and Electronics Engineers",
+   "retracted": 26.0,
+   "works": 89328.0,
+   "per_10k": 2.91
+  },
+  {
+   "publisher_rw": "ASTM International",
+   "retracted": 19.0,
+   "works": 2169.0,
+   "per_10k": 87.6
+  }
+ ],
+ "denominator_sensitivity": {
+  "n_journals": 40,
+  "per_10k_all_types": 87.26,
+  "per_10k_article_review": 93.08,
+  "spearman_rank_corr": 0.992
+ },
+ "by_journal_rw": {
+  "Yugoslav Journal of Operations Research": {
+   "per_10k": 0.0,
+   "works": 240,
+   "retracted": 0
+  },
+  "International Wound Journal": {
+   "per_10k": 0.0,
+   "works": 1704,
+   "retracted": 0
+  },
+  "Computer Standards & Interfaces": {
+   "per_10k": 0.0,
+   "works": 597,
+   "retracted": 0
+  },
+  "Journal of Optical Communications": {
+   "per_10k": 0.0,
+   "works": 1021,
+   "retracted": 0
+  },
+  "Trees": {
+   "per_10k": 0.0,
+   "works": 1222,
+   "retracted": 0
+  },
+  "Journal of Biochemical Technology": {
+   "per_10k": 0.0,
+   "works": 174,
+   "retracted": 0
+  },
+  "Global Economy Journal": {
+   "per_10k": 0.0,
+   "works": 205,
+   "retracted": 0
+  },
+  "Measurement": {
+   "per_10k": 0.0,
+   "works": 8493,
+   "retracted": 0
+  },
+  "Applied Energy": {
+   "per_10k": 0.0,
+   "works": 13420,
+   "retracted": 0
+  },
+  "Microelectronics Journal": {
+   "per_10k": 0.0,
+   "works": 1230,
+   "retracted": 0
+  },
+  "Infection and Drug Resistance": {
+   "per_10k": 0.0,
+   "works": 2551,
+   "retracted": 0
+  },
+  "Neurosurgical Review": {
+   "per_10k": 0.0,
+   "works": 1310,
+   "retracted": 0
+  },
+  "International Journal of Nanomedicine": {
+   "per_10k": 0.0,
+   "works": 4730,
+   "retracted": 0
+  },
+  "Journal of Computational Methods in Sciences and Engineering": {
+   "per_10k": 0.0,
+   "works": 1023,
+   "retracted": 0
+  },
+  "Brain Research": {
+   "per_10k": 0.0,
+   "works": 3766,
+   "retracted": 0
+  },
+  "Bulletin of Materials Science": {
+   "per_10k": 0.0,
+   "works": 2000,
+   "retracted": 0
+  },
+  "Robotics and Computer-Integrated Manufacturing": {
+   "per_10k": 0.0,
+   "works": 1092,
+   "retracted": 0
+  },
+  "Renewable Energy": {
+   "per_10k": 0.0,
+   "works": 12054,
+   "retracted": 0
+  },
+  "Infrared Physics & Technology": {
+   "per_10k": 0.0,
+   "works": 2682,
+   "retracted": 0
+  },
+  "Advances in Electronics": {
+   "per_10k": 0.0,
+   "works": 7,
+   "retracted": 0
+  },
+  "Computational Materials Science": {
+   "per_10k": 0.0,
+   "works": 5236,
+   "retracted": 0
+  },
+  "Technological Forecasting and Social Change": {
+   "per_10k": 0.0,
+   "works": 3869,
+   "retracted": 0
+  },
+  "Intelligent Automation and Soft Computing": {
+   "per_10k": 0.0,
+   "works": 1593,
+   "retracted": 0
+  },
+  "International Orthopaedics": {
+   "per_10k": 0.0,
+   "works": 2994,
+   "retracted": 0
+  },
+  "Optics & Laser Technology": {
+   "per_10k": 0.0,
+   "works": 5277,
+   "retracted": 0
+  },
+  "Procedia Technology": {
+   "per_10k": 0.0,
+   "works": 1171,
+   "retracted": 0
+  },
+  "Environmental Chemistry Letters": {
+   "per_10k": 0.0,
+   "works": 1049,
+   "retracted": 0
+  },
+  "Decision Support Systems": {
+   "per_10k": 0.0,
+   "works": 1029,
+   "retracted": 0
+  },
+  "International Journal of Applied Linguistics & English Literature": {
+   "per_10k": 0.0,
+   "works": 1038,
+   "retracted": 0
+  },
+  "Science of The Total Environment": {
+   "per_10k": 0.0,
+   "works": 42907,
+   "retracted": 0
+  },
+  "Vacuum": {
+   "per_10k": 0.0,
+   "works": 4979,
+   "retracted": 0
+  },
+  "Cardiovascular Revascularization Medicine : Including Molecular Interventions": {
+   "per_10k": 0.0,
+   "works": 2518,
+   "retracted": 0
+  },
+  "Psychology Research and Behavior Management": {
+   "per_10k": 0.0,
+   "works": 883,
+   "retracted": 0
+  },
+  "International Journal of Remote Sensing": {
+   "per_10k": 0.0,
+   "works": 3195,
+   "retracted": 0
+  },
+  "Network: Computation in Neural Systems": {
+   "per_10k": 0.0,
+   "works": 54,
+   "retracted": 0
+  },
+  "Procedia - Social and Behavioral Sciences": {
+   "per_10k": 0.0,
+   "works": 7966,
+   "retracted": 0
+  },
+  "Urban Climate": {
+   "per_10k": 0.0,
+   "works": 1229,
+   "retracted": 0
+  },
+  "Journal of International Medical Research": {
+   "per_10k": 0.0,
+   "works": 4840,
+   "retracted": 0
+  },
+  "Skin Research and Technology": {
+   "per_10k": 0.0,
+   "works": 971,
+   "retracted": 0
+  },
+  "Journal of the Knowledge Economy": {
+   "per_10k": 0.0,
+   "works": 845,
+   "retracted": 0
+  },
+  "British Educational Research Journal": {
+   "per_10k": 0.0,
+   "works": 614,
+   "retracted": 0
+  },
+  "Journal of Cleaner Production": {
+   "per_10k": 0.0,
+   "works": 29563,
+   "retracted": 0
+  },
+  "International Journal of Automation and Control": {
+   "per_10k": 0.0,
+   "works": 268,
+   "retracted": 0
+  },
+  "Journal of Bionic Engineering": {
+   "per_10k": 0.0,
+   "works": 799,
+   "retracted": 0
+  },
+  "Frontiers in Computational Neuroscience": {
+   "per_10k": 0.0,
+   "works": 1105,
+   "retracted": 0
+  },
+  "Journal of Materials Processing Technology": {
+   "per_10k": 0.0,
+   "works": 3426,
+   "retracted": 0
+  },
+  "Software Quality Journal": {
+   "per_10k": 0.0,
+   "works": 341,
+   "retracted": 0
+  },
+  "Telemedicine and e-Health": {
+   "per_10k": 0.0,
+   "works": 1434,
+   "retracted": 0
+  },
+  "Clinical Hemorheology and Microcirculation": {
+   "per_10k": 0.0,
+   "works": 1250,
+   "retracted": 0
+  },
+  "International Journal of Computer Mathematics": {
+   "per_10k": 0.0,
+   "works": 1041,
+   "retracted": 0
+  },
+  "Key Engineering Materials": {
+   "per_10k": 0.0,
+   "works": 14576,
+   "retracted": 0
+  },
+  "Bulletin of Earthquake Engineering": {
+   "per_10k": 0.0,
+   "works": 1855,
+   "retracted": 0
+  },
+  "Functional & Integrative Genomics": {
+   "per_10k": 0.0,
+   "works": 512,
+   "retracted": 0
+  },
+  "International Journal of Distributed Sensor Networks": {
+   "per_10k": 0.0,
+   "works": 2460,
+   "retracted": 0
+  },
+  "Military Technical Bulletin (Vojnotehnički glasnik)": {
+   "per_10k": 0.0,
+   "works": 393,
+   "retracted": 0
+  },
+  "International Journal of Mobile Network Design and Innovation": {
+   "per_10k": 0.0,
+   "works": 117,
+   "retracted": 0
+  },
+  "Wuhan University Journal of Natural Sciences": {
+   "per_10k": 0.0,
+   "works": 460,
+   "retracted": 0
+  },
+  "Analyst": {
+   "per_10k": 0.0,
+   "works": 6709,
+   "retracted": 0
+  },
+  "Computational Science and Its Applications – ICCSA 2014": {
+   "per_10k": 0.0,
+   "works": 165575,
+   "retracted": 0
+  },
+  "Computers and Geotechnics": {
+   "per_10k": 0.0,
+   "works": 2862,
+   "retracted": 0
+  },
+  "Journal of Cluster Science": {
+   "per_10k": 0.0,
+   "works": 1546,
+   "retracted": 0
+  },
+  "International Journal of Business Process Integration and Management": {
+   "per_10k": 0.0,
+   "works": 104,
+   "retracted": 0
+  },
+  "Elektronika ir Elektrotechnika": {
+   "per_10k": 0.0,
+   "works": 710,
+   "retracted": 0
+  },
+  "Construction and Building Materials": {
+   "per_10k": 0.0,
+   "works": 23187,
+   "retracted": 0
+  },
+  "Bioinformation": {
+   "per_10k": 0.0,
+   "works": 1033,
+   "retracted": 0
+  },
+  "Journal of Medical Ethics": {
+   "per_10k": 0.0,
+   "works": 1884,
+   "retracted": 0
+  },
+  "Chemometrics and Intelligent Laboratory Systems": {
+   "per_10k": 0.0,
+   "works": 1607,
+   "retracted": 0
+  },
+  "Cureus": {
+   "per_10k": 0.0,
+   "works": 33293,
+   "retracted": 0
+  },
+  "Advanced Materials Research": {
+   "per_10k": 0.0,
+   "works": 5230,
+   "retracted": 0
+  },
+  "International Journal of Sustainable Energy": {
+   "per_10k": 0.0,
+   "works": 401,
+   "retracted": 0
+  },
+  "International Journal of Geomechanics": {
+   "per_10k": 0.0,
+   "works": 2221,
+   "retracted": 0
+  },
+  "Software": {
+   "per_10k": 0.0,
+   "works": 21,
+   "retracted": 0
+  },
+  "Marketing Education Review": {
+   "per_10k": 0.0,
+   "works": 252,
+   "retracted": 0
+  },
+  "Advances in Continuous and Discrete Models: Theory and Modern Applications (formerly known as Advances in Difference Equations)": {
+   "per_10k": 3.01,
+   "works": 3325,
+   "retracted": 1
+  },
+  "IEEE Transactions on Computers": {
+   "per_10k": 0.0,
+   "works": 1588,
+   "retracted": 0
+  },
+  "Electric Power Systems Research": {
+   "per_10k": 0.0,
+   "works": 4429,
+   "retracted": 0
+  },
+  "Computer Methods in Applied Mechanics and Engineering": {
+   "per_10k": 0.0,
+   "works": 4389,
+   "retracted": 0
+  },
+  "Fluctuation and Noise Letters": {
+   "per_10k": 0.0,
+   "works": 388,
+   "retracted": 0
+  },
+  "Energies": {
+   "per_10k": 0.0,
+   "works": 38005,
+   "retracted": 0
+  },
+  "Water Research": {
+   "per_10k": 0.0,
+   "works": 8002,
+   "retracted": 0
+  },
+  "Engineering Analysis with Boundary Elements": {
+   "per_10k": 0.0,
+   "works": 2031,
+   "retracted": 0
+  },
+  "Journal of Electronic Imaging": {
+   "per_10k": 0.0,
+   "works": 2031,
+   "retracted": 0
+  },
+  "Journal of Inequalities and Applications": {
+   "per_10k": 0.0,
+   "works": 2362,
+   "retracted": 0
+  },
+  "Journal of Electrical Engineering & Technology": {
+   "per_10k": 0.0,
+   "works": 2203,
+   "retracted": 0
+  },
+  "Animals": {
+   "per_10k": 0.0,
+   "works": 11501,
+   "retracted": 0
+  },
+  "Electronic Notes In Theoretical Computer Science": {
+   "per_10k": 0.0,
+   "works": 520,
+   "retracted": 0
+  },
+  "Journal of Computer Science": {
+   "per_10k": 0.0,
+   "works": 894,
+   "retracted": 0
+  },
+  "Computer-Aided Design": {
+   "per_10k": 0.0,
+   "works": 859,
+   "retracted": 0
+  },
+  "The Journal of Antibiotics": {
+   "per_10k": 0.0,
+   "works": 1080,
+   "retracted": 0
+  },
+  "International Journal of Human–Computer Interaction": {
+   "per_10k": 0.0,
+   "works": 1273,
+   "retracted": 0
+  },
+  "Applied System Innovation": {
+   "per_10k": 0.0,
+   "works": 380,
+   "retracted": 0
+  },
+  "Human Vaccines & Immunotherapeutics": {
+   "per_10k": 0.0,
+   "works": 3918,
+   "retracted": 0
+  },
+  "Procedia Engineering": {
+   "per_10k": 0.0,
+   "works": 14400,
+   "retracted": 0
+  },
+  "Human Factors and Ergonomics in Manufacturing & Service Industries": {
+   "per_10k": 0.0,
+   "works": 403,
+   "retracted": 0
+  },
+  "Journal of Computer Science and Technology": {
+   "per_10k": 0.0,
+   "works": 773,
+   "retracted": 0
+  },
+  "Experimental Brain Research": {
+   "per_10k": 0.0,
+   "works": 2328,
+   "retracted": 0
+  },
+  "The Accounting Review": {
+   "per_10k": 0.0,
+   "works": 865,
+   "retracted": 0
+  },
+  "Chemical Physics Letters": {
+   "per_10k": 0.0,
+   "works": 7371,
+   "retracted": 0
+  },
+  "International Journal of Vehicular Technology": {
+   "per_10k": 0.0,
+   "works": 21,
+   "retracted": 0
+  },
+  "Experimental and Theoretical Nanotechnology (ETN)": {
+   "per_10k": 0.0,
+   "works": 200,
+   "retracted": 0
+  },
+  "Outlook on Agriculture": {
+   "per_10k": 0.0,
+   "works": 315,
+   "retracted": 0
+  },
+  "Science and Technology for Energy Transition": {
+   "per_10k": 0.0,
+   "works": 22,
+   "retracted": 0
+  },
+  "The Journal of China Universities of Posts and Telecommunications": {
+   "per_10k": 0.0,
+   "works": 439,
+   "retracted": 0
+  },
+  "Computers in Biology and Medicine": {
+   "per_10k": 0.0,
+   "works": 4036,
+   "retracted": 0
+  },
+  "Structural and Multidisciplinary Optimization": {
+   "per_10k": 0.0,
+   "works": 2230,
+   "retracted": 0
+  },
+  "Journal of Molecular Biology": {
+   "per_10k": 0.0,
+   "works": 3240,
+   "retracted": 0
+  },
+  "Communications and Network": {
+   "per_10k": 0.0,
+   "works": 118,
+   "retracted": 0
+  },
+  "Industrial & Engineering Chemistry Research": {
+   "per_10k": 0.0,
+   "works": 14095,
+   "retracted": 0
+  },
+  "Current Psychology": {
+   "per_10k": 0.0,
+   "works": 4831,
+   "retracted": 0
+  },
+  "Journal of Computational Chemistry": {
+   "per_10k": 0.0,
+   "works": 2727,
+   "retracted": 0
+  },
+  "Journal of Microscopy": {
+   "per_10k": 0.0,
+   "works": 1046,
+   "retracted": 0
+  },
+  "International Journal of Integrated Supply Management": {
+   "per_10k": 0.0,
+   "works": 132,
+   "retracted": 0
+  },
+  "Russian Microelectronics": {
+   "per_10k": 0.0,
+   "works": 663,
+   "retracted": 0
+  },
+  "Letters in Applied Microbiology": {
+   "per_10k": 0.0,
+   "works": 1533,
+   "retracted": 0
+  },
+  "International Journal of Information Technology & Decision Making": {
+   "per_10k": 0.0,
+   "works": 601,
+   "retracted": 0
+  },
+  "Computer Science and Information Systems": {
+   "per_10k": 0.0,
+   "works": 451,
+   "retracted": 0
+  },
+  "Frontiers of Computer Science": {
+   "per_10k": 0.0,
+   "works": 855,
+   "retracted": 0
+  },
+  "Discover Internet of Things": {
+   "per_10k": 0.0,
+   "works": 27,
+   "retracted": 0
+  },
+  "Engineering Research Express": {
+   "per_10k": 0.0,
+   "works": 713,
+   "retracted": 0
+  },
+  "International Journal of Pattern Recognition and Artificial Intelligence": {
+   "per_10k": 0.0,
+   "works": 1399,
+   "retracted": 0
+  },
+  "Journal of the Energy Institute": {
+   "per_10k": 0.0,
+   "works": 1084,
+   "retracted": 0
+  },
+  "International Journal of Computational Fluid Dynamics": {
+   "per_10k": 0.0,
+   "works": 318,
+   "retracted": 0
+  },
+  "Korean Journal of Chemical Engineering": {
+   "per_10k": 0.0,
+   "works": 2898,
+   "retracted": 0
+  },
+  "Computers & Operations Research": {
+   "per_10k": 0.0,
+   "works": 2060,
+   "retracted": 0
+  },
+  "Economic Change and Restructuring": {
+   "per_10k": 0.0,
+   "works": 312,
+   "retracted": 0
+  },
+  "Iraqi Journal for Computer Science and Mathematics": {
+   "per_10k": 0.0,
+   "works": 53,
+   "retracted": 0
+  },
+  "Computers & Industrial Engineering": {
+   "per_10k": 0.0,
+   "works": 4700,
+   "retracted": 0
+  },
+  "International Journal of Grid and Utility Computing": {
+   "per_10k": 0.0,
+   "works": 374,
+   "retracted": 0
+  },
+  "The Astrophysical Journal Supplement Series": {
+   "per_10k": 0.0,
+   "works": 1942,
+   "retracted": 0
+  },
+  "Humanities and Social Sciences Communications": {
+   "per_10k": 0.0,
+   "works": 1742,
+   "retracted": 0
+  },
+  "The Open Biomedical Engineering Journal": {
+   "per_10k": 0.0,
+   "works": 170,
+   "retracted": 0
+  },
+  "Progress in Nuclear Energy": {
+   "per_10k": 0.0,
+   "works": 2266,
+   "retracted": 0
+  },
+  "Journal of Vibration and Control": {
+   "per_10k": 0.0,
+   "works": 2055,
+   "retracted": 0
+  },
+  "Coatings": {
+   "per_10k": 0.0,
+   "works": 6630,
+   "retracted": 0
+  },
+  "Journal of the Korean Data & Information Science Society": {
+   "per_10k": 0.0,
+   "works": 1089,
+   "retracted": 0
+  },
+  "Journal of Applied Mathematics": {
+   "per_10k": 0.0,
+   "works": 467,
+   "retracted": 0
+  },
+  "International Journal of Human-Computer Studies": {
+   "per_10k": 0.0,
+   "works": 865,
+   "retracted": 0
+  },
+  "International Journal of Computational Intelligence Systems": {
+   "per_10k": 0.0,
+   "works": 967,
+   "retracted": 0
+  },
+  "Journal of Coastal Conservation": {
+   "per_10k": 0.0,
+   "works": 559,
+   "retracted": 0
+  },
+  "AIP Advances": {
+   "per_10k": 0.0,
+   "works": 11499,
+   "retracted": 0
+  },
+  "Journal of Applied Mathematics and Computing": {
+   "per_10k": 0.0,
+   "works": 973,
+   "retracted": 0
+  },
+  "International Journal of Aeronautical and Space Sciences": {
+   "per_10k": 13.33,
+   "works": 750,
+   "retracted": 1
+  },
+  "Journal of Computing in Civil Engineering": {
+   "per_10k": 16.5,
+   "works": 606,
+   "retracted": 1
+  },
+  "International Journal of Process Management and Benchmarking": {
+   "per_10k": 25.77,
+   "works": 388,
+   "retracted": 1
+  },
+  "Optics Express": {
+   "per_10k": 0.38,
+   "works": 26371,
+   "retracted": 1
+  },
+  "International Journal on Artificial Intelligence Tools": {
+   "per_10k": 19.76,
+   "works": 506,
+   "retracted": 1
+  },
+  "Applied Stochastic Models in Business and Industry": {
+   "per_10k": 14.45,
+   "works": 692,
+   "retracted": 1
+  },
+  "Environmental Research": {
+   "per_10k": 1.19,
+   "works": 8412,
+   "retracted": 1
+  },
+  "Ingénierie des Systèmes d’Information": {
+   "per_10k": 18.42,
+   "works": 543,
+   "retracted": 1
+  },
+  "Advances in Mechanical Engineering": {
+   "per_10k": 2.33,
+   "works": 4286,
+   "retracted": 1
+  },
+  "International Journal of Environmental Research and Public Health": {
+   "per_10k": 0.19,
+   "works": 52896,
+   "retracted": 1
+  },
+  "Advances in Fuzzy Systems": {
+   "per_10k": 56.82,
+   "works": 176,
+   "retracted": 1
+  },
+  "The Open Construction and Building Technology Journal": {
+   "per_10k": 34.36,
+   "works": 291,
+   "retracted": 1
+  },
+  "Journal of Biomedical Informatics": {
+   "per_10k": 5.05,
+   "works": 1979,
+   "retracted": 1
+  },
+  "Computers & Electrical Engineering": {
+   "per_10k": 3.2,
+   "works": 3122,
+   "retracted": 1
+  },
+  "Procedia Computer Science": {
+   "per_10k": 0.53,
+   "works": 18876,
+   "retracted": 1
+  },
+  "Molecular and Cellular Probes": {
+   "per_10k": 15.36,
+   "works": 651,
+   "retracted": 1
+  },
+  "IEEE Transactions on Circuits and Systems I: Regular Papers": {
+   "per_10k": 2.85,
+   "works": 3509,
+   "retracted": 1
+  },
+  "Computers and Electronics in Agriculture": {
+   "per_10k": 2.4,
+   "works": 4171,
+   "retracted": 1
+  },
+  "Journal of Environmental Protection (JEP)": {
+   "per_10k": 12.79,
+   "works": 782,
+   "retracted": 1
+  },
+  "Artificial Intelligence Review": {
+   "per_10k": 10.7,
+   "works": 935,
+   "retracted": 1
+  },
+  "Energy & Fuels": {
+   "per_10k": 0.93,
+   "works": 10759,
+   "retracted": 1
+  },
+  "Bioinorganic Chemistry and Applications": {
+   "per_10k": 31.45,
+   "works": 318,
+   "retracted": 1
+  },
+  "Journal of Scientific Computing": {
+   "per_10k": 4.8,
+   "works": 2082,
+   "retracted": 1
+  },
+  "Symmetry": {
+   "per_10k": 0.97,
+   "works": 10295,
+   "retracted": 1
+  },
+  "International Journal of Healthcare Management": {
+   "per_10k": 16.67,
+   "works": 600,
+   "retracted": 1
+  },
+  "Information Sciences": {
+   "per_10k": 1.32,
+   "works": 7587,
+   "retracted": 1
+  },
+  "Bulletin of Mgimo University (Вестник Мгимо Университета)": {
+   "per_10k": 10.32,
+   "works": 969,
+   "retracted": 1
+  },
+  "Computational Methods in Applied Mathematics": {
+   "per_10k": 24.51,
+   "works": 408,
+   "retracted": 1
+  },
+  "Nature Human Behaviour": {
+   "per_10k": 6.8,
+   "works": 1471,
+   "retracted": 1
+  },
+  "Results in Physics": {
+   "per_10k": 1.82,
+   "works": 5499,
+   "retracted": 1
+  },
+  "The Journal of Maternal-Fetal & Neonatal Medicine": {
+   "per_10k": 1.87,
+   "works": 5354,
+   "retracted": 1
+  },
+  "International Journal of Wireless and Mobile Computing": {
+   "per_10k": 14.2,
+   "works": 704,
+   "retracted": 1
+  },
+  "Journal of Circuits, Systems and Computers": {
+   "per_10k": 4.56,
+   "works": 2195,
+   "retracted": 1
+  },
+  "Education and Information Technologies": {
+   "per_10k": 4.68,
+   "works": 2139,
+   "retracted": 1
+  },
+  "Journal of Molecular Modeling": {
+   "per_10k": 3.47,
+   "works": 2885,
+   "retracted": 1
+  },
+  "Engineering Structures": {
+   "per_10k": 1.05,
+   "works": 9483,
+   "retracted": 1
+  },
+  "CLEAN Soil Air Water": {
+   "per_10k": 9.42,
+   "works": 1062,
+   "retracted": 1
+  },
+  "China Communications": {
+   "per_10k": 4.69,
+   "works": 2130,
+   "retracted": 1
+  },
+  "Signal, Image and Video Processing": {
+   "per_10k": 5.96,
+   "works": 1679,
+   "retracted": 1
+  },
+  "Evidence-Based Complementary and Alternative Medicine": {
+   "per_10k": 1.13,
+   "works": 8823,
+   "retracted": 1
+  },
+  "PLoS Biology": {
+   "per_10k": 3.43,
+   "works": 2918,
+   "retracted": 1
+  },
+  "Behavioural Neurology": {
+   "per_10k": 19.84,
+   "works": 504,
+   "retracted": 1
+  },
+  "Applied Mathematical Modelling": {
+   "per_10k": 2.17,
+   "works": 4610,
+   "retracted": 1
+  },
+  "Journal of Applied Genetics": {
+   "per_10k": 21.14,
+   "works": 473,
+   "retracted": 1
+  },
+  "International Journal of Artificial Intelligence in Education": {
+   "per_10k": 35.09,
+   "works": 285,
+   "retracted": 1
+  },
+  "ISPRS Journal of Photogrammetry and Remote Sensing": {
+   "per_10k": 5.21,
+   "works": 1921,
+   "retracted": 1
+  },
+  "Pattern Recognition Letters": {
+   "per_10k": 3.64,
+   "works": 2748,
+   "retracted": 1
+  },
+  "Information Systems Frontiers": {
+   "per_10k": 12.22,
+   "works": 818,
+   "retracted": 1
+  },
+  "Information Systems": {
+   "per_10k": 10.47,
+   "works": 955,
+   "retracted": 1
+  },
+  "Problems of Information Transmission": {
+   "per_10k": 43.29,
+   "works": 231,
+   "retracted": 1
+  },
+  "Journal of Chemical Education": {
+   "per_10k": 2.54,
+   "works": 3937,
+   "retracted": 1
+  },
+  "International Journal of Software Engineering and Knowledge Engineering": {
+   "per_10k": 15.87,
+   "works": 630,
+   "retracted": 1
+  },
+  "Sensors": {
+   "per_10k": 0.23,
+   "works": 43303,
+   "retracted": 1
+  },
+  "Journal of Geophysical Research: Atmospheres": {
+   "per_10k": 1.43,
+   "works": 6998,
+   "retracted": 1
+  },
+  "ISPRS International Journal of Geo-Information": {
+   "per_10k": 2.42,
+   "works": 4124,
+   "retracted": 1
+  },
+  "Sustainable Energy Technologies and Assessments": {
+   "per_10k": 3.74,
+   "works": 2675,
+   "retracted": 1
+  },
+  "Alexandria Engineering Journal": {
+   "per_10k": 3.0,
+   "works": 3334,
+   "retracted": 1
+  },
+  "Additive Manufacturing": {
+   "per_10k": 3.26,
+   "works": 3065,
+   "retracted": 1
+  },
+  "The Serials Librarian": {
+   "per_10k": 17.86,
+   "works": 560,
+   "retracted": 1
+  },
+  "Electronic Commerce Research": {
+   "per_10k": 20.96,
+   "works": 477,
+   "retracted": 1
+  },
+  "Journal of Big Data": {
+   "per_10k": 15.11,
+   "works": 662,
+   "retracted": 1
+  },
+  "Geotechnical and Geological Engineering": {
+   "per_10k": 4.0,
+   "works": 2500,
+   "retracted": 1
+  },
+  "The Anatomical Record : Advances in Integrative Anatomy and Evolutionary Biology": {
+   "per_10k": 4.79,
+   "works": 2086,
+   "retracted": 1
+  },
+  "Cogent Engineering": {
+   "per_10k": 6.66,
+   "works": 1501,
+   "retracted": 1
+  },
+  "Virtual Reality": {
+   "per_10k": 21.1,
+   "works": 474,
+   "retracted": 1
+  },
+  "International Journal of Advanced Computer Science and Applications(IJACSA)": {
+   "per_10k": 1.35,
+   "works": 7432,
+   "retracted": 1
+  },
+  "Facta Universitatis: Electronics and Energetics": {
+   "per_10k": 28.82,
+   "works": 347,
+   "retracted": 1
+  },
+  "Energy Science & Engineering": {
+   "per_10k": 7.28,
+   "works": 1374,
+   "retracted": 1
+  },
+  "Bioresource Technology": {
+   "per_10k": 0.74,
+   "works": 13570,
+   "retracted": 1
+  },
+  "Health Informatics Journal": {
+   "per_10k": 14.95,
+   "works": 669,
+   "retracted": 1
+  },
+  "Jurnal Pendidikan Teknologi Kejuruan": {
+   "per_10k": 38.61,
+   "works": 259,
+   "retracted": 1
+  },
+  "Circuits, Systems, and Signal Processing": {
+   "per_10k": 4.36,
+   "works": 2294,
+   "retracted": 1
+  },
+  "Human Genetics": {
+   "per_10k": 10.21,
+   "works": 979,
+   "retracted": 1
+  },
+  "Frontiers in Environmental Science": {
+   "per_10k": 2.38,
+   "works": 4200,
+   "retracted": 1
+  },
+  "Frontiers in Cell and Developmental Biology": {
+   "per_10k": 1.09,
+   "works": 9199,
+   "retracted": 1
+  },
+  "Journal of Cybersecurity and Privacy": {
+   "per_10k": 114.94,
+   "works": 87,
+   "retracted": 1
+  },
+  "Computers in Human Behavior": {
+   "per_10k": 2.29,
+   "works": 4361,
+   "retracted": 1
+  },
+  "IEICE Electronics Express": {
+   "per_10k": 5.08,
+   "works": 1970,
+   "retracted": 1
+  },
+  "Vietnam Journal of Computer Science": {
+   "per_10k": 49.02,
+   "works": 204,
+   "retracted": 1
+  },
+  "Bulletin of the Bryansk State Technical University (Вестник Брянского Государственного Технического Университета)": {
+   "per_10k": 7.68,
+   "works": 1302,
+   "retracted": 1
+  },
+  "Computer Assisted Language Learning": {
+   "per_10k": 19.69,
+   "works": 508,
+   "retracted": 1
+  },
+  "Journal of Software: Practice and Experience (SPE)": {
+   "per_10k": 10.47,
+   "works": 955,
+   "retracted": 1
+  },
+  "International Journal of Business and Systems Research": {
+   "per_10k": 34.84,
+   "works": 287,
+   "retracted": 1
+  },
+  "Programming and Computer Software": {
+   "per_10k": 20.92,
+   "works": 478,
+   "retracted": 1
+  },
+  "Journal of Applied Security Research": {
+   "per_10k": 31.45,
+   "works": 318,
+   "retracted": 1
+  },
+  "Scientometrics": {
+   "per_10k": 3.26,
+   "works": 3070,
+   "retracted": 1
+  },
+  "Telecommunication Systems": {
+   "per_10k": 9.76,
+   "works": 1025,
+   "retracted": 1
+  },
+  "Intelligent Service Robotics": {
+   "per_10k": 35.21,
+   "works": 284,
+   "retracted": 1
+  },
+  "Journal of X-Ray Science and Technology": {
+   "per_10k": 15.53,
+   "works": 644,
+   "retracted": 1
+  },
+  "TOP": {
+   "per_10k": 34.72,
+   "works": 288,
+   "retracted": 1
+  },
+  "Pervasive and Mobile Computing": {
+   "per_10k": 12.8,
+   "works": 781,
+   "retracted": 1
+  },
+  "Computational Biology and Chemistry": {
+   "per_10k": 7.51,
+   "works": 1332,
+   "retracted": 1
+  },
+  "Nucleic Acids Research": {
+   "per_10k": 0.94,
+   "works": 10673,
+   "retracted": 1
+  },
+  "Optics Letters": {
+   "per_10k": 0.81,
+   "works": 12417,
+   "retracted": 1
+  },
+  "Energy Efficiency": {
+   "per_10k": 13.53,
+   "works": 739,
+   "retracted": 1
+  },
+  "Expert Systems with Applications": {
+   "per_10k": 1.19,
+   "works": 8417,
+   "retracted": 1
+  },
+  "Applied Mechanics and Materials": {
+   "per_10k": 0.68,
+   "works": 14628,
+   "retracted": 1
+  },
+  "Circuits and Systems": {
+   "per_10k": 22.99,
+   "works": 435,
+   "retracted": 1
+  },
+  "International Journal of Innovative Computing and Applications": {
+   "per_10k": 52.08,
+   "works": 192,
+   "retracted": 1
+  },
+  "Process Safety and Environmental Protection": {
+   "per_10k": 2.59,
+   "works": 3859,
+   "retracted": 1
+  },
+  "International Review on Computers and Software": {
+   "per_10k": 27.78,
+   "works": 360,
+   "retracted": 1
+  },
+  "Iranian Journal of Science and Technology, Transactions of Civil Engineering": {
+   "per_10k": 9.75,
+   "works": 1026,
+   "retracted": 1
+  },
+  "Journal of Building Engineering": {
+   "per_10k": 1.72,
+   "works": 5827,
+   "retracted": 1
+  },
+  "Safety": {
+   "per_10k": 22.62,
+   "works": 442,
+   "retracted": 1
+  },
+  "Applied Artificial Intelligence": {
+   "per_10k": 16.47,
+   "works": 607,
+   "retracted": 1
+  },
+  "International Journal of Reasoning-based Intelligent Systems": {
+   "per_10k": 33.0,
+   "works": 303,
+   "retracted": 1
+  },
+  "Journal of Biosystems Engineering": {
+   "per_10k": 29.76,
+   "works": 336,
+   "retracted": 1
+  },
+  "IET Communications": {
+   "per_10k": 3.53,
+   "works": 2832,
+   "retracted": 1
+  },
+  "Computers & Education": {
+   "per_10k": 5.88,
+   "works": 1700,
+   "retracted": 1
+  },
+  "Modern Problems of Remote Sensing of Earth from Space (Современные Проблемы Дистанционного Зондирования Земли Из Космоса)": {
+   "per_10k": 9.03,
+   "works": 1107,
+   "retracted": 1
+  },
+  "Journal of Geophysics and Engineering": {
+   "per_10k": 10.81,
+   "works": 925,
+   "retracted": 1
+  },
+  "Journal on Internet of Things": {
+   "per_10k": 156.25,
+   "works": 64,
+   "retracted": 1
+  },
+  "Intelligent Industrial Systems": {
+   "per_10k": 140.85,
+   "works": 71,
+   "retracted": 1
+  },
+  "BMC Systems Biology": {
+   "per_10k": 16.75,
+   "works": 597,
+   "retracted": 1
+  },
+  "PeerJ Computer Science": {
+   "per_10k": 2.47,
+   "works": 4056,
+   "retracted": 1
+  },
+  "Journal of Neural Engineering": {
+   "per_10k": 5.05,
+   "works": 1982,
+   "retracted": 1
+  },
+  "International Journal of Sensor Networks": {
+   "per_10k": 15.85,
+   "works": 631,
+   "retracted": 1
+  },
+  "Review of Education": {
+   "per_10k": 30.12,
+   "works": 332,
+   "retracted": 1
+  },
+  "CCF Transactions on Networking": {
+   "per_10k": 217.39,
+   "works": 46,
+   "retracted": 1
+  },
+  "European Journal of Clinical Pharmacology": {
+   "per_10k": 6.07,
+   "works": 1648,
+   "retracted": 1
+  },
+  "Journal of Structural Engineering": {
+   "per_10k": 4.27,
+   "works": 2343,
+   "retracted": 1
+  },
+  "Advances in Mathematical Physics": {
+   "per_10k": 9.01,
+   "works": 1110,
+   "retracted": 1
+  },
+  "Connection Science": {
+   "per_10k": 29.59,
+   "works": 338,
+   "retracted": 1
+  },
+  "Acta Geophysica": {
+   "per_10k": 8.33,
+   "works": 1201,
+   "retracted": 1
+  },
+  "International Journal of Hydrogen Energy": {
+   "per_10k": 0.44,
+   "works": 22835,
+   "retracted": 1
+  },
+  "Waves in Random and Complex Media": {
+   "per_10k": 5.8,
+   "works": 1723,
+   "retracted": 1
+  },
+  "Stochastic Environmental Research and Risk Assessment": {
+   "per_10k": 7.45,
+   "works": 1343,
+   "retracted": 1
+  },
+  "Medical & Biological Engineering & Computing": {
+   "per_10k": 6.72,
+   "works": 1489,
+   "retracted": 1
+  },
+  "Modern Physics Letters A": {
+   "per_10k": 4.02,
+   "works": 2489,
+   "retracted": 1
+  },
+  "Die Onkologie": {
+   "per_10k": 77.52,
+   "works": 129,
+   "retracted": 1
+  },
+  "Applied Mathematics and Computation": {
+   "per_10k": 1.49,
+   "works": 6708,
+   "retracted": 1
+  },
+  "Asia-Pacific Journal of Regional Science": {
+   "per_10k": 37.04,
+   "works": 270,
+   "retracted": 1
+  },
+  "Transactions on Emerging Telecommunications Technologies": {
+   "per_10k": 5.58,
+   "works": 1792,
+   "retracted": 1
+  },
+  "International Journal of Applied Pattern Recognition": {
+   "per_10k": 91.74,
+   "works": 109,
+   "retracted": 1
+  },
+  "Theoretical Computer Science": {
+   "per_10k": 2.44,
+   "works": 4096,
+   "retracted": 1
+  },
+  "Designs, Codes and Cryptography": {
+   "per_10k": 8.83,
+   "works": 1133,
+   "retracted": 1
+  },
+  "Proceedings of the Institution of Mechanical Engineers, Part L: Journal of Materials: Design and Applications": {
+   "per_10k": 9.81,
+   "works": 1019,
+   "retracted": 1
+  },
+  "Diagnostics": {
+   "per_10k": 1.36,
+   "works": 7339,
+   "retracted": 1
+  },
+  "The Journal of Finance and Data Science": {
+   "per_10k": 102.04,
+   "works": 98,
+   "retracted": 1
+  },
+  "Journal of Ocean Engineering and Science": {
+   "per_10k": 21.01,
+   "works": 476,
+   "retracted": 1
+  },
+  "Expert Systems with Applications: X": {
+   "per_10k": 322.58,
+   "works": 31,
+   "retracted": 1
+  },
+  "IEEE Transactions on Circuits and Systems II: Express Briefs": {
+   "per_10k": 2.08,
+   "works": 4803,
+   "retracted": 1
+  },
+  "Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering": {
+   "per_10k": 8.53,
+   "works": 1172,
+   "retracted": 1
+  },
+  "IFAC-PapersOnLine": {
+   "per_10k": 0.46,
+   "works": 21880,
+   "retracted": 1
+  },
+  "Distributed Generation & Alternative Energy Journal": {
+   "per_10k": 38.61,
+   "works": 259,
+   "retracted": 1
+  },
+  "Applied Cognitive Psychology": {
+   "per_10k": 10.28,
+   "works": 973,
+   "retracted": 1
+  },
+  "Engineering Applications of Artificial Intelligence": {
+   "per_10k": 3.94,
+   "works": 2540,
+   "retracted": 1
+  },
+  "Stem Cells International": {
+   "per_10k": 4.17,
+   "works": 2398,
+   "retracted": 1
+  },
+  "ACM SIGMETRICS Performance Evaluation Review": {
+   "per_10k": 9.85,
+   "works": 1015,
+   "retracted": 1
+  },
+  "Physical and Engineering Sciences in Medicine": {
+   "per_10k": 25.64,
+   "works": 390,
+   "retracted": 1
+  },
+  "Energy Sources, Part A: Recovery Utilization and Environmental Effects": {
+   "per_10k": 2.32,
+   "works": 4308,
+   "retracted": 1
+  },
+  "Journal of Biological Systems": {
+   "per_10k": 35.84,
+   "works": 279,
+   "retracted": 1
+  },
+  "Climate Dynamics": {
+   "per_10k": 2.42,
+   "works": 4137,
+   "retracted": 1
+  },
+  "Transactions of the Canadian Society for Mechanical Engineering": {
+   "per_10k": 19.01,
+   "works": 526,
+   "retracted": 1
+  },
+  "International Journal on Document Analysis and Recognition (IJDAR)": {
+   "per_10k": 52.91,
+   "works": 189,
+   "retracted": 1
+  },
+  "International Journal of Intelligent Systems and Applications": {
+   "per_10k": 16.21,
+   "works": 617,
+   "retracted": 1
+  },
+  "Frontiers in Psychology": {
+   "per_10k": 0.32,
+   "works": 31401,
+   "retracted": 1
+  },
+  "EURASIP Journal on Advances in Signal Processing": {
+   "per_10k": 13.0,
+   "works": 769,
+   "retracted": 1
+  },
+  "Granular Computing": {
+   "per_10k": 28.57,
+   "works": 350,
+   "retracted": 1
+  },
+  "Thinking Skills and Creativity": {
+   "per_10k": 11.67,
+   "works": 857,
+   "retracted": 1
+  },
+  "Pure and Applied Geophysics": {
+   "per_10k": 4.6,
+   "works": 2173,
+   "retracted": 1
+  },
+  "Journal of Hydrology X": {
+   "per_10k": 86.96,
+   "works": 115,
+   "retracted": 1
+  },
+  "IEEE Internet of Things Magazine": {
+   "per_10k": 19.05,
+   "works": 525,
+   "retracted": 1
+  },
+  "CCF Transactions on Pervasive Computing and Interaction": {
+   "per_10k": 82.64,
+   "works": 121,
+   "retracted": 1
+  },
+  "XXI Century: Results of the Past and Problems of the Present Plus (Xxi Век: Итоги Прошлого И Проблемы Настоящего Плюс)": {
+   "per_10k": 30.49,
+   "works": 328,
+   "retracted": 1
+  },
+  "Jurnal Teknik Informatika": {
+   "per_10k": 47.17,
+   "works": 212,
+   "retracted": 1
+  },
+  "Physical Review. E, Statistical, Nonlinear, and Soft Matter Physics": {
+   "per_10k": 0.68,
+   "works": 14629,
+   "retracted": 1
+  },
+  "International Journal of Data Science and Analytics": {
+   "per_10k": 26.46,
+   "works": 378,
+   "retracted": 1
+  },
+  "Artificial Intelligence in Medicine": {
+   "per_10k": 11.14,
+   "works": 898,
+   "retracted": 1
+  },
+  "AI EDAM: Artificial Intelligence for Engineering Design, Analysis and Manufacturing": {
+   "per_10k": 28.65,
+   "works": 349,
+   "retracted": 1
+  },
+  "Mathematics": {
+   "per_10k": 0.8,
+   "works": 12456,
+   "retracted": 1
+  },
+  "Computers, Materials & Continua (CMC)": {
+   "per_10k": 2.69,
+   "works": 3719,
+   "retracted": 1
+  },
+  "Journal of Information Security and Applications": {
+   "per_10k": 9.65,
+   "works": 1036,
+   "retracted": 1
+  },
+  "Journal of Structural Biology": {
+   "per_10k": 7.91,
+   "works": 1264,
+   "retracted": 1
+  },
+  "APL Bioengineering": {
+   "per_10k": 37.45,
+   "works": 267,
+   "retracted": 1
+  },
+  "Mathematical Methods in the Applied Sciences": {
+   "per_10k": 1.78,
+   "works": 5615,
+   "retracted": 1
+  },
+  "International Journal of Computer Applications in Technology": {
+   "per_10k": 14.56,
+   "works": 687,
+   "retracted": 1
+  },
+  "IEEE Transactions on Systems, Man, and Cybernetics: Systems": {
+   "per_10k": 2.7,
+   "works": 3701,
+   "retracted": 1
+  },
+  "Applied Mathematics": {
+   "per_10k": 10.79,
+   "works": 927,
+   "retracted": 1
+  },
+  "Environmental Science and Pollution Research": {
+   "per_10k": 0.32,
+   "works": 30850,
+   "retracted": 1
+  },
+  "Advanced Intelligent Systems": {
+   "per_10k": 10.85,
+   "works": 922,
+   "retracted": 1
+  },
+  "Soft Computing Letters": {
+   "per_10k": 400.0,
+   "works": 25,
+   "retracted": 1
+  },
+  "Reliability and Quality of Complex Systems (Надежность И Качество Сложных Систем)": {
+   "per_10k": 18.73,
+   "works": 534,
+   "retracted": 1
+  },
+  "Information": {
+   "per_10k": 3.23,
+   "works": 3097,
+   "retracted": 1
+  },
+  "Information Technologies and Computing Systems (Информационные Технологии И Вычислительные Системы)": {
+   "per_10k": 49.02,
+   "works": 204,
+   "retracted": 1
+  },
+  "Engineering Technologies and Systems (Инженерные Технологии И Системы)": {
+   "per_10k": 36.63,
+   "works": 273,
+   "retracted": 1
+  },
+  "Computer Graphics Forum": {
+   "per_10k": 4.52,
+   "works": 2211,
+   "retracted": 1
+  },
+  "Bioengineered": {
+   "per_10k": 3.83,
+   "works": 2610,
+   "retracted": 1
+  },
+  "Proceedings of the Institution of Mechanical Engineers, Part I": {
+   "per_10k": 11.39,
+   "works": 878,
+   "retracted": 1
+  },
+  "F1000Research": {
+   "per_10k": 0.48,
+   "works": 20799,
+   "retracted": 1
+  },
+  "Neuroscience Informatics": {
+   "per_10k": 97.09,
+   "works": 103,
+   "retracted": 1
+  },
+  "Ocean Engineering": {
+   "per_10k": 1.07,
+   "works": 9345,
+   "retracted": 1
+  },
+  "Computers & Mathematics with Applications": {
+   "per_10k": 2.83,
+   "works": 3529,
+   "retracted": 1
+  },
+  "Journal of Engineering and Computer Innovations": {
+   "per_10k": 2500.0,
+   "works": 4,
+   "retracted": 1
+  },
+  "International Journal of Intelligent Systems": {
+   "per_10k": 6.78,
+   "works": 1474,
+   "retracted": 1
+  },
+  "The Open Mechanical Engineering Journal": {
+   "per_10k": 42.37,
+   "works": 236,
+   "retracted": 1
+  },
+  "Archives of Computational Methods in Engineering": {
+   "per_10k": 13.91,
+   "works": 719,
+   "retracted": 1
+  },
+  "Systematic Biology": {
+   "per_10k": 12.24,
+   "works": 817,
+   "retracted": 1
+  },
+  "International Journal of Adaptive Control and Signal Processing": {
+   "per_10k": 9.21,
+   "works": 1086,
+   "retracted": 1
+  },
+  "Computer Networks": {
+   "per_10k": 3.35,
+   "works": 2989,
+   "retracted": 1
+  },
+  "Cognitive Neurodynamics": {
+   "per_10k": 17.09,
+   "works": 585,
+   "retracted": 1
+  },
+  "IET Generation, Transmission & Distribution": {
+   "per_10k": 2.51,
+   "works": 3982,
+   "retracted": 1
+  },
+  "Computers in Industry": {
+   "per_10k": 9.64,
+   "works": 1037,
+   "retracted": 1
+  },
+  "International Journal of Communication and Society": {
+   "per_10k": 156.25,
+   "works": 64,
+   "retracted": 1
+  },
+  "Journal of Infection and Public Health": {
+   "per_10k": 5.21,
+   "works": 1920,
+   "retracted": 1
+  },
+  "Journal of Purchasing and Supply Management": {
+   "per_10k": 32.57,
+   "works": 307,
+   "retracted": 1
+  },
+  "Security Journal": {
+   "per_10k": 26.53,
+   "works": 377,
+   "retracted": 1
+  },
+  "Journal of King Saud University - Computer and Information Sciences": {
+   "per_10k": 7.49,
+   "works": 1335,
+   "retracted": 1
+  },
+  "Applied Computing and Geosciences": {
+   "per_10k": 109.89,
+   "works": 91,
+   "retracted": 1
+  },
+  "The Visual Computer": {
+   "per_10k": 5.94,
+   "works": 1683,
+   "retracted": 1
+  },
+  "Solar Energy": {
+   "per_10k": 1.35,
+   "works": 7384,
+   "retracted": 1
+  },
+  "Semigroup Forum": {
+   "per_10k": 15.55,
+   "works": 643,
+   "retracted": 1
+  },
+  "Journal of Hydrology": {
+   "per_10k": 1.17,
+   "works": 8548,
+   "retracted": 1
+  },
+  "International Journal of Information Management": {
+   "per_10k": 17.62,
+   "works": 1135,
+   "retracted": 2
+  },
+  "Neuro-Oncology": {
+   "per_10k": 1.16,
+   "works": 17250,
+   "retracted": 2
+  },
+  "Journal of Molecular Liquids": {
+   "per_10k": 1.25,
+   "works": 15970,
+   "retracted": 2
+  },
+  "ACM Transactions on Internet of Things": {
+   "per_10k": 224.72,
+   "works": 89,
+   "retracted": 2
+  },
+  "Computer Communications": {
+   "per_10k": 7.85,
+   "works": 2548,
+   "retracted": 2
+  },
+  "Theoretical and Applied Climatology": {
+   "per_10k": 6.72,
+   "works": 2976,
+   "retracted": 2
+  },
+  "Natural Hazards": {
+   "per_10k": 4.78,
+   "works": 4184,
+   "retracted": 2
+  },
+  "Empirical Software Engineering": {
+   "per_10k": 22.45,
+   "works": 891,
+   "retracted": 2
+  },
+  "International Journal of Pervasive Computing and Communications": {
+   "per_10k": 72.73,
+   "works": 275,
+   "retracted": 2
+  },
+  "Network Modeling Analysis in Health Informatics and Bioinformatics": {
+   "per_10k": 62.31,
+   "works": 321,
+   "retracted": 2
+  },
+  "Discover Applied Sciences": {
+   "per_10k": 3.84,
+   "works": 5210,
+   "retracted": 2
+  },
+  "Energy Systems": {
+   "per_10k": 47.62,
+   "works": 420,
+   "retracted": 2
+  },
+  "Computerized Medical Imaging and Graphics: the Official Journal of the Computerized Medical": {
+   "per_10k": 29.07,
+   "works": 688,
+   "retracted": 2
+  },
+  "Crystals": {
+   "per_10k": 3.1,
+   "works": 6462,
+   "retracted": 2
+  },
+  "IEEE Transactions on Cybernetics": {
+   "per_10k": 4.26,
+   "works": 4699,
+   "retracted": 2
+  },
+  "Journal of Intelligent & Robotic Systems": {
+   "per_10k": 13.17,
+   "works": 1519,
+   "retracted": 2
+  },
+  "Advances in Data Science and Adaptive Analysis": {
+   "per_10k": 190.48,
+   "works": 105,
+   "retracted": 2
+  },
+  "RSC Advances": {
+   "per_10k": 0.36,
+   "works": 55029,
+   "retracted": 2
+  },
+  "The Journal of Academic Librarianship": {
+   "per_10k": 18.48,
+   "works": 1082,
+   "retracted": 2
+  },
+  "International Journal of Fuzzy Systems": {
+   "per_10k": 14.67,
+   "works": 1363,
+   "retracted": 2
+  },
+  "Nature": {
+   "per_10k": 0.64,
+   "works": 31402,
+   "retracted": 2
+  },
+  "Modeling, Optimization and Information Technologies (Моделирование, Оптимизация И Информационные Технологии)": {
+   "per_10k": 30.49,
+   "works": 656,
+   "retracted": 2
+  },
+  "Adsorption Science & Technology": {
+   "per_10k": 30.17,
+   "works": 663,
+   "retracted": 2
+  },
+  "Remote Sensing": {
+   "per_10k": 0.82,
+   "works": 24307,
+   "retracted": 2
+  },
+  "ACM Transactions on Asian and Low-Resource Language Information Processing": {
+   "per_10k": 35.4,
+   "works": 565,
+   "retracted": 2
+  },
+  "Quality & Quantity": {
+   "per_10k": 14.02,
+   "works": 1427,
+   "retracted": 2
+  },
+  "Signal Processing": {
+   "per_10k": 6.76,
+   "works": 2958,
+   "retracted": 2
+  },
+  "Annals of Translational Medicine": {
+   "per_10k": 2.43,
+   "works": 8235,
+   "retracted": 2
+  },
+  "Computing": {
+   "per_10k": 28.53,
+   "works": 701,
+   "retracted": 2
+  },
+  "Environment, Development and Sustainability": {
+   "per_10k": 6.23,
+   "works": 3212,
+   "retracted": 2
+  },
+  "Flow Measurement and Instrumentation": {
+   "per_10k": 17.79,
+   "works": 1124,
+   "retracted": 2
+  },
+  "Heliyon": {
+   "per_10k": 1.53,
+   "works": 13106,
+   "retracted": 2
+  },
+  "Journal of Nanomaterials": {
+   "per_10k": 6.04,
+   "works": 3312,
+   "retracted": 2
+  },
+  "Agronomy Journal": {
+   "per_10k": 7.46,
+   "works": 2680,
+   "retracted": 2
+  },
+  "Applied Soft Computing": {
+   "per_10k": 3.21,
+   "works": 6221,
+   "retracted": 2
+  },
+  "Bioinformatics": {
+   "per_10k": 2.76,
+   "works": 7244,
+   "retracted": 2
+  },
+  "Journal of Energy Storage": {
+   "per_10k": 3.34,
+   "works": 5982,
+   "retracted": 2
+  },
+  "World Journal of Engineering": {
+   "per_10k": 26.39,
+   "works": 758,
+   "retracted": 2
+  },
+  "International Journal of Parallel Programming": {
+   "per_10k": 50.89,
+   "works": 393,
+   "retracted": 2
+  },
+  "AEU - International Journal of Electronics and Communications": {
+   "per_10k": 6.96,
+   "works": 2873,
+   "retracted": 2
+  },
+  "ACM Transactions on Sensor Networks (TOSN)": {
+   "per_10k": 75.19,
+   "works": 399,
+   "retracted": 3
+  },
+  "Advances in Meteorology": {
+   "per_10k": 26.98,
+   "works": 1112,
+   "retracted": 3
+  },
+  "International Journal of Advances in Intelligent Informatics": {
+   "per_10k": 152.28,
+   "works": 197,
+   "retracted": 3
+  },
+  "Neurocomputing": {
+   "per_10k": 2.64,
+   "works": 11370,
+   "retracted": 3
+  },
+  "Proceedings of the Institution of Mechanical Engineers. Part H, Journal of Engineering in Medicine": {
+   "per_10k": 29.76,
+   "works": 1008,
+   "retracted": 3
+  },
+  "Neuroscience Letters": {
+   "per_10k": 5.39,
+   "works": 5564,
+   "retracted": 3
+  },
+  "Energy": {
+   "per_10k": 1.57,
+   "works": 19166,
+   "retracted": 3
+  },
+  "Design Automation for Embedded Systems": {
+   "per_10k": 270.27,
+   "works": 111,
+   "retracted": 3
+  },
+  "International Journal of Numerical Methods for Heat & Fluid Flow": {
+   "per_10k": 20.28,
+   "works": 1479,
+   "retracted": 3
+  },
+  "Journal of Network and Computer Applications": {
+   "per_10k": 16.44,
+   "works": 1825,
+   "retracted": 3
+  },
+  "Engineering with Computers": {
+   "per_10k": 21.91,
+   "works": 1369,
+   "retracted": 3
+  },
+  "Sustainability": {
+   "per_10k": 0.51,
+   "works": 59372,
+   "retracted": 3
+  },
+  "Wireless Networks": {
+   "per_10k": 13.02,
+   "works": 2304,
+   "retracted": 3
+  },
+  "Complex & Intelligent Systems": {
+   "per_10k": 31.91,
+   "works": 940,
+   "retracted": 3
+  },
+  "International Journal of Wireless Information Networks": {
+   "per_10k": 94.04,
+   "works": 319,
+   "retracted": 3
+  },
+  "Chemosphere": {
+   "per_10k": 1.4,
+   "works": 21429,
+   "retracted": 3
+  },
+  "Journal of Nanoparticle Research": {
+   "per_10k": 10.47,
+   "works": 2865,
+   "retracted": 3
+  },
+  "Scientific Reports": {
+   "per_10k": 0.18,
+   "works": 165853,
+   "retracted": 3
+  },
+  "Shock and Vibration": {
+   "per_10k": 7.1,
+   "works": 4223,
+   "retracted": 3
+  },
+  "Computational Intelligence": {
+   "per_10k": 76.78,
+   "works": 521,
+   "retracted": 4
+  },
+  "Emergency Medicine International": {
+   "per_10k": 82.47,
+   "works": 485,
+   "retracted": 4
+  },
+  "Neural Processing Letters": {
+   "per_10k": 23.52,
+   "works": 1701,
+   "retracted": 4
+  },
+  "Mobile Networks and Applications": {
+   "per_10k": 27.51,
+   "works": 1454,
+   "retracted": 4
+  },
+  "ISA transactions": {
+   "per_10k": 12.99,
+   "works": 3079,
+   "retracted": 4
+  },
+  "The International Journal of Advanced Manufacturing Technology": {
+   "per_10k": 2.87,
+   "works": 13951,
+   "retracted": 4
+  },
+  "Discrete and Continuous Dynamical Systems": {
+   "per_10k": 31.01,
+   "works": 1290,
+   "retracted": 4
+  },
+  "International Journal of Analytical Chemistry": {
+   "per_10k": 73.66,
+   "works": 543,
+   "retracted": 4
+  },
+  "Journal of Intelligent Manufacturing": {
+   "per_10k": 38.87,
+   "works": 1029,
+   "retracted": 4
+  },
+  "Operations Management Research": {
+   "per_10k": 201.61,
+   "works": 248,
+   "retracted": 5
+  },
+  "Distributed and Parallel Databases": {
+   "per_10k": 236.97,
+   "works": 211,
+   "retracted": 5
+  },
+  "Applied Intelligence": {
+   "per_10k": 13.41,
+   "works": 3728,
+   "retracted": 5
+  },
+  "Journal of Medical Systems": {
+   "per_10k": 29.38,
+   "works": 1702,
+   "retracted": 5
+  },
+  "IEEE Transactions on Fuzzy Systems": {
+   "per_10k": 20.4,
+   "works": 2451,
+   "retracted": 5
+  },
+  "Measurement and Control": {
+   "per_10k": 54.53,
+   "works": 917,
+   "retracted": 5
+  },
+  "The Scientific World Journal": {
+   "per_10k": 30.81,
+   "works": 1623,
+   "retracted": 5
+  },
+  "Electronics": {
+   "per_10k": 4.12,
+   "works": 12140,
+   "retracted": 5
+  },
+  "International Journal of Advanced Robotic Systems": {
+   "per_10k": 35.63,
+   "works": 1684,
+   "retracted": 6
+  },
+  "Applied Sciences": {
+   "per_10k": 1.33,
+   "works": 45238,
+   "retracted": 6
+  },
+  "Aggression and Violent Behavior": {
+   "per_10k": 72.03,
+   "works": 833,
+   "retracted": 6
+  },
+  "International Journal of Information Technology": {
+   "per_10k": 53.81,
+   "works": 1115,
+   "retracted": 6
+  },
+  "Pattern Recognition": {
+   "per_10k": 15.12,
+   "works": 3967,
+   "retracted": 6
+  },
+  "Optik - International Journal for Light and Electron Optics": {
+   "per_10k": 4.23,
+   "works": 14188,
+   "retracted": 6
+  },
+  "Future Generation Computer Systems": {
+   "per_10k": 16.77,
+   "works": 4175,
+   "retracted": 7
+  },
+  "EURASIP Journal on Image and Video Processing": {
+   "per_10k": 131.09,
+   "works": 534,
+   "retracted": 7
+  },
+  "Peer-to-Peer Networking and Applications": {
+   "per_10k": 64.4,
+   "works": 1087,
+   "retracted": 7
+  },
+  "Journal of Combinatorial Optimization": {
+   "per_10k": 62.39,
+   "works": 1122,
+   "retracted": 7
+  },
+  "Acta Agriculturae Scandinavica, Section B — Soil & Plant Science": {
+   "per_10k": 106.06,
+   "works": 660,
+   "retracted": 7
+  },
+  "Journal of Food Quality": {
+   "per_10k": 52.4,
+   "works": 1336,
+   "retracted": 7
+  },
+  "Journal of Chemistry": {
+   "per_10k": 30.88,
+   "works": 2591,
+   "retracted": 8
+  },
+  "IET Image Processing": {
+   "per_10k": 34.51,
+   "works": 2318,
+   "retracted": 8
+  },
+  "Concurrent Engineering": {
+   "per_10k": 316.21,
+   "works": 253,
+   "retracted": 8
+  },
+  "Behaviour & Information Technology": {
+   "per_10k": 76.63,
+   "works": 1044,
+   "retracted": 8
+  },
+  "Concurrency and Computation: Practice and Experience": {
+   "per_10k": 19.05,
+   "works": 4200,
+   "retracted": 8
+  },
+  "Optical and Quantum Electronics": {
+   "per_10k": 20.95,
+   "works": 4295,
+   "retracted": 9
+  },
+  "Cognitive Systems Research": {
+   "per_10k": 133.73,
+   "works": 673,
+   "retracted": 9
+  },
+  "IETE Journal of Research": {
+   "per_10k": 46.37,
+   "works": 1941,
+   "retracted": 9
+  },
+  "International Journal of Antennas and Propagation": {
+   "per_10k": 57.0,
+   "works": 1579,
+   "retracted": 9
+  },
+  "Journal of Advanced Transportation": {
+   "per_10k": 43.73,
+   "works": 2287,
+   "retracted": 10
+  },
+  "Applied Nanoscience": {
+   "per_10k": 45.79,
+   "works": 2184,
+   "retracted": 10
+  },
+  "Advances in Materials Science and Engineering": {
+   "per_10k": 21.68,
+   "works": 4612,
+   "retracted": 10
+  },
+  "Contrast Media & Molecular Imaging": {
+   "per_10k": 85.76,
+   "works": 1166,
+   "retracted": 10
+  },
+  "International Journal of Computers and Applications": {
+   "per_10k": 206.61,
+   "works": 484,
+   "retracted": 10
+  },
+  "Journal of Visual Communication and Image Representation": {
+   "per_10k": 56.07,
+   "works": 1962,
+   "retracted": 11
+  },
+  "Occupational Therapy International": {
+   "per_10k": 330.58,
+   "works": 363,
+   "retracted": 12
+  },
+  "Scanning": {
+   "per_10k": 248.57,
+   "works": 523,
+   "retracted": 13
+  },
+  "Evolutionary Intelligence": {
+   "per_10k": 191.74,
+   "works": 678,
+   "retracted": 13
+  },
+  "IEEE Access": {
+   "per_10k": 2.12,
+   "works": 65922,
+   "retracted": 14
+  },
+  "Eurasip Journal on Wireless Communications and Networking": {
+   "per_10k": 71.57,
+   "works": 1956,
+   "retracted": 14
+  },
+  "Journal of Robotics": {
+   "per_10k": 447.28,
+   "works": 313,
+   "retracted": 14
+  },
+  "Expert Systems": {
+   "per_10k": 136.52,
+   "works": 1172,
+   "retracted": 16
+  },
+  "International Journal of Communication Systems": {
+   "per_10k": 67.03,
+   "works": 2536,
+   "retracted": 17
+  },
+  "International Journal of System Assurance Engineering and Management": {
+   "per_10k": 126.23,
+   "works": 1426,
+   "retracted": 18
+  },
+  "Journal of Testing and Evaluation (JOTE)": {
+   "per_10k": 87.6,
+   "works": 2169,
+   "retracted": 19
+  },
+  "International Journal of Speech Technology": {
+   "per_10k": 283.29,
+   "works": 706,
+   "retracted": 20
+  },
+  "Journal of Control Science and Engineering": {
+   "per_10k": 508.08,
+   "works": 433,
+   "retracted": 22
+  },
+  "Personal and Ubiquitous Computing": {
+   "per_10k": 285.37,
+   "works": 841,
+   "retracted": 24
+  },
+  "Journal of Function Spaces": {
+   "per_10k": 166.09,
+   "works": 1746,
+   "retracted": 29
+  },
+  "Neural Computing and Applications": {
+   "per_10k": 47.67,
+   "works": 6293,
+   "retracted": 30
+  },
+  "Discrete Dynamics in Nature and Society": {
+   "per_10k": 103.16,
+   "works": 2908,
+   "retracted": 30
+  },
+  "The Journal of Supercomputing": {
+   "per_10k": 85.73,
+   "works": 3616,
+   "retracted": 31
+  },
+  "Information Systems and e-Business Management": {
+   "per_10k": 1201.41,
+   "works": 283,
+   "retracted": 34
+  },
+  "Journal of Electrical and Computer Engineering": {
+   "per_10k": 536.23,
+   "works": 690,
+   "retracted": 37
+  },
+  "BioMed Research International": {
+   "per_10k": 20.33,
+   "works": 18196,
+   "retracted": 37
+  },
+  "International Transactions on Electrical Energy Systems": {
+   "per_10k": 158.92,
+   "works": 2517,
+   "retracted": 40
+  },
+  "Scientific Programming": {
+   "per_10k": 178.78,
+   "works": 2517,
+   "retracted": 45
+  },
+  "Applied Bionics and Biomechanics": {
+   "per_10k": 577.16,
+   "works": 797,
+   "retracted": 46
+  },
+  "The Open Automation and Control Systems Journal": {
+   "per_10k": 1149.14,
+   "works": 409,
+   "retracted": 47
+  },
+  "Annals of Operations Research": {
+   "per_10k": 155.69,
+   "works": 3340,
+   "retracted": 52
+  },
+  "Arabian Journal for Science and Engineering": {
+   "per_10k": 89.89,
+   "works": 5896,
+   "retracted": 53
+  },
+  "Journal of Mathematics": {
+   "per_10k": 282.6,
+   "works": 2017,
+   "retracted": 57
+  },
+  "PLoS One": {
+   "per_10k": 3.65,
+   "works": 158704,
+   "retracted": 58
+  },
+  "Journal of Environmental and Public Health": {
+   "per_10k": 534.76,
+   "works": 1122,
+   "retracted": 60
+  },
+  "Wireless Personal Communications": {
+   "per_10k": 83.48,
+   "works": 7547,
+   "retracted": 63
+  },
+  "The International Journal of Electrical Engineering & Education": {
+   "per_10k": 980.97,
+   "works": 683,
+   "retracted": 67
+  },
+  "Computational and Mathematical Methods in Medicine": {
+   "per_10k": 207.13,
+   "works": 3283,
+   "retracted": 68
+  },
+  "Advances in Multimedia": {
+   "per_10k": 1159.66,
+   "works": 595,
+   "retracted": 69
+  },
+  "Cluster Computing": {
+   "per_10k": 275.69,
+   "works": 3192,
+   "retracted": 88
+  },
+  "Complexity": {
+   "per_10k": 182.36,
+   "works": 5703,
+   "retracted": 104
+  },
+  "Multimedia Tools and Applications": {
+   "per_10k": 100.14,
+   "works": 11684,
+   "retracted": 117
+  },
+  "Mathematical Problems in Engineering": {
+   "per_10k": 86.99,
+   "works": 14715,
+   "retracted": 128
+  },
+  "Journal of Healthcare Engineering": {
+   "per_10k": 511.44,
+   "works": 2796,
+   "retracted": 143
+  },
+  "Mobile Information Systems": {
+   "per_10k": 465.75,
+   "works": 3328,
+   "retracted": 155
+  },
+  "Journal of Sensors": {
+   "per_10k": 549.11,
+   "works": 2932,
+   "retracted": 161
+  },
+  "Microprocessors and Microsystems": {
+   "per_10k": 877.84,
+   "works": 2153,
+   "retracted": 189
+  },
+  "Wireless Communications and Mobile Computing": {
+   "per_10k": 565.04,
+   "works": 5504,
+   "retracted": 311
+  },
+  "Soft Computing": {
+   "per_10k": 535.87,
+   "works": 5841,
+   "retracted": 313
+  },
+  "Computational Intelligence and Neuroscience": {
+   "per_10k": 774.23,
+   "works": 4921,
+   "retracted": 381
+  },
+  "Journal of Ambient Intelligence and Humanized Computing": {
+   "per_10k": 968.28,
+   "works": 4162,
+   "retracted": 403
+  },
+  "Journal of Intelligent & Fuzzy Systems": {
+   "per_10k": 496.99,
+   "works": 8632,
+   "retracted": 429
+  },
+  "Security and Communication Networks": {
+   "per_10k": 1329.49,
+   "works": 3821,
+   "retracted": 508
+  }
+ },
+ "rate_distribution": {
+  "journals_ranked": 208,
+  "median_per_10k": 2.3049999999999997,
+  "p90_per_10k": 87.173,
+  "max_per_10k": 1329.49,
+  "share_over_100_per_10k": 0.0913
+ }
+}

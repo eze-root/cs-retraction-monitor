@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CS 撤稿监测 · Retraction Monitor</title>
+<title>CS Retraction Monitor · 计算机学科撤稿监测</title>
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -11,51 +11,38 @@
   <div class="brand">
     <span class="brand-mark" aria-hidden="true"></span>
     <div>
-      <div class="brand-title">计算机学科撤稿监测</div>
-      <div class="brand-sub" id="snapshot-line">加载中…</div>
+      <div class="brand-title" data-i18n="brand.title"></div>
+      <div class="brand-sub" id="snapshot-line" data-i18n="brand.loading"></div>
     </div>
   </div>
-  <nav class="tabs" role="tablist" id="tabs">
-    <a href="#overview" data-tab="overview">概览</a>
-    <a href="#rq1" data-tab="rq1">RQ1 期刊撤稿分布</a>
-    <a href="#journals" data-tab="journals">期刊榜单</a>
-    <a href="#records" data-tab="records">记录检索</a>
-    <a href="#rq2" data-tab="rq2">RQ2 AI 相关</a>
-    <a href="#rq3" data-tab="rq3">RQ3 预测与规避</a>
-    <a href="#methods" data-tab="methods">数据与方法</a>
+  <nav class="tabs" id="tabs">
+    <a href="#overview" data-tab="overview" data-i18n="nav.overview"></a>
+    <a href="#rq1" data-tab="rq1" data-i18n="nav.rq1"></a>
+    <a href="#journals" data-tab="journals" data-i18n="nav.journals"></a>
+    <a href="#records" data-tab="records" data-i18n="nav.records"></a>
+    <a href="#rq2" data-tab="rq2" data-i18n="nav.rq2"></a>
+    <a href="#rq3" data-tab="rq3" data-i18n="nav.rq3"></a>
+    <a href="#methods" data-tab="methods" data-i18n="nav.methods"></a>
   </nav>
-  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换明暗主题">◐</button>
+  <button class="lang-toggle" id="lang-toggle" type="button"></button>
+  <button class="theme-toggle" id="theme-toggle" type="button">◐</button>
 </header>
 
 <main>
-  <!-- ============ 概览 ============ -->
+  <!-- ============ 概览 / Overview ============ -->
   <section class="page" id="page-overview">
     <div class="page-head">
-      <h1>研究概览</h1>
-      <p class="lede">基于 Crossref / Retraction Watch 固定快照，逐步回答三个研究问题：
-        <b>RQ1</b> 计算机领域期刊的撤稿规模与分布；<b>RQ2</b> 其中哪些与 AI 生成内容相关；
-        <b>RQ3</b> 能否通过审计 harness / skill 在发表前预测与规避。</p>
+      <h1 data-i18n="ov.h1"></h1>
+      <p class="lede" data-i18n-html="ov.lede"></p>
     </div>
     <div class="tiles" id="kpi-tiles"></div>
     <div class="grid-2">
-      <div class="card">
-        <h3>主要发现（RQ1，自动由数据生成）</h3>
-        <ol class="findings" id="findings"></ol>
-      </div>
-      <div class="card">
-        <h3>研究进度</h3>
-        <ul class="roadmap">
-          <li class="done"><span class="badge ok">✓ 已完成</span> 数据层：固定快照、标准化、CS / 会议子集、获取队列</li>
-          <li class="done"><span class="badge ok">✓ 已完成</span> 2023 年前后撤稿规模与原因结构对比</li>
-          <li class="done"><span class="badge ok">✓ 已完成</span> RQ1 计算机期刊撤稿的年度、来源、原因、地域、时滞与撤稿率</li>
-          <li class="active"><span class="badge run">● 进行中</span> RQ2 AI 生成内容相关撤稿：第一阶段（元数据 + 开放声明文本）已完成</li>
-          <li><span class="badge todo">○ 计划</span> RQ3 审计 harness / skill 的预测与规避实验</li>
-        </ul>
-      </div>
+      <div class="card"><h3 data-i18n="ov.findings"></h3><ol class="findings" id="findings"></ol></div>
+      <div class="card"><h3 data-i18n="ov.progress"></h3><ul class="roadmap" id="roadmap"></ul></div>
     </div>
     <div class="card" id="card-overview-trend"></div>
     <div class="card">
-      <h3>快照内最新撤稿声明 <span class="muted small">（按声明日期，CS 期刊子集）</span></h3>
+      <h3><span data-i18n="ov.latest"></span> <span class="muted small" data-i18n="ov.latestSub"></span></h3>
       <div class="table-wrap"><table class="data" id="latest-table"></table></div>
     </div>
   </section>
@@ -63,14 +50,13 @@
   <!-- ============ RQ1 ============ -->
   <section class="page" id="page-rq1">
     <div class="page-head">
-      <h1>RQ1 计算机领域期刊的撤稿情况与分布</h1>
-      <p class="lede">单位为撤稿通知记录（非独立论文）。数据库没有发表量分母，以下均为<b>记录数与占比</b>，不是撤稿率。
-        2026 年仅到快照日期，图中以浅色标示。</p>
+      <h1 data-i18n="rq1.h1"></h1>
+      <p class="lede" data-i18n-html="rq1.lede"></p>
     </div>
-    <h2 class="section">1. 年度变化</h2>
+    <h2 class="section" data-i18n="rq1.s1"></h2>
     <div class="card" id="card-yearly"></div>
     <div class="card" id="card-publisher-year"></div>
-    <h2 class="section">2. 来源集中度与批量撤稿</h2>
+    <h2 class="section" data-i18n="rq1.s2"></h2>
     <div class="grid-2">
       <div class="card" id="card-lorenz"></div>
       <div class="card" id="card-publishers"></div>
@@ -78,15 +64,15 @@
     <div class="grid-2">
       <div class="card" id="card-batch-dist"></div>
       <div class="card">
-        <h3>最大的撤稿批次</h3>
-        <p class="sub">同一期刊、同一撤稿日期的记录数</p>
+        <h3 data-i18n="rq1.batchTable"></h3>
+        <p class="sub" data-i18n="rq1.batchTableSub"></p>
         <div class="table-wrap short"><table class="data" id="batch-table"></table></div>
       </div>
     </div>
-    <h2 class="section">3. 撤稿原因</h2>
+    <h2 class="section" data-i18n="rq1.s3"></h2>
     <div class="card" id="card-reasons"></div>
     <div class="card" id="card-themes"></div>
-    <h2 class="section">4. 地域与时滞</h2>
+    <h2 class="section" data-i18n="rq1.s4"></h2>
     <div class="grid-2">
       <div class="card" id="card-countries"></div>
       <div class="card" id="card-country-year"></div>
@@ -95,65 +81,57 @@
       <div class="card" id="card-lag-hist"></div>
       <div class="card" id="card-lag-year"></div>
     </div>
-    <h2 class="section">5. 撤稿率（OpenAlex 发文量作分母）</h2>
+    <h2 class="section" data-i18n="rq1.s5"></h2>
     <p class="lede" id="rates-lede"></p>
     <div class="card" id="card-rate-year"></div>
     <div class="grid-2">
       <div class="card" id="card-rate-publisher"></div>
       <div class="card">
-        <h3>撤稿率最高的期刊</h3>
+        <h3 data-i18n="rq1.rateTable"></h3>
         <p class="sub" id="rate-table-sub"></p>
         <div class="table-wrap short"><table class="data" id="rate-table"></table></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ 期刊榜单 ============ -->
+  <!-- ============ 期刊榜单 / Journals ============ -->
   <section class="page" id="page-journals">
     <div class="page-head">
-      <h1>期刊榜单</h1>
-      <p class="lede">撤稿记录最多的 40 种 CS 期刊。点击表头排序。批量占比 = 属于同日 ≥10 条批次的记录比例。每万篇 = 2015–2022 年发表论文的撤稿率（OpenAlex 分母）；被撤论文都发表在该窗口之外的期刊显示为 0。</p>
+      <h1 data-i18n="j.h1"></h1>
+      <p class="lede" data-i18n="j.lede"></p>
     </div>
     <div class="card"><div class="table-wrap tall"><table class="data sortable" id="journal-table"></table></div></div>
   </section>
 
-  <!-- ============ 记录检索 ============ -->
+  <!-- ============ 记录检索 / Records ============ -->
   <section class="page" id="page-records">
     <div class="page-head">
-      <h1>记录检索</h1>
-      <p class="lede">CS 期刊撤稿记录（来源字段原样展示，不是独立核查结论）。</p>
+      <h1 data-i18n="r.h1"></h1>
+      <p class="lede" data-i18n="r.lede"></p>
     </div>
     <div class="filters">
-      <input type="search" id="q" placeholder="搜索标题 / 期刊 / DOI / 国家…">
-      <select id="f-year"><option value="">全部年份</option></select>
-      <select id="f-publisher"><option value="">全部出版社</option></select>
-      <select id="f-reason"><option value="">全部原因</option></select>
-      <label class="check"><input type="checkbox" id="f-batch"> 仅批量撤稿</label>
+      <input type="search" id="q" data-i18n-ph="r.q">
+      <select id="f-year"><option value="" data-i18n="r.allYears"></option></select>
+      <select id="f-publisher"><option value="" data-i18n="r.allPubs"></option></select>
+      <select id="f-reason"><option value="" data-i18n="r.allReasons"></option></select>
+      <label class="check"><input type="checkbox" id="f-batch"> <span data-i18n="r.onlyBatch"></span></label>
       <span class="muted small" id="rec-count"></span>
     </div>
     <div class="card"><div class="table-wrap tall"><table class="data" id="rec-table"></table></div>
-      <div class="pager"><button id="prev" type="button">上一页</button><span id="page-info"></span><button id="next" type="button">下一页</button></div>
+      <div class="pager"><button id="prev" type="button" data-i18n="r.prev"></button><span id="page-info"></span><button id="next" type="button" data-i18n="r.next"></button></div>
     </div>
   </section>
 
   <!-- ============ RQ2 ============ -->
   <section class="page" id="page-rq2">
     <div class="page-head">
-      <h1>RQ2 哪些撤稿与 AI 生成内容相关？ <span class="badge run">● 第一阶段</span></h1>
-      <p class="lede">三层证据：RW 原因标签 <code>Computer-Aided Content or Computer-Generated Content</code>（同时覆盖 SCIgen、改写工具与 LLM）、
-        原论文是否在 ChatGPT 发布（2022-11-30）后发表、OpenAlex 收录的撤稿声明文本。任何一层都不能单独认定为“AI 导致撤稿”。</p>
+      <h1><span data-i18n="rq2.h1"></span> <span class="badge run" data-i18n="rq2.badge"></span></h1>
+      <p class="lede" data-i18n-html="rq2.lede"></p>
     </div>
     <div class="tiles" id="rq2-tiles"></div>
     <div class="grid-2">
-      <div class="card">
-        <h3>第一阶段结论</h3>
-        <ol class="findings" id="rq2-findings"></ol>
-      </div>
-      <div class="card">
-        <h3>证据分层</h3>
-        <p class="sub">每条记录只归入最高一层</p>
-        <table class="data" id="tier-table"></table>
-      </div>
+      <div class="card"><h3 data-i18n="rq2.findings"></h3><ol class="findings" id="rq2-findings"></ol></div>
+      <div class="card"><h3 data-i18n="rq2.tiers"></h3><p class="sub" data-i18n="rq2.tiersSub"></p><table class="data" id="tier-table"></table></div>
     </div>
     <div class="card" id="card-aigc-pub"></div>
     <div class="grid-2">
@@ -161,88 +139,64 @@
       <div class="card" id="card-text-coverage"></div>
     </div>
     <div class="grid-2">
-      <div class="card">
-        <h3>声明文本中的机制线索</h3>
-        <p class="sub" id="mech-sub"></p>
-        <table class="data" id="mech-table"></table>
-      </div>
-      <div class="card">
-        <h3>LLM 时代候选（排除最大期刊后）</h3>
-        <p class="sub" id="post-sub"></p>
-        <table class="data" id="post-table"></table>
-      </div>
+      <div class="card"><h3 data-i18n="rq2.mech"></h3><p class="sub" id="mech-sub"></p><table class="data" id="mech-table"></table></div>
+      <div class="card"><h3 data-i18n="rq2.post"></h3><p class="sub" id="post-sub"></p><table class="data" id="post-table"></table></div>
     </div>
-    <div class="card">
-      <h3>第二阶段计划</h3>
-      <ul class="plain">
-        <li>获取 LLM 时代候选（B 层）的完整撤稿声明，先逐家核查出版社使用条款；</li>
-        <li>按 DOI 关联 Problematic Paper Screener 的 tortured phrases / ChatGPT 痕迹检测，作为“正文可观察”的独立证据；</li>
-        <li>对可合法获取的原论文运行 <code>pre-review-integrity-check</code> skill，并与人工标注（LLM / 改写工具 / SCIgen / 无法判断）比较，报告一致性。</li>
-      </ul>
-    </div>
+    <div class="card"><h3 data-i18n="rq2.plan"></h3><ul class="plain" data-i18n-html="rq2.planList"></ul></div>
   </section>
 
   <!-- ============ RQ3 ============ -->
   <section class="page" id="page-rq3">
     <div class="page-head">
-      <h1>RQ3 能否通过 harness / skill 预测与规避？ <span class="badge todo">计划中</span></h1>
-      <p class="lede">构建模型无关的论文审计 harness：统一输入契约、工具权限、结构化输出、证据定位与成本日志。
-        撤稿声明只用于评分，不泄漏给模型。</p>
+      <h1><span data-i18n="rq3.h1"></span> <span class="badge run" data-i18n="rq3.badge"></span></h1>
+      <p class="lede" data-i18n-html="rq3.lede"></p>
+    </div>
+    <div class="tiles" id="rq3-tiles"></div>
+    <div class="card"><h3 data-i18n="rq3.findings"></h3><ol class="findings" id="rq3-findings"></ol></div>
+    <div class="grid-2">
+      <div class="card" id="card-roc"></div>
+      <div class="card"><h3 data-i18n="rq3.methods"></h3><p class="sub" data-i18n="rq3.methodsSub"></p><div class="table-wrap"><table class="data" id="method-table"></table></div></div>
+    </div>
+    <div class="grid-2">
+      <div class="card" id="card-fair"></div>
+      <div class="card"><h3 data-i18n="rq3.ppv"></h3><p class="sub" data-i18n="rq3.ppvSub"></p><div class="table-wrap short"><table class="data" id="ppv-table"></table></div></div>
     </div>
     <div class="card">
-      <h3>评估设计（草案）</h3>
-      <table class="data">
-        <thead><tr><th>维度</th><th>内容</th></tr></thead>
-        <tbody>
-          <tr><td>基线</td><td>单次提示 / 结构化提示 / 带工具检索的多步 harness</td></tr>
-          <tr><td>主要指标</td><td>经人工核实的发现精确率、召回率、证据定位正确性、无依据指控比例、拒判能力、成本</td></tr>
-          <tr><td>泄漏控制</td><td>按原论文 DOI、批次、期刊分组划分；移除撤稿水印与声明</td></tr>
-          <tr><td>预测输出</td><td>此页将展示各模型 / 各流程的预测结果与误差分析</td></tr>
-        </tbody>
-      </table>
+      <h3 data-i18n="rq3.terms"></h3>
+      <div class="grid-2 tight">
+        <div><p class="sub" data-i18n="rq3.termsUp"></p><div id="terms-up"></div></div>
+        <div><p class="sub" data-i18n="rq3.termsDown"></p><div id="terms-down"></div></div>
+      </div>
+      <p class="note" data-i18n="rq3.termsNote"></p>
+    </div>
+    <h2 class="section" data-i18n="rq3.forecast"></h2>
+    <p class="lede" data-i18n="rq3.forecastSub"></p>
+    <div class="card" id="card-forecast"></div>
+    <p class="lede" id="journal-note"></p>
+    <div class="grid-2">
+      <div class="card"><h3 data-i18n="rq3.harness"></h3><p class="sub" data-i18n="rq3.harnessSub"></p><ol class="plain" data-i18n-html="rq3.harnessSteps"></ol>
+<pre>uv run python -m harness.run papers.jsonl --out risk.jsonl
+# --llm MODEL  (optional, needs ANTHROPIC_API_KEY)</pre></div>
+      <div class="card"><h3 data-i18n="rq3.next"></h3><ul class="plain" data-i18n-html="rq3.nextList"></ul></div>
     </div>
   </section>
 
-  <!-- ============ 方法 ============ -->
+  <!-- ============ 方法 / Methods ============ -->
   <section class="page" id="page-methods">
-    <div class="page-head"><h1>数据与方法</h1></div>
+    <div class="page-head"><h1 data-i18n="m.h1"></h1></div>
     <div class="grid-2">
-      <div class="card">
-        <h3>数据来源与版本</h3>
-        <dl class="kv" id="source-kv"></dl>
-      </div>
-      <div class="card">
-        <h3>期刊子集筛选流程</h3>
-        <table class="data" id="flow-table"></table>
-      </div>
+      <div class="card"><h3 data-i18n="m.source"></h3><dl class="kv" id="source-kv"></dl></div>
+      <div class="card"><h3 data-i18n="m.flow"></h3><table class="data" id="flow-table"></table></div>
     </div>
-    <div class="card">
-      <h3>口径与研究边界</h3>
-      <ul class="plain">
-        <li>单位是 Retraction Watch <b>撤稿通知记录</b>；同一原论文可能有多条记录，另报告唯一原论文 DOI 数。</li>
-        <li>撤稿率用 OpenAlex 的期刊年发文量作分母，按原论文发表年计；期刊池只含有过 CS 撤稿的期刊，是<b>条件比率</b>。近年发表的论文观察期短（右删失），比率偏低。</li>
-        <li>撤稿原因是来源对声明的标注，可能是过程问题或调查事件，不能直接当作论文错误的真值。</li>
-        <li>批量撤稿使记录之间不独立；结论都给出排除 Hindawi 或批次后的敏感性结果。</li>
-        <li>主题归并（T1–T7）是探索性映射，定义见 <code>scripts/taxonomy.py</code>。</li>
-        <li>2026 年数据只到快照日期，且收录存在滞后。</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>复现</h3>
-<pre>make openalex # 获取 OpenAlex 发文量与声明文本（缓存式）
-make analyses # 重跑 2023 前后、RQ1、撤稿率、RQ2 分析
-make site    # 重建网站数据（site/data/）
-make serve   # 本地预览 http://localhost:8000
-make refresh # 获取最新 Retraction Watch 快照并重建</pre>
-    </div>
+    <div class="card"><h3 data-i18n="m.caveats"></h3><ul class="plain" data-i18n-html="m.caveatsList"></ul></div>
+    <div class="card"><h3 data-i18n="m.repro"></h3><pre data-i18n="m.repro.code"></pre></div>
   </section>
 </main>
 
-<footer class="foot">
-  数据：Crossref / Retraction Watch（CC0）。本站展示来源元数据的描述统计，不构成对任何论文或作者的不端认定。
-</footer>
+<footer class="foot" data-i18n="footer"></footer>
 
 <script src="vendor/echarts.min.js"></script>
+<script src="assets/i18n.js"></script>
 <script src="assets/app.js"></script>
 </body>
 </html>

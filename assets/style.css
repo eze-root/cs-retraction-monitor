@@ -22,7 +22,7 @@ a:hover { text-decoration: underline; }
 
 .topbar { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 20px;
   padding: 10px 24px; background: var(--surface); border-bottom: 1px solid var(--border); }
-.brand { display: flex; align-items: center; gap: 10px; min-width: 220px; }
+.brand { display: flex; align-items: center; gap: 10px; min-width: 200px; }
 .brand-mark { width: 26px; height: 26px; border-radius: 7px;
   background: linear-gradient(135deg, var(--accent), #16916d); }
 .brand-title { font-weight: 650; font-size: 15px; }
@@ -31,6 +31,10 @@ a:hover { text-decoration: underline; }
 .tabs a { padding: 6px 12px; border-radius: 7px; color: var(--ink-2); font-size: 13.5px; }
 .tabs a:hover { background: var(--surface-2); text-decoration: none; }
 .tabs a.active { background: var(--surface-2); color: var(--ink); font-weight: 600; box-shadow: inset 0 -2px 0 var(--accent); }
+.lang-toggle { border: 1px solid var(--border); background: var(--surface); color: var(--ink); border-radius: 8px;
+  height: 32px; padding: 0 10px; cursor: pointer; font-size: 13px; font-weight: 600; }
+.lang-toggle:hover, .theme-toggle:hover { background: var(--surface-2); }
+.grid-2.tight { gap: 12px; margin-bottom: 4px; }
 .theme-toggle { border: 1px solid var(--border); background: var(--surface); color: var(--ink);
   border-radius: 8px; width: 34px; height: 32px; cursor: pointer; font-size: 16px; }
 

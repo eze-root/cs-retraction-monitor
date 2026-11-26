@@ -1,0 +1,1298 @@
+{
+ "schema_version": "1.0",
+ "snapshot": "bcb455b60862",
+ "generated_by": "scripts/analyze_rq3_prediction.py",
+ "design": {
+  "inputs": "标题、摘要、参考文献数、作者数（发表时可见）；不用作者、单位、国家、期刊",
+  "weighting": "期刊内按发表年匹配，正负例总权重相等",
+  "cv": "按期刊分组 5 折；时间外推 ≤2020 → 2021–2022",
+  "negatives": "同期刊随机抽样、截至快照未撤稿（PU 设定）"
+ },
+ "data_flow": {
+  "collected": 24059,
+  "collected_pos": 6859,
+  "in_frame": 23175,
+  "neg_removed_in_rw_or_notice": 928,
+  "abstract_coverage_pos": 0.6765,
+  "abstract_coverage_neg": 0.6531,
+  "analysis_set": 14667,
+  "analysis_pos": 4042,
+  "analysis_neg": 10625,
+  "analysis_sources": 86,
+  "weighted_set": 8345,
+  "weighted_pos": 4042,
+  "weighted_neg": 4303
+ },
+ "skill_rules": {
+  "recall": 0.0027,
+  "fpr": 0.0012,
+  "pos_with_tortured": 11,
+  "neg_with_tortured": 3,
+  "pos_with_llm_artifact": 0,
+  "neg_with_llm_artifact": 0,
+  "top_terms_in_positives": [
+   {
+    "expected_term": "data mining",
+    "n": 6
+   },
+   {
+    "expected_term": "big data",
+    "n": 2
+   },
+   {
+    "expected_term": "decision tree",
+    "n": 2
+   },
+   {
+    "expected_term": "breast cancer",
+    "n": 1
+   },
+   {
+    "expected_term": "supervised learning",
+    "n": 1
+   },
+   {
+    "expected_term": "deep learning",
+    "n": 1
+   }
+  ]
+ },
+ "content_model": {
+  "auc": 0.7178,
+  "pr_auc_balanced": 0.6907,
+  "recall_at_fpr_1": 0.047,
+  "threshold_at_fpr_1": 0.9440920771289949,
+  "recall_at_fpr_5": 0.1742,
+  "threshold_at_fpr_5": 0.8841974417065932,
+  "recall_at_fpr_10": 0.2672,
+  "threshold_at_fpr_10": 0.8433559686487664
+ },
+ "content_plus_country_ablation": {
+  "auc": 0.7224,
+  "pr_auc_balanced": 0.6934,
+  "recall_at_fpr_1": 0.0443,
+  "threshold_at_fpr_1": 0.9465766961853426,
+  "recall_at_fpr_5": 0.1569,
+  "threshold_at_fpr_5": 0.8958348192525653,
+  "recall_at_fpr_10": 0.2808,
+  "threshold_at_fpr_10": 0.8452427098369137
+ },
+ "baselines_auc": {
+  "structural_only": 0.6645,
+  "skill_counts_only": 0.5001
+ },
+ "temporal": {
+  "auc": 0.7098,
+  "pr_auc_balanced": 0.6825,
+  "recall_at_fpr_1": 0.0535,
+  "threshold_at_fpr_1": 0.8603640270915435,
+  "recall_at_fpr_5": 0.1405,
+  "threshold_at_fpr_5": 0.7988354648338662,
+  "recall_at_fpr_10": 0.2475,
+  "threshold_at_fpr_10": 0.7420485868939128,
+  "train_n": 1941,
+  "test_n": 5105
+ },
+ "subgroups": [
+  {
+   "subgroup": "批量撤稿",
+   "n": 3013,
+   "recall_at_fpr_5": 0.1736
+  },
+  {
+   "subgroup": "零散撤稿",
+   "n": 1029,
+   "recall_at_fpr_5": 0.1759
+  },
+  {
+   "subgroup": "带生成内容标签",
+   "n": 2385,
+   "recall_at_fpr_5": 0.1987
+  },
+  {
+   "subgroup": "不带生成内容标签",
+   "n": 1657,
+   "recall_at_fpr_5": 0.1388
+  }
+ ],
+ "recall_by_publisher": [
+  {
+   "publisher": "Hindawi",
+   "n": 2565,
+   "recall": 0.2179
+  },
+  {
+   "publisher": "IOS Press (bought by Sage November 2023)",
+   "n": 883,
+   "recall": 0.0713
+  },
+  {
+   "publisher": "Springer - Nature Publishing Group",
+   "n": 192,
+   "recall": 0.1771
+  },
+  {
+   "publisher": "SAGE Publications",
+   "n": 86,
+   "recall": 0.1163
+  },
+  {
+   "publisher": "PLoS",
+   "n": 81,
+   "recall": 0.1111
+  },
+  {
+   "publisher": "Wiley",
+   "n": 65,
+   "recall": 0.1077
+  }
+ ],
+ "fairness": {
+  "content_model": [
+   {
+    "group": "中国",
+    "n_neg": 2254,
+    "n_pos": 2911,
+    "fpr": 0.0747,
+    "recall": 0.2089,
+    "within_group_auc": 0.7038
+   },
+   {
+    "group": "其他地区",
+    "n_neg": 1080,
+    "n_pos": 430,
+    "fpr": 0.0176,
+    "recall": 0.0767,
+    "within_group_auc": 0.6711
+   },
+   {
+    "group": "印度",
+    "n_neg": 258,
+    "n_pos": 360,
+    "fpr": 0.0015,
+    "recall": 0.0528,
+    "within_group_auc": 0.699
+   },
+   {
+    "group": "未知",
+    "n_neg": 179,
+    "n_pos": 291,
+    "fpr": 0.0172,
+    "recall": 0.134,
+    "within_group_auc": 0.7092
+   },
+   {
+    "group": "欧美澳",
+    "n_neg": 532,
+    "n_pos": 50,
+    "fpr": 0.0008,
+    "recall": 0.1,
+    "within_group_auc": 0.7657
+   }
+  ],
+  "with_country_feature": [
+   {
+    "group": "中国",
+    "n_neg": 2254,
+    "n_pos": 2911,
+    "fpr": 0.0632,
+    "recall": 0.1742,
+    "within_group_auc": 0.7034
+   },
+   {
+    "group": "其他地区",
+    "n_neg": 1080,
+    "n_pos": 430,
+    "fpr": 0.0014,
+    "recall": 0.0256,
+    "within_group_auc": 0.6676
+   },
+   {
+    "group": "印度",
+    "n_neg": 258,
+    "n_pos": 360,
+    "fpr": 0.0784,
+    "recall": 0.1167,
+    "within_group_auc": 0.6914
+   },
+   {
+    "group": "未知",
+    "n_neg": 179,
+    "n_pos": 291,
+    "fpr": 0.0726,
+    "recall": 0.2543,
+    "within_group_auc": 0.7004
+   },
+   {
+    "group": "欧美澳",
+    "n_neg": 532,
+    "n_pos": 50,
+    "fpr": 0.0,
+    "recall": 0.0,
+    "within_group_auc": 0.7631
+   }
+  ],
+  "fairness_weighted": [
+   {
+    "group": "中国",
+    "n_neg": 2254,
+    "n_pos": 2911,
+    "fpr": 0.0709,
+    "recall": 0.2099,
+    "within_group_auc": 0.7027
+   },
+   {
+    "group": "其他地区",
+    "n_neg": 1080,
+    "n_pos": 430,
+    "fpr": 0.0221,
+    "recall": 0.0907,
+    "within_group_auc": 0.6692
+   },
+   {
+    "group": "印度",
+    "n_neg": 258,
+    "n_pos": 360,
+    "fpr": 0.0029,
+    "recall": 0.0778,
+    "within_group_auc": 0.6933
+   },
+   {
+    "group": "未知",
+    "n_neg": 179,
+    "n_pos": 291,
+    "fpr": 0.0141,
+    "recall": 0.1546,
+    "within_group_auc": 0.7136
+   },
+   {
+    "group": "欧美澳",
+    "n_neg": 532,
+    "n_pos": 50,
+    "fpr": 0.0012,
+    "recall": 0.1,
+    "within_group_auc": 0.7561
+   }
+  ],
+  "threshold": "FPR 5%（整体）"
+ },
+ "content_model_fairness_weighted": {
+  "auc": 0.7144,
+  "pr_auc_balanced": 0.686,
+  "recall_at_fpr_1": 0.0401,
+  "threshold_at_fpr_1": 0.941978584097653,
+  "recall_at_fpr_5": 0.1801,
+  "threshold_at_fpr_5": 0.8721301113464504,
+  "recall_at_fpr_10": 0.2541,
+  "threshold_at_fpr_10": 0.8396729048187866
+ },
+ "ppv_scenarios": [
+  {
+   "scenario": "期刊池平均（每万篇 21.3）",
+   "fpr": 0.01,
+   "recall": 0.047,
+   "ppv": 0.0099,
+   "flags_per_1000": 10.1,
+   "true_flags_per_1000": 0.1
+  },
+  {
+   "scenario": "期刊池平均（每万篇 21.3）",
+   "fpr": 0.05,
+   "recall": 0.1742,
+   "ppv": 0.0074,
+   "flags_per_1000": 50.3,
+   "true_flags_per_1000": 0.37
+  },
+  {
+   "scenario": "期刊池平均（每万篇 21.3）",
+   "fpr": 0.1,
+   "recall": 0.2672,
+   "ppv": 0.0057,
+   "flags_per_1000": 100.4,
+   "true_flags_per_1000": 0.57
+  },
+  {
+   "scenario": "高风险期刊（每万篇 100）",
+   "fpr": 0.01,
+   "recall": 0.047,
+   "ppv": 0.0453,
+   "flags_per_1000": 10.4,
+   "true_flags_per_1000": 0.47
+  },
+  {
+   "scenario": "高风险期刊（每万篇 100）",
+   "fpr": 0.05,
+   "recall": 0.1742,
+   "ppv": 0.034,
+   "flags_per_1000": 51.2,
+   "true_flags_per_1000": 1.74
+  },
+  {
+   "scenario": "高风险期刊（每万篇 100）",
+   "fpr": 0.1,
+   "recall": 0.2672,
+   "ppv": 0.0263,
+   "flags_per_1000": 101.7,
+   "true_flags_per_1000": 2.67
+  },
+  {
+   "scenario": "极高风险期刊（每万篇 500）",
+   "fpr": 0.01,
+   "recall": 0.047,
+   "ppv": 0.1983,
+   "flags_per_1000": 11.8,
+   "true_flags_per_1000": 2.35
+  },
+  {
+   "scenario": "极高风险期刊（每万篇 500）",
+   "fpr": 0.05,
+   "recall": 0.1742,
+   "ppv": 0.155,
+   "flags_per_1000": 56.2,
+   "true_flags_per_1000": 8.71
+  },
+  {
+   "scenario": "极高风险期刊（每万篇 500）",
+   "fpr": 0.1,
+   "recall": 0.2672,
+   "ppv": 0.1233,
+   "flags_per_1000": 108.4,
+   "true_flags_per_1000": 13.36
+  }
+ ],
+ "prevention": {
+  "positives": 4042,
+  "flagged": 704,
+  "flagged_share": 0.1742,
+  "median_lag_days_flagged": 481.0,
+  "total_paper_years_earlier": 1154.6,
+  "flagged_share_batch": 0.1736,
+  "flagged_share_scattered": 0.1759
+ },
+ "top_terms": {
+  "toward_retracted": [
+   {
+    "term": "algorithm",
+    "coef": 6.81
+   },
+   {
+    "term": "fuzzy",
+    "coef": 4.96
+   },
+   {
+    "term": "computer",
+    "coef": 4.006
+   },
+   {
+    "term": "network",
+    "coef": 3.413
+   },
+   {
+    "term": "algorithm in",
+    "coef": 3.412
+   },
+   {
+    "term": "iot",
+    "coef": 3.138
+   },
+   {
+    "term": "information",
+    "coef": 2.972
+   },
+   {
+    "term": "algorithm based",
+    "coef": 2.861
+   },
+   {
+    "term": "linguistic",
+    "coef": 2.835
+   },
+   {
+    "term": "teaching",
+    "coef": 2.833
+   },
+   {
+    "term": "in order",
+    "coef": 2.791
+   },
+   {
+    "term": "decision",
+    "coef": 2.781
+   },
+   {
+    "term": "computational",
+    "coef": 2.71
+   },
+   {
+    "term": "order to",
+    "coef": 2.685
+   },
+   {
+    "term": "data and",
+    "coef": 2.627
+   },
+   {
+    "term": "evaluation",
+    "coef": 2.403
+   },
+   {
+    "term": "using",
+    "coef": 2.369
+   },
+   {
+    "term": "approaches",
+    "coef": 2.347
+   },
+   {
+    "term": "security",
+    "coef": 2.338
+   },
+   {
+    "term": "learning",
+    "coef": 2.331
+   },
+   {
+    "term": "bipolar",
+    "coef": 2.232
+   },
+   {
+    "term": "the algorithm",
+    "coef": 2.226
+   },
+   {
+    "term": "computing",
+    "coef": 2.181
+   },
+   {
+    "term": "3d",
+    "coef": 2.117
+   },
+   {
+    "term": "machine",
+    "coef": 2.1
+   },
+   {
+    "term": "personalized",
+    "coef": 2.076
+   },
+   {
+    "term": "deep learning",
+    "coef": 2.055
+   },
+   {
+    "term": "algorithm the",
+    "coef": 2.032
+   },
+   {
+    "term": "cancer",
+    "coef": 1.986
+   },
+   {
+    "term": "and can",
+    "coef": 1.972
+   }
+  ],
+  "toward_not_retracted": [
+   {
+    "term": "model and",
+    "coef": -3.008
+   },
+   {
+    "term": "we",
+    "coef": -2.827
+   },
+   {
+    "term": "natural",
+    "coef": -2.8
+   },
+   {
+    "term": "engineering",
+    "coef": -2.79
+   },
+   {
+    "term": "showed",
+    "coef": -2.521
+   },
+   {
+    "term": "were",
+    "coef": -2.409
+   },
+   {
+    "term": "two",
+    "coef": -2.301
+   },
+   {
+    "term": "detection method",
+    "coef": -2.255
+   },
+   {
+    "term": "our",
+    "coef": -2.23
+   },
+   {
+    "term": "from",
+    "coef": -2.11
+   },
+   {
+    "term": "was",
+    "coef": -2.1
+   },
+   {
+    "term": "price",
+    "coef": -1.999
+   },
+   {
+    "term": "policy",
+    "coef": -1.953
+   },
+   {
+    "term": "however",
+    "coef": -1.921
+   },
+   {
+    "term": "antenna",
+    "coef": -1.914
+   },
+   {
+    "term": "via",
+    "coef": -1.901
+   },
+   {
+    "term": "data from",
+    "coef": -1.891
+   },
+   {
+    "term": "free",
+    "coef": -1.874
+   },
+   {
+    "term": "sample",
+    "coef": -1.865
+   },
+   {
+    "term": "tested",
+    "coef": -1.831
+   },
+   {
+    "term": "understand the",
+    "coef": -1.806
+   },
+   {
+    "term": "of natural",
+    "coef": -1.798
+   },
+   {
+    "term": "the relationship",
+    "coef": -1.798
+   },
+   {
+    "term": "validated",
+    "coef": -1.797
+   },
+   {
+    "term": "relationship",
+    "coef": -1.797
+   },
+   {
+    "term": "device",
+    "coef": -1.795
+   },
+   {
+    "term": "electrical",
+    "coef": -1.795
+   },
+   {
+    "term": "for the",
+    "coef": -1.785
+   },
+   {
+    "term": "for edge",
+    "coef": -1.778
+   },
+   {
+    "term": "intelligent analysis",
+    "coef": -1.716
+   }
+  ]
+ },
+ "roc": [
+  {
+   "fpr": 0.0,
+   "tpr": 0.0
+  },
+  {
+   "fpr": 0.0087,
+   "tpr": 0.0361
+  },
+  {
+   "fpr": 0.0201,
+   "tpr": 0.0693
+  },
+  {
+   "fpr": 0.0247,
+   "tpr": 0.0905
+  },
+  {
+   "fpr": 0.0325,
+   "tpr": 0.1291
+  },
+  {
+   "fpr": 0.0395,
+   "tpr": 0.1549
+  },
+  {
+   "fpr": 0.0499,
+   "tpr": 0.1742
+  },
+  {
+   "fpr": 0.058,
+   "tpr": 0.1927
+  },
+  {
+   "fpr": 0.0691,
+   "tpr": 0.2167
+  },
+  {
+   "fpr": 0.0813,
+   "tpr": 0.2335
+  },
+  {
+   "fpr": 0.0868,
+   "tpr": 0.2583
+  },
+  {
+   "fpr": 0.113,
+   "tpr": 0.2766
+  },
+  {
+   "fpr": 0.1223,
+   "tpr": 0.2947
+  },
+  {
+   "fpr": 0.1357,
+   "tpr": 0.3144
+  },
+  {
+   "fpr": 0.1438,
+   "tpr": 0.3404
+  },
+  {
+   "fpr": 0.1525,
+   "tpr": 0.3731
+  },
+  {
+   "fpr": 0.1601,
+   "tpr": 0.3897
+  },
+  {
+   "fpr": 0.1671,
+   "tpr": 0.4134
+  },
+  {
+   "fpr": 0.1787,
+   "tpr": 0.4292
+  },
+  {
+   "fpr": 0.1846,
+   "tpr": 0.449
+  },
+  {
+   "fpr": 0.1937,
+   "tpr": 0.4661
+  },
+  {
+   "fpr": 0.2034,
+   "tpr": 0.4767
+  },
+  {
+   "fpr": 0.2108,
+   "tpr": 0.4916
+  },
+  {
+   "fpr": 0.2157,
+   "tpr": 0.5072
+  },
+  {
+   "fpr": 0.2208,
+   "tpr": 0.52
+  },
+  {
+   "fpr": 0.2253,
+   "tpr": 0.5346
+  },
+  {
+   "fpr": 0.2359,
+   "tpr": 0.5524
+  },
+  {
+   "fpr": 0.2434,
+   "tpr": 0.5628
+  },
+  {
+   "fpr": 0.2545,
+   "tpr": 0.5745
+  },
+  {
+   "fpr": 0.2588,
+   "tpr": 0.5888
+  },
+  {
+   "fpr": 0.2737,
+   "tpr": 0.5965
+  },
+  {
+   "fpr": 0.2788,
+   "tpr": 0.6096
+  },
+  {
+   "fpr": 0.2924,
+   "tpr": 0.6192
+  },
+  {
+   "fpr": 0.3,
+   "tpr": 0.6274
+  },
+  {
+   "fpr": 0.3092,
+   "tpr": 0.6341
+  },
+  {
+   "fpr": 0.3157,
+   "tpr": 0.6475
+  },
+  {
+   "fpr": 0.3296,
+   "tpr": 0.6598
+  },
+  {
+   "fpr": 0.3414,
+   "tpr": 0.668
+  },
+  {
+   "fpr": 0.3456,
+   "tpr": 0.6789
+  },
+  {
+   "fpr": 0.3591,
+   "tpr": 0.6888
+  },
+  {
+   "fpr": 0.363,
+   "tpr": 0.6954
+  },
+  {
+   "fpr": 0.3712,
+   "tpr": 0.7016
+  },
+  {
+   "fpr": 0.3811,
+   "tpr": 0.7108
+  },
+  {
+   "fpr": 0.3963,
+   "tpr": 0.7167
+  },
+  {
+   "fpr": 0.4053,
+   "tpr": 0.7232
+  },
+  {
+   "fpr": 0.4104,
+   "tpr": 0.7331
+  },
+  {
+   "fpr": 0.4141,
+   "tpr": 0.7407
+  },
+  {
+   "fpr": 0.4258,
+   "tpr": 0.7533
+  },
+  {
+   "fpr": 0.4401,
+   "tpr": 0.7605
+  },
+  {
+   "fpr": 0.449,
+   "tpr": 0.7667
+  },
+  {
+   "fpr": 0.4568,
+   "tpr": 0.7731
+  },
+  {
+   "fpr": 0.4662,
+   "tpr": 0.7808
+  },
+  {
+   "fpr": 0.4793,
+   "tpr": 0.7885
+  },
+  {
+   "fpr": 0.4854,
+   "tpr": 0.7949
+  },
+  {
+   "fpr": 0.4935,
+   "tpr": 0.7991
+  },
+  {
+   "fpr": 0.5017,
+   "tpr": 0.806
+  },
+  {
+   "fpr": 0.5066,
+   "tpr": 0.812
+  },
+  {
+   "fpr": 0.5199,
+   "tpr": 0.8191
+  },
+  {
+   "fpr": 0.5269,
+   "tpr": 0.8258
+  },
+  {
+   "fpr": 0.5366,
+   "tpr": 0.8313
+  },
+  {
+   "fpr": 0.5423,
+   "tpr": 0.837
+  },
+  {
+   "fpr": 0.5513,
+   "tpr": 0.8412
+  },
+  {
+   "fpr": 0.5618,
+   "tpr": 0.8471
+  },
+  {
+   "fpr": 0.5695,
+   "tpr": 0.8518
+  },
+  {
+   "fpr": 0.5768,
+   "tpr": 0.8563
+  },
+  {
+   "fpr": 0.582,
+   "tpr": 0.8607
+  },
+  {
+   "fpr": 0.5856,
+   "tpr": 0.8689
+  },
+  {
+   "fpr": 0.5942,
+   "tpr": 0.8723
+  },
+  {
+   "fpr": 0.6081,
+   "tpr": 0.878
+  },
+  {
+   "fpr": 0.6205,
+   "tpr": 0.8817
+  },
+  {
+   "fpr": 0.6266,
+   "tpr": 0.8877
+  },
+  {
+   "fpr": 0.6399,
+   "tpr": 0.8916
+  },
+  {
+   "fpr": 0.6528,
+   "tpr": 0.8949
+  },
+  {
+   "fpr": 0.6668,
+   "tpr": 0.8983
+  },
+  {
+   "fpr": 0.6749,
+   "tpr": 0.9038
+  },
+  {
+   "fpr": 0.6829,
+   "tpr": 0.9124
+  },
+  {
+   "fpr": 0.6943,
+   "tpr": 0.9169
+  },
+  {
+   "fpr": 0.7041,
+   "tpr": 0.9208
+  },
+  {
+   "fpr": 0.7098,
+   "tpr": 0.9243
+  },
+  {
+   "fpr": 0.7222,
+   "tpr": 0.9273
+  },
+  {
+   "fpr": 0.7281,
+   "tpr": 0.931
+  },
+  {
+   "fpr": 0.7404,
+   "tpr": 0.9342
+  },
+  {
+   "fpr": 0.7472,
+   "tpr": 0.9369
+  },
+  {
+   "fpr": 0.7589,
+   "tpr": 0.9396
+  },
+  {
+   "fpr": 0.7677,
+   "tpr": 0.9419
+  },
+  {
+   "fpr": 0.7768,
+   "tpr": 0.9461
+  },
+  {
+   "fpr": 0.7829,
+   "tpr": 0.9503
+  },
+  {
+   "fpr": 0.7896,
+   "tpr": 0.9525
+  },
+  {
+   "fpr": 0.7974,
+   "tpr": 0.955
+  },
+  {
+   "fpr": 0.8005,
+   "tpr": 0.9572
+  },
+  {
+   "fpr": 0.8096,
+   "tpr": 0.9609
+  },
+  {
+   "fpr": 0.8149,
+   "tpr": 0.9636
+  },
+  {
+   "fpr": 0.8199,
+   "tpr": 0.9664
+  },
+  {
+   "fpr": 0.8268,
+   "tpr": 0.9686
+  },
+  {
+   "fpr": 0.832,
+   "tpr": 0.9713
+  },
+  {
+   "fpr": 0.8393,
+   "tpr": 0.9733
+  },
+  {
+   "fpr": 0.8442,
+   "tpr": 0.9753
+  },
+  {
+   "fpr": 0.8531,
+   "tpr": 0.9758
+  },
+  {
+   "fpr": 0.8587,
+   "tpr": 0.978
+  },
+  {
+   "fpr": 0.862,
+   "tpr": 0.98
+  },
+  {
+   "fpr": 0.8736,
+   "tpr": 0.9814
+  },
+  {
+   "fpr": 0.8776,
+   "tpr": 0.9827
+  },
+  {
+   "fpr": 0.8875,
+   "tpr": 0.9847
+  },
+  {
+   "fpr": 0.8972,
+   "tpr": 0.9857
+  },
+  {
+   "fpr": 0.9033,
+   "tpr": 0.9869
+  },
+  {
+   "fpr": 0.9105,
+   "tpr": 0.9874
+  },
+  {
+   "fpr": 0.9162,
+   "tpr": 0.9884
+  },
+  {
+   "fpr": 0.9258,
+   "tpr": 0.9901
+  },
+  {
+   "fpr": 0.9306,
+   "tpr": 0.9911
+  },
+  {
+   "fpr": 0.9359,
+   "tpr": 0.9921
+  },
+  {
+   "fpr": 0.9416,
+   "tpr": 0.9931
+  },
+  {
+   "fpr": 0.9465,
+   "tpr": 0.9946
+  },
+  {
+   "fpr": 0.9588,
+   "tpr": 0.9958
+  },
+  {
+   "fpr": 0.9647,
+   "tpr": 0.9965
+  },
+  {
+   "fpr": 0.9715,
+   "tpr": 0.9973
+  },
+  {
+   "fpr": 0.9808,
+   "tpr": 0.9975
+  },
+  {
+   "fpr": 0.9853,
+   "tpr": 0.9985
+  },
+  {
+   "fpr": 0.9911,
+   "tpr": 0.999
+  },
+  {
+   "fpr": 0.9952,
+   "tpr": 0.9998
+  },
+  {
+   "fpr": 1.0,
+   "tpr": 1.0
+  }
+ ],
+ "completion_forecast": {
+  "note": "期刊池（有过 CS 撤稿的期刊）；假设时滞分布不随时间改变；批量清理会打破这一假设",
+  "scenarios": {
+   "慢速时滞": {
+    "reference_pub_years": "2015–2019",
+    "reference_n": 945,
+    "rows": [
+     {
+      "pub_year": 2020,
+      "observed": 772,
+      "works": 354317,
+      "observation_days": 2319,
+      "share_observed": 0.9228,
+      "pred_total": 837,
+      "pred_low": 822,
+      "pred_high": 853,
+      "pred_remaining": 65,
+      "observed_per_10k": 21.79,
+      "pred_per_10k": 23.61,
+      "too_early": false
+     },
+     {
+      "pub_year": 2021,
+      "observed": 1301,
+      "works": 394142,
+      "observation_days": 1954,
+      "share_observed": 0.7407,
+      "pred_total": 1756,
+      "pred_low": 1693,
+      "pred_high": 1824,
+      "pred_remaining": 455,
+      "observed_per_10k": 33.01,
+      "pred_per_10k": 44.56,
+      "too_early": false
+     },
+     {
+      "pub_year": 2022,
+      "observed": 2255,
+      "works": 437107,
+      "observation_days": 1589,
+      "share_observed": 0.5312,
+      "pred_total": 4245,
+      "pred_low": 3998,
+      "pred_high": 4505,
+      "pred_remaining": 1990,
+      "observed_per_10k": 51.59,
+      "pred_per_10k": 97.12,
+      "too_early": false
+     },
+     {
+      "pub_year": 2023,
+      "observed": 795,
+      "works": 414018,
+      "observation_days": 1224,
+      "share_observed": 0.3683,
+      "pred_total": 2159,
+      "pred_low": 1987,
+      "pred_high": 2340,
+      "pred_remaining": 1364,
+      "observed_per_10k": 19.2,
+      "pred_per_10k": 52.14,
+      "too_early": false
+     },
+     {
+      "pub_year": 2024,
+      "observed": 389,
+      "works": 430141,
+      "observation_days": 858,
+      "share_observed": 0.2847,
+      "pred_total": 1367,
+      "pred_low": 1234,
+      "pred_high": 1513,
+      "pred_remaining": 978,
+      "observed_per_10k": 9.04,
+      "pred_per_10k": 31.77,
+      "too_early": false
+     },
+     {
+      "pub_year": 2025,
+      "observed": 112,
+      "works": 434339,
+      "observation_days": 493,
+      "share_observed": 0.2042,
+      "pred_total": 548,
+      "pred_low": 490,
+      "pred_high": 626,
+      "pred_remaining": 436,
+      "observed_per_10k": 2.58,
+      "pred_per_10k": 12.63,
+      "too_early": true
+     }
+    ]
+   },
+   "快速时滞": {
+    "reference_pub_years": "2020–2020",
+    "reference_n": 787,
+    "rows": [
+     {
+      "pub_year": 2021,
+      "observed": 1301,
+      "works": 394142,
+      "observation_days": 1954,
+      "share_observed": 0.986,
+      "pred_total": 1319,
+      "pred_low": 1311,
+      "pred_high": 1331,
+      "pred_remaining": 18,
+      "observed_per_10k": 33.01,
+      "pred_per_10k": 33.48,
+      "too_early": false
+     },
+     {
+      "pub_year": 2022,
+      "observed": 2255,
+      "works": 437107,
+      "observation_days": 1589,
+      "share_observed": 0.8615,
+      "pred_total": 2618,
+      "pred_low": 2550,
+      "pred_high": 2697,
+      "pred_remaining": 363,
+      "observed_per_10k": 51.59,
+      "pred_per_10k": 59.88,
+      "too_early": false
+     },
+     {
+      "pub_year": 2023,
+      "observed": 795,
+      "works": 414018,
+      "observation_days": 1224,
+      "share_observed": 0.7357,
+      "pred_total": 1081,
+      "pred_low": 1036,
+      "pred_high": 1131,
+      "pred_remaining": 286,
+      "observed_per_10k": 19.2,
+      "pred_per_10k": 26.1,
+      "too_early": false
+     },
+     {
+      "pub_year": 2024,
+      "observed": 389,
+      "works": 430141,
+      "observation_days": 858,
+      "share_observed": 0.5248,
+      "pred_total": 741,
+      "pred_low": 696,
+      "pred_high": 795,
+      "pred_remaining": 352,
+      "observed_per_10k": 9.04,
+      "pred_per_10k": 17.23,
+      "too_early": false
+     },
+     {
+      "pub_year": 2025,
+      "observed": 112,
+      "works": 434339,
+      "observation_days": 493,
+      "share_observed": 0.0889,
+      "pred_total": 1259,
+      "pred_low": 1025,
+      "pred_high": 1632,
+      "pred_remaining": 1147,
+      "observed_per_10k": 2.58,
+      "pred_per_10k": 28.99,
+      "too_early": true
+     }
+    ]
+   }
+  },
+  "summary_2023_2024": {
+   "慢速时滞": {
+    "observed": 1184,
+    "pred_total": 3526,
+    "pred_remaining": 2342,
+    "pred_per_10k": 41.77
+   },
+   "快速时滞": {
+    "observed": 1184,
+    "pred_total": 1822,
+    "pred_remaining": 638,
+    "pred_per_10k": 21.58
+   }
+  }
+ },
+ "journal_backtest_summary": {
+  "train_pub_years": "≤2019",
+  "score_pub_years": "2020–2022",
+  "journals": 65,
+  "spearman": 0.368,
+  "p_value": 0.0025,
+  "calibration": {
+   "slope": 9.979,
+   "intercept": 1.101,
+   "resid_sd_log": 2.225
+  }
+ },
+ "journal_forecast_note": "期刊层面的预测因误差过大不公开，见本地报告"
+}

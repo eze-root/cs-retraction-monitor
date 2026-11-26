@@ -3,7 +3,7 @@
  "snapshot_commit": "bcb455b60862616288b8245e21bfdfdc0610ee34",
  "snapshot_date": "2026-11-06T23:00:10.000+00:00",
  "source_csv_sha256": "f7e2365a7eb06259348b3e859cd6a7df134d0747e6f744a0d76ebf3260c9862c",
- "site_built_at": "2026-11-24T14:32:25+00:00",
+ "site_built_at": "2026-11-26T02:09:31+00:00",
  "cohorts": {
   "all_records": 73688,
   "all_retractions": 68244,
